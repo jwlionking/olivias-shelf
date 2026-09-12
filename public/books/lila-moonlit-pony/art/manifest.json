@@ -1,0 +1,158 @@
+{
+ "cards": [
+  {
+   "id": "lila-stand",
+   "file": "lila-stand.webp",
+   "width": 579,
+   "height": 1399,
+   "cutout": true,
+   "copy": "Waking Lila\u2026",
+   "bytes": 189926
+  },
+  {
+   "id": "pony",
+   "file": "pony.webp",
+   "width": 986,
+   "height": 805,
+   "cutout": true,
+   "copy": "Calling the pony\u2026",
+   "bytes": 150886
+  },
+  {
+   "id": "lila-bell",
+   "file": "lila-bell.webp",
+   "width": 1152,
+   "height": 1728,
+   "cutout": true,
+   "copy": "Tying the ribbon\u2026",
+   "bytes": 373436
+  },
+  {
+   "id": "moon-face",
+   "file": "moon-face.webp",
+   "width": 1118,
+   "height": 1132,
+   "cutout": true,
+   "copy": "Polishing the moon\u2026",
+   "bytes": 194130
+  },
+  {
+   "id": "pony-sleep",
+   "file": "pony-sleep.webp",
+   "width": 1337,
+   "height": 606,
+   "cutout": true,
+   "copy": "Tucking the pony in\u2026",
+   "bytes": 195982
+  },
+  {
+   "id": "bell",
+   "file": "bell.webp",
+   "width": 912,
+   "height": 950,
+   "cutout": true,
+   "copy": "Finding the silver bell\u2026",
+   "bytes": 228996
+  },
+  {
+   "id": "flowers",
+   "file": "flowers.webp",
+   "width": 1044,
+   "height": 1094,
+   "cutout": true,
+   "copy": "Picking the flowers\u2026",
+   "bytes": 327194
+  },
+  {
+   "id": "oak-tree",
+   "file": "oak-tree.webp",
+   "width": 1098,
+   "height": 1467,
+   "cutout": true,
+   "copy": "Growing the oak\u2026",
+   "bytes": 496212
+  },
+  {
+   "id": "bedroom-window",
+   "file": "bedroom-window.jpg",
+   "width": 1600,
+   "height": 1200,
+   "cutout": false,
+   "copy": "Painting the window\u2026",
+   "bytes": 632505
+  },
+  {
+   "id": "meadow",
+   "file": "meadow.jpg",
+   "width": 1600,
+   "height": 1200,
+   "cutout": false,
+   "copy": "Painting the meadow\u2026",
+   "bytes": 677809
+  },
+  {
+   "id": "stream",
+   "file": "stream.jpg",
+   "width": 1600,
+   "height": 900,
+   "cutout": false,
+   "copy": "Pouring the stream\u2026",
+   "bytes": 566692
+  },
+  {
+   "id": "ride",
+   "file": "ride.jpg",
+   "width": 1600,
+   "height": 900,
+   "cutout": false,
+   "copy": "Saddling the moonlight\u2026",
+   "bytes": 502796
+  },
+  {
+   "id": "goodnight",
+   "file": "goodnight.jpg",
+   "width": 1600,
+   "height": 900,
+   "cutout": false,
+   "copy": "Hushing the meadow\u2026",
+   "bytes": 449899
+  },
+  {
+   "id": "oak-sky",
+   "file": "oak-sky.jpg",
+   "width": 1152,
+   "height": 1728,
+   "cutout": false,
+   "copy": "Planting the oak wood\u2026",
+   "bytes": 844068
+  },
+  {
+   "id": "fireflies",
+   "file": "fireflies.jpg",
+   "width": 1408,
+   "height": 1408,
+   "cutout": false,
+   "copy": "Lighting the fireflies\u2026",
+   "bytes": 722714
+  },
+  {
+   "id": "cover",
+   "file": "cover.jpg",
+   "width": 1200,
+   "height": 1600,
+   "cutout": false,
+   "copy": "Binding the cover\u2026",
+   "bytes": 768371
+  },
+  {
+   "id": "lila-reference",
+   "file": "lila-reference.jpg",
+   "width": 1152,
+   "height": 1536,
+   "cutout": false,
+   "copy": "Meeting Lila\u2026",
+   "bytes": 646004
+  }
+ ],
+ "provenance": "Original gouache picture-book illustrations painted for Storylight; cutouts keyed from magenta plates; back cards resampled to JPEG."
+}

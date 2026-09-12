@@ -1,0 +1,195 @@
+{
+ "cards": [
+  {
+   "id": "reef-dark",
+   "file": "reef-dark.jpg",
+   "width": 1600,
+   "height": 1195,
+   "cutout": false,
+   "copy": "Dimming the reef…",
+   "bytes": 521235,
+   "sha256": "ad4e38b57b9e7dc3968c0b892a912ecae07a06713e00cce1c6c3c7304256b70b"
+  },
+  {
+   "id": "shallows",
+   "file": "shallows.jpg",
+   "width": 1600,
+   "height": 1195,
+   "cutout": false,
+   "copy": "Pouring the sea…",
+   "bytes": 509251,
+   "sha256": "2249df39dda81079af9640005c479b29a3ccc0d4997c114256f46f7c642e7c1e"
+  },
+  {
+   "id": "kelp-forest",
+   "file": "kelp-forest.jpg",
+   "width": 1600,
+   "height": 1195,
+   "cutout": false,
+   "copy": "Growing the kelp…",
+   "bytes": 699647,
+   "sha256": "bd43f149e9312a73217045061800198c188270211faaf4ce43a2484d00c63bf4"
+  },
+  {
+   "id": "crab-rocks",
+   "file": "crab-rocks.jpg",
+   "width": 1600,
+   "height": 1195,
+   "cutout": false,
+   "copy": "Stacking the rocks…",
+   "bytes": 636247,
+   "sha256": "a3ee82fba2fac1027f67cb40bfdf466368b73ec7d814a83907f44726f89405b6"
+  },
+  {
+   "id": "deep-dark",
+   "file": "deep-dark.jpg",
+   "width": 1600,
+   "height": 1195,
+   "cutout": false,
+   "copy": "Going deeper…",
+   "bytes": 339418,
+   "sha256": "bea330eb439fd49eb6915e59c50ce3152045fc40d860a41c9b57e6dd92011c33"
+  },
+  {
+   "id": "ship-sand",
+   "file": "ship-sand.jpg",
+   "width": 1600,
+   "height": 1195,
+   "cutout": false,
+   "copy": "Sinking the ship…",
+   "bytes": 580524,
+   "sha256": "983c29f24a9178959a9c6479aa68fb34ad4761df388f2464b20a82d95a2664e4"
+  },
+  {
+   "id": "whale-blue",
+   "file": "whale-blue.jpg",
+   "width": 1600,
+   "height": 1195,
+   "cutout": false,
+   "copy": "Calling the whale…",
+   "bytes": 498531,
+   "sha256": "ff5b1796187cd865423e2b34cb942f3267fbac9723a456fcf2c1048ab93232c3"
+  },
+  {
+   "id": "plankton",
+   "file": "plankton.jpg",
+   "width": 1600,
+   "height": 1195,
+   "cutout": false,
+   "copy": "Lighting the plankton…",
+   "bytes": 523290,
+   "sha256": "70c6869b2dfdb1bc2a5916d3694e8ef2417f90c42c1883f425e3e5a764439428"
+  },
+  {
+   "id": "reef-bright",
+   "file": "reef-bright.jpg",
+   "width": 1600,
+   "height": 1195,
+   "cutout": false,
+   "copy": "Glowing the reef…",
+   "bytes": 827911,
+   "sha256": "53eb43e6e7b0dfc6766941962b9b94ebd840ab5094a60dbc7fdc43e05dfdd31f"
+  },
+  {
+   "id": "fish-dark",
+   "file": "fish-dark.png",
+   "width": 1200,
+   "height": 895,
+   "cutout": true,
+   "copy": "Cutting out the figures…",
+   "bytes": 1272188,
+   "sha256": "116aca55cb5a009fc8be2786d86e1020aedd77957a7af99094918be79f5b7787"
+  },
+  {
+   "id": "fish-bright",
+   "file": "fish-bright.png",
+   "width": 1200,
+   "height": 820,
+   "cutout": true,
+   "copy": "Cutting out the figures…",
+   "bytes": 1259857,
+   "sha256": "2c1d13ff3544a0e3dcbcf930bdcc767be6a785f1cf980d1625ca6df302b1071d"
+  },
+  {
+   "id": "octopus",
+   "file": "octopus.png",
+   "width": 1200,
+   "height": 1128,
+   "cutout": true,
+   "copy": "Cutting out the figures…",
+   "bytes": 2110223,
+   "sha256": "58ac2dcb1ef663cbcf8ea616f6cb2539a7641199c92879f6818b899d71862a3c"
+  },
+  {
+   "id": "crab",
+   "file": "crab.png",
+   "width": 1200,
+   "height": 989,
+   "cutout": true,
+   "copy": "Cutting out the figures…",
+   "bytes": 1382985,
+   "sha256": "3007df9388764c80f9d105c36d6427e905748f5cd3302f6f8b2aa182cf68543c"
+  },
+  {
+   "id": "jellies",
+   "file": "jellies.png",
+   "width": 1200,
+   "height": 915,
+   "cutout": true,
+   "copy": "Cutting out the figures…",
+   "bytes": 1510136,
+   "sha256": "d823b15b69d79f5eb1d340ad7b954d9444d6e5877c86132544ee0040d27ebabc"
+  },
+  {
+   "id": "chest-open",
+   "file": "chest-open.png",
+   "width": 1130,
+   "height": 1200,
+   "cutout": true,
+   "copy": "Cutting out the figures…",
+   "bytes": 2521611,
+   "sha256": "c0c7a036c0d7fb2e43347c525808559df22c3cb069e533e3c14101d0c56cdf64"
+  },
+  {
+   "id": "whale",
+   "file": "whale.png",
+   "width": 1200,
+   "height": 588,
+   "cutout": true,
+   "copy": "Cutting out the figures…",
+   "bytes": 792522,
+   "sha256": "bd3cd1f2bd08740d2c117dd1180a907d595164bd61520d324b5e36429720a340"
+  },
+  {
+   "id": "kelp",
+   "file": "kelp.png",
+   "width": 739,
+   "height": 1200,
+   "cutout": true,
+   "copy": "Cutting out the figures…",
+   "bytes": 868175,
+   "sha256": "ab4e24945cf4ddd5e5c3adb7c7d93fdd70b64968ba69a53da64e545f6bf1d02e"
+  },
+  {
+   "id": "coral-front",
+   "file": "coral-front.png",
+   "width": 1200,
+   "height": 381,
+   "cutout": true,
+   "copy": "Cutting out the figures…",
+   "bytes": 969741,
+   "sha256": "f96303c8eb7049815b623d56b9ff906187c2dda59f169365797ab2ddab348129"
+  },
+  {
+   "id": "rocks",
+   "file": "rocks.png",
+   "width": 1200,
+   "height": 815,
+   "cutout": true,
+   "copy": "Cutting out the figures…",
+   "bytes": 1577195,
+   "sha256": "d40992879c1908614c9593d2bfbb3b24ca390698082499b0374c819aecbee165"
+  }
+ ],
+ "provenance": "GPT Image 2 (Higgsfield, 2k, high) gouache picture-book illustrations; cut-outs via the Higgsfield background remover, trimmed to their alpha bounds; back cards resampled to 1600 wide JPEG. Job ids in .cache/gen/fin/jobs.json."
+}

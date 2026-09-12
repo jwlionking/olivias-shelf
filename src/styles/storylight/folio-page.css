@@ -1,0 +1,208 @@
+/* Marketing / legal pages that live outside the WebGL nursery.
+   Same night sky, paper folio, gold corners and wooden pills as the reader. */
+
+.folio-page {
+  min-height: 100dvh;
+  position: relative;
+  color: var(--cream, #f8f0dd);
+  font-family: "Fredoka", "Baloo 2", system-ui, sans-serif;
+  background: #0b1030;
+  overflow-x: hidden;
+}
+
+.folio-sky {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    url("/sc/public/ui/sky.874540564572448d.webp") center / cover no-repeat,
+    radial-gradient(ellipse at 50% 18%, #2a3566 0%, #0b1030 62%, #05081a 100%);
+}
+.folio-sky::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/sc/public/textures/paper.7b1612c72db0354d.webp") center / 520px repeat;
+  mix-blend-mode: soft-light;
+  opacity: 0.28;
+}
+.folio-stars {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1.6px 1.6px at 12% 22%, #fff 60%, transparent),
+    radial-gradient(1.2px 1.2px at 28% 12%, #ffe9a8 60%, transparent),
+    radial-gradient(2px 2px at 68% 18%, #fff 60%, transparent),
+    radial-gradient(1.4px 1.4px at 82% 34%, #fff 60%, transparent),
+    radial-gradient(1.2px 1.2px at 42% 30%, #ffe9a8 60%, transparent),
+    radial-gradient(1.8px 1.8px at 90% 70%, #fff 60%, transparent),
+    radial-gradient(1.2px 1.2px at 8% 72%, #fff 60%, transparent),
+    radial-gradient(1.5px 1.5px at 22% 86%, #ffe9a8 60%, transparent);
+  animation: twinkle 3s ease-in-out infinite alternate;
+}
+.folio-moon {
+  position: absolute;
+  right: 5vw;
+  top: 7vh;
+  width: min(220px, 26vw);
+  height: min(220px, 26vw);
+  filter: drop-shadow(0 0 40px #ffe9a866);
+}
+.folio-moon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.folio-page > header,
+.folio-page > main,
+.folio-page > footer {
+  position: relative;
+  z-index: 1;
+}
+
+.sc-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 22px 8px;
+}
+.sc-nav .storycomet-logo {
+  width: min(190px, 48vw);
+  height: 48px;
+}
+.sc-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sc-nav-links a {
+  color: #fff3d6;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 14px;
+  text-shadow: 0 2px 8px #05081a99;
+}
+.sc-nav-links a:hover { color: #ffe9a8; }
+.sc-nav-links a[aria-current="page"] {
+  color: #ffe9a8;
+}
+
+.folio-main {
+  display: grid;
+  place-items: start center;
+  padding: 12px 16px 64px;
+}
+.folio-page .panel-shell {
+  margin: 12px auto 0;
+}
+.folio-page .panel-shell.pricing-wide {
+  width: min(900px, 96vw);
+  padding-left: 34px;
+  padding-right: 34px;
+  overflow: visible;
+  max-height: none;
+}
+.folio-page .panel-shell.legal {
+  width: min(680px, 94vw);
+}
+.folio-page .legal-copy {
+  color: #5a4a35;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "Andika", "Fredoka", system-ui, sans-serif;
+}
+.folio-page .legal-copy p { margin: 0 0 14px; }
+.folio-page .legal-copy h2 {
+  font-size: 22px;
+  margin: 22px 0 8px;
+}
+.folio-page a.ink-link {
+  color: #8d4f1f;
+  font-weight: 700;
+  text-decoration: none;
+}
+.folio-page a.ink-link:hover { text-decoration: underline; }
+
+.sc-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 28px 22px 36px;
+  color: #d9c8a4;
+  font-size: 13px;
+}
+.sc-foot a { color: #f7e3b8; text-decoration: none; }
+.sc-foot a:hover { color: #ffe9a8; }
+.sc-foot-links { display: flex; flex-wrap: wrap; gap: 16px; }
+
+.reader-picks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 8px 0 4px;
+}
+.reader-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px 8px 8px;
+  border: 0;
+  border-radius: 999px;
+  background: #fff9ec;
+  color: #3d2a17;
+  font: 700 14px/1 "Fredoka", system-ui, sans-serif;
+  box-shadow: inset 0 0 0 1px #d4b98288;
+  cursor: pointer;
+}
+.reader-chip[aria-pressed="true"] {
+  background: linear-gradient(180deg, #fff3d6, #f6d98a);
+  box-shadow: 0 0 0 1px #e0a83a, 0 3px 6px #05081a33;
+}
+.reader-chip img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.folio-form {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+}
+.folio-form label {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #a5642f;
+  font-weight: 700;
+}
+.folio-form input {
+  font: inherit;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #b8975f;
+  background: #fff9ec;
+  color: #2c2a3e;
+}
+
+@media (max-width: 720px) {
+  .folio-moon {
+    right: auto;
+    left: 50%;
+    top: 10px;
+    width: 96px;
+    height: 96px;
+    transform: translateX(-50%);
+    opacity: 0.85;
+  }
+  .folio-page .panel-shell.pricing-wide {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

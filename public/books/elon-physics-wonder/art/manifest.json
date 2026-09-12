@@ -1,0 +1,104 @@
+{
+ "cards": [
+  {
+   "id": "cover",
+   "file": "cover.jpg",
+   "width": 1200,
+   "height": 1600,
+   "cutout": false,
+   "copy": "Binding the cover\u2026",
+   "bytes": 573253
+  },
+  {
+   "id": "olivia-stand",
+   "file": "olivia-stand.webp",
+   "cutout": true,
+   "copy": "Waking olivia-stand\u2026",
+   "width": 543,
+   "height": 1600,
+   "bytes": 159122
+  },
+  {
+   "id": "elon-stand",
+   "file": "elon-stand.webp",
+   "width": 718,
+   "height": 1600,
+   "cutout": true,
+   "copy": "Waking elon-stand\u2026",
+   "bytes": 158082
+  },
+  {
+   "id": "pip-stand",
+   "file": "pip-stand.webp",
+   "width": 543,
+   "height": 1600,
+   "cutout": true,
+   "copy": "Waking pip-stand\u2026",
+   "bytes": 159122
+  },
+  {
+   "id": "rocket",
+   "file": "rocket.webp",
+   "width": 614,
+   "height": 986,
+   "cutout": true,
+   "copy": "Waking rocket\u2026",
+   "bytes": 110632
+  },
+  {
+   "id": "apple",
+   "file": "apple.webp",
+   "width": 805,
+   "height": 832,
+   "cutout": true,
+   "copy": "Waking apple\u2026",
+   "bytes": 150668
+  },
+  {
+   "id": "magnet",
+   "file": "magnet.webp",
+   "width": 727,
+   "height": 811,
+   "cutout": true,
+   "copy": "Waking magnet\u2026",
+   "bytes": 115742
+  },
+  {
+   "id": "workshop",
+   "file": "workshop.jpg",
+   "width": 1600,
+   "height": 1200,
+   "cutout": false,
+   "copy": "Painting workshop\u2026",
+   "bytes": 540022
+  },
+  {
+   "id": "orchard",
+   "file": "orchard.jpg",
+   "width": 1600,
+   "height": 1200,
+   "cutout": false,
+   "copy": "Painting orchard\u2026",
+   "bytes": 588934
+  },
+  {
+   "id": "launch",
+   "file": "launch.jpg",
+   "width": 1600,
+   "height": 900,
+   "cutout": false,
+   "copy": "Painting launch\u2026",
+   "bytes": 293560
+  },
+  {
+   "id": "stars",
+   "file": "stars.jpg",
+   "width": 1408,
+   "height": 1408,
+   "cutout": false,
+   "copy": "Painting stars\u2026",
+   "bytes": 537616
+  }
+ ],
+ "provenance": "Original gouache picture-book illustrations painted for Olivia's Shelf from a family photo of Olivia."
+}

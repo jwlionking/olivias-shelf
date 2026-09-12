@@ -1,0 +1,77 @@
+{
+ "cards": [
+  {
+   "id": "cover",
+   "file": "cover.jpg",
+   "width": 1200,
+   "height": 1600,
+   "cutout": false,
+   "copy": "Binding the cover\u2026",
+   "bytes": 485961
+  },
+  {
+   "id": "zero",
+   "file": "zero.webp",
+   "width": 1408,
+   "height": 1408,
+   "cutout": true,
+   "copy": "Waking zero\u2026",
+   "bytes": 333738
+  },
+  {
+   "id": "belle",
+   "file": "belle.webp",
+   "width": 1408,
+   "height": 1408,
+   "cutout": true,
+   "copy": "Waking belle\u2026",
+   "bytes": 281316
+  },
+  {
+   "id": "rock",
+   "file": "rock.webp",
+   "width": 930,
+   "height": 740,
+   "cutout": true,
+   "copy": "Waking rock\u2026",
+   "bytes": 173252
+  },
+  {
+   "id": "candy",
+   "file": "candy.webp",
+   "width": 1268,
+   "height": 608,
+   "cutout": true,
+   "copy": "Waking candy\u2026",
+   "bytes": 195342
+  },
+  {
+   "id": "couch",
+   "file": "couch.jpg",
+   "width": 1600,
+   "height": 1200,
+   "cutout": false,
+   "copy": "Painting couch\u2026",
+   "bytes": 479467
+  },
+  {
+   "id": "yard",
+   "file": "yard.jpg",
+   "width": 1600,
+   "height": 1200,
+   "cutout": false,
+   "copy": "Painting yard\u2026",
+   "bytes": 625878
+  },
+  {
+   "id": "creek",
+   "file": "creek.jpg",
+   "width": 1600,
+   "height": 900,
+   "cutout": false,
+   "copy": "Painting creek\u2026",
+   "bytes": 538349
+  }
+ ],
+ "provenance": "Original gouache picture-book illustrations painted for Storylight from family photos of Zero and Belle."
+}

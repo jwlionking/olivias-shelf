@@ -1,0 +1,245 @@
+{
+ "cards": [
+  {
+   "id": "cottage-front",
+   "file": "cottage-front.jpg",
+   "width": 1600,
+   "height": 1195,
+   "cutout": false,
+   "copy": "Painting the cottage…",
+   "bytes": 711083,
+   "sha256": "ca133e0f60cc79516b0d8aef56ffa503a674a719aa406665675ecdf461c23ee5"
+  },
+  {
+   "id": "meadow-sky",
+   "file": "meadow-sky.jpg",
+   "width": 1600,
+   "height": 1195,
+   "cutout": false,
+   "copy": "Sowing the meadow…",
+   "bytes": 591124,
+   "sha256": "603a58e6a2e43043b3e501df9fff6d388cd186d9712a3facfe5043ade4f0e8c8"
+  },
+  {
+   "id": "fence-field",
+   "file": "fence-field.jpg",
+   "width": 1600,
+   "height": 1195,
+   "cutout": false,
+   "copy": "Mending the fence…",
+   "bytes": 581497,
+   "sha256": "126e0e401d75bea958b498554838d95e04892f3bf0dd842baed6f2266ec4d62d"
+  },
+  {
+   "id": "river",
+   "file": "river.jpg",
+   "width": 1600,
+   "height": 1195,
+   "cutout": false,
+   "copy": "Filling the river…",
+   "bytes": 686707,
+   "sha256": "68a6d04b6c7a2caeafa539a355a44a11258a4636d1a0e7d88d901b8eca34d4e2"
+  },
+  {
+   "id": "hill",
+   "file": "hill.jpg",
+   "width": 1600,
+   "height": 1195,
+   "cutout": false,
+   "copy": "Raising the hill…",
+   "bytes": 657848,
+   "sha256": "ca572d9545e262d2b9dea68dc3f0d358373d3c3eabfd8151f469c024c1dcf2e6"
+  },
+  {
+   "id": "clouds-sky",
+   "file": "clouds-sky.jpg",
+   "width": 1600,
+   "height": 1195,
+   "cutout": false,
+   "copy": "Fluffing the clouds…",
+   "bytes": 495299,
+   "sha256": "3908d7be46c9e2c8ae1c08b84c72bf2c068719d9be32c9d92dc04e47f33997e9"
+  },
+  {
+   "id": "oak-wood",
+   "file": "oak-wood.jpg",
+   "width": 1600,
+   "height": 1195,
+   "cutout": false,
+   "copy": "Growing the oak…",
+   "bytes": 795175,
+   "sha256": "09e9243b1df898dbabf0fca26414164de84924c58a2755e1ac753db907df5894"
+  },
+  {
+   "id": "windy-field",
+   "file": "windy-field.jpg",
+   "width": 1600,
+   "height": 1195,
+   "cutout": false,
+   "copy": "Stirring up the wind…",
+   "bytes": 685412,
+   "sha256": "af678e83eeb48f7380f8e2aec77f7e7fa3ad6f1fa5fafc7449f6298b80f8ffd4"
+  },
+  {
+   "id": "sunset-meadow",
+   "file": "sunset-meadow.jpg",
+   "width": 1600,
+   "height": 1195,
+   "cutout": false,
+   "copy": "Warming the sunset…",
+   "bytes": 546926,
+   "sha256": "85772eb64e8381c9edcc24500a3f0749a6892c654778aabbbe900be5ae3b6ca6"
+  },
+  {
+   "id": "home-wall",
+   "file": "home-wall.jpg",
+   "width": 1600,
+   "height": 1195,
+   "cutout": false,
+   "copy": "Papering the bedroom…",
+   "bytes": 472271,
+   "sha256": "d19a9e4bac1083a82694a4bf1514dbd440d3a24c630f313afa72d5ba6d6c5bd7"
+  },
+  {
+   "id": "kite-face",
+   "file": "kite-face.png",
+   "width": 1172,
+   "height": 1200,
+   "cutout": true,
+   "copy": "Painting the kite…",
+   "bytes": 1281503,
+   "sha256": "89c619a0c9d4296ad3275a6e219ffd0880fb6e8a2f5dcf4e7dc3c9f7e12fccda"
+  },
+  {
+   "id": "ducks",
+   "file": "ducks.png",
+   "width": 1200,
+   "height": 957,
+   "cutout": true,
+   "copy": "Cutting out the figures…",
+   "bytes": 1389429,
+   "sha256": "846869932c9294668784b71c73a8e6dd4eda9a51a6876af0603e6330a7bf9d1c"
+  },
+  {
+   "id": "sheep",
+   "file": "sheep.png",
+   "width": 1200,
+   "height": 1066,
+   "cutout": true,
+   "copy": "Cutting out the figures…",
+   "bytes": 2308602,
+   "sha256": "b665ab83f15ac29e29721fc66636254b184cca1cbb54ff6a92de0acae634a05a"
+  },
+  {
+   "id": "cloud-sleepy",
+   "file": "cloud-sleepy.png",
+   "width": 1200,
+   "height": 843,
+   "cutout": true,
+   "copy": "Cutting out the figures…",
+   "bytes": 1204759,
+   "sha256": "cf2d015b6aa81c214f7f27e61ed93f4290069282827730c278ed2d3f67220958"
+  },
+  {
+   "id": "crow",
+   "file": "crow.png",
+   "width": 983,
+   "height": 1200,
+   "cutout": true,
+   "copy": "Cutting out the figures…",
+   "bytes": 1470832,
+   "sha256": "b4f758b2cef8233a7766f2ca3a1504ddc873856769c41e445cd12bb68d195c2f"
+  },
+  {
+   "id": "oak-tree",
+   "file": "oak-tree.png",
+   "width": 1200,
+   "height": 931,
+   "cutout": true,
+   "copy": "Cutting out the figures…",
+   "bytes": 1802226,
+   "sha256": "033faca0dddaf29e15a8df57ad7de1ccc7f892e156b521f6bd70442ce8613418"
+  },
+  {
+   "id": "fence",
+   "file": "fence.png",
+   "width": 1200,
+   "height": 354,
+   "cutout": true,
+   "copy": "Cutting out the figures…",
+   "bytes": 869353,
+   "sha256": "67a959fe179b4a0d66848df433c3ddc27bd3e6c65d9f0b39e2e9b9205b2a1a03"
+  },
+  {
+   "id": "grass",
+   "file": "grass.png",
+   "width": 1200,
+   "height": 477,
+   "cutout": true,
+   "copy": "Cutting out the figures…",
+   "bytes": 1244620,
+   "sha256": "036825894138e04ef86d4cb65269b083bc13a4e1b012d13bfa8736d858dbc116"
+  },
+  {
+   "id": "birches",
+   "file": "birches.png",
+   "width": 981,
+   "height": 1200,
+   "cutout": true,
+   "copy": "Cutting out the figures…",
+   "bytes": 1310842,
+   "sha256": "68327611ff067dfe46576728b67a6ffa71e9dc61198a9b728838cd573d9182df"
+  },
+  {
+   "id": "door",
+   "file": "door.png",
+   "width": 756,
+   "height": 1200,
+   "cutout": true,
+   "copy": "Cutting out the figures…",
+   "bytes": 1799853,
+   "sha256": "cc7d9d13f20a1746327f5881c099d61f9ae44449caea003045e916bec3fc8b25"
+  },
+  {
+   "id": "riverbank",
+   "file": "riverbank.png",
+   "width": 1200,
+   "height": 479,
+   "cutout": true,
+   "copy": "Cutting out the figures…",
+   "bytes": 638563,
+   "sha256": "19d628fa051c9e71c7b1dbe447bc59a33c2bda6911ecab71ce30f7b731387e90"
+  },
+  {
+   "id": "bedside",
+   "file": "bedside.png",
+   "width": 1200,
+   "height": 925,
+   "cutout": true,
+   "copy": "Cutting out the figures…",
+   "bytes": 1826213,
+   "sha256": "3a4a7ec6e907298c48939dcfb6e5d13caac84b6ba2c8f933f28eed87a21ee5a7"
+  },
+  {
+   "id": "festival-sky",
+   "file": "festival-sky.jpg",
+   "width": 1600,
+   "height": 1195,
+   "cutout": false,
+   "copy": "Flying a hundred kites…",
+   "bytes": 675122,
+   "sha256": "dba26236b61696fb5595a848071883584083f72a9e0f2165f9880b901e0a870e"
+  },
+  {
+   "id": "kite-blue",
+   "file": "kite-blue.png",
+   "width": 1081,
+   "height": 1200,
+   "cutout": true,
+   "copy": "Painting a blue kite…",
+   "bytes": 1305261,
+   "sha256": "723f9eaa2356a5f48f7bdb24c1b0f3ff6297add6e1ca37c64c7a725cad79ed08"
+  }
+ ],
+ "provenance": "GPT Image 2 (Higgsfield, 2k, high) gouache picture-book illustrations; cut-outs via the Higgsfield background remover, trimmed to their alpha bounds; back cards resampled to 1600 wide JPEG. Job ids in .cache/gen/nia/jobs.json and art/prompts.json."
+}

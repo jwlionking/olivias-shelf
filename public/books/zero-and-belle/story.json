@@ -1,0 +1,142 @@
+{
+  "id": "zero-and-belle",
+  "title": "Zero and Belle",
+  "subtitle": "One rock, one romp",
+  "author": "Storylight",
+  "ageRange": "4 to 8",
+  "readingLevel": "Early chapter",
+  "blurb": "Zero is eight and loves rocks. Belle is eleven months and loves to play. Two German shepherd sisters, one candy toy, and a very important stone.",
+  "cover": "art/cover.jpg",
+  "scenes": "scenes.js",
+  "colors": {
+    "cloth": "#5a4632",
+    "endpaper": { "base": "#2a241c", "ink": "#e8c48a", "pattern": "stars" }
+  },
+  "hero": { "name": "Zero", "felt": "otto" },
+  "magic": {
+    "rock": "There it is. Smooth as a secret.",
+    "home": "One rock. One candy. Two sisters on the couch."
+  },
+  "narrator": {
+    "openai": {
+      "model": "gpt-4o-mini-tts",
+      "voice": "nova",
+      "speed": 0.92,
+      "instructions": "Warm gentle storyteller reading a family picture book about two real dogs. Soft, clear, never rushed. Zero is calm. Belle is bouncy. Give them kind voices without barking words."
+    }
+  },
+  "pages": [
+    {
+      "id": "meet",
+      "scene": "couch",
+      "heading": "Two sisters",
+      "text": "{Zero:zero/wag} is eight. She is brown as toast and calm as a Sunday. {Belle:belle/wag} is eleven months — jet black, skinny, long and tall, almost as big as Zero, tan only on her legs. She never sits still. Two sisters. One {couch}.",
+      "hint": "Tap Zero. Tap Belle. Tap the candy.",
+      "words": ["Zero", "Belle", "couch", "sisters"]
+    },
+    {
+      "id": "rocks",
+      "scene": "rocks",
+      "heading": "Zero loves rocks",
+      "text": "{Zero:zero/sniff} loved {rocks:rock/clack}. Smooth ones. Stripey ones. The one that fit her paw just so. She kept it like a treasure. Belle watched. Belle's tail said, I have an idea.",
+      "hint": "Tap the rock. Tap Zero.",
+      "words": ["Zero", "rocks", "treasure", "Belle"]
+    },
+    {
+      "id": "wreck",
+      "scene": "wreck",
+      "heading": "Belle loves to play",
+      "text": "{Belle:belle/wreck} loved to {play:candy/play}. She wrecked the pillow pile. She play-{bit:belle/bite} the rainbow {candy}. She bounced. She was always, always happy.",
+      "hint": "Tap Belle. She is a wrecking ball with ears.",
+      "words": ["Belle", "play", "pillows", "candy", "happy"]
+    },
+    {
+      "id": "steal",
+      "scene": "steal",
+      "heading": "The idea",
+      "text": "Then Belle {took:belle/run} Zero's {rock:rock/clack}. Zoom! Across the floor. Zero stood up, slow as an old queen. \"That is my rock,\" she said, without words.",
+      "hint": "Tap Belle. She has the rock.",
+      "words": ["Belle", "rock", "Zero", "zoom"]
+    },
+    {
+      "id": "yard",
+      "scene": "yard",
+      "heading": "Into the yard",
+      "text": "Out they went. {Belle:belle/run} with the {candy:candy/play} in her mouth. {Zero:zero/run} followed, calm, because sisters do. The {yard} was full of grass and trouble.",
+      "hint": "Tap the yard. Tap both sisters.",
+      "words": ["yard", "Belle", "candy", "Zero"]
+    },
+    {
+      "id": "creek",
+      "scene": "creek",
+      "heading": "The creek",
+      "text": "The {creek:creek/splash} was a box of {stones:rock/clack}. {Zero:zero/sniff} was in heaven. {Belle:belle/wreck} splashed every one. Water on the ears. Water on the candy. Happy.",
+      "hint": "Tap the water. Tap Zero's stones.",
+      "words": ["creek", "stones", "Zero", "Belle"]
+    },
+    {
+      "id": "find",
+      "scene": "find",
+      "heading": "There it is",
+      "text": "In the grass sat the {rock:rock/find}. Smooth as a secret. {Zero:zero/wag} nosed it kind. {Belle:belle/bite} play-nipped the air, then dropped a tiny pebble at Zero's paws. \"Yours,\" said the pebble.",
+      "hint": "Tap the rock.",
+      "words": ["rock", "Zero", "Belle", "pebble"]
+    },
+    {
+      "id": "home",
+      "scene": "home",
+      "heading": "Home on the couch",
+      "text": "Back on the {couch}. {Zero:zero/sleep} with her rock. {Belle:belle/sleep} with her rainbow {candy:candy/play}. Two sisters. One home. All happy.",
+      "hint": "Tap them goodnight.",
+      "words": ["couch", "Zero", "Belle", "candy", "home"]
+    }
+  ],
+  "end": {
+    "heading": "The End",
+    "text": "You {read} the whole {story}. Zero loves rocks. Belle loves to play. That is how sisters work.",
+    "prompt": "If you had a favorite rock, where would you keep it?"
+  },
+  "credits": "Original story and painted scenes made for Storylight, from photos of Zero and Belle.",
+  "quiz": {
+    "folder": "quiz",
+    "questions": [
+      {
+        "q": "Who loves rocks?",
+        "options": [
+          { "word": "Zero", "image": "art:zero.webp" },
+          { "word": "Belle", "image": "art:belle.webp" },
+          { "word": "candy", "image": "art:candy.webp" }
+        ],
+        "answer": 0,
+        "right": "Yes! Zero is eight, and rocks are her treasure.",
+        "wrong": "Not quite. Zero is the rock collector. Belle is the player."
+      },
+      {
+        "q": "Who has the rainbow candy?",
+        "options": [
+          { "word": "Belle", "image": "art:belle.webp" },
+          { "word": "Zero", "image": "art:zero.webp" },
+          { "word": "rock", "image": "art:rock.webp" }
+        ],
+        "answer": 0,
+        "right": "That's right! Belle carries her rainbow candy everywhere.",
+        "wrong": "Hmm. Belle is the one with the candy toy."
+      },
+      {
+        "q": "Who is the puppy?",
+        "options": [
+          { "word": "Belle", "label": "Belle, eleven months" },
+          { "word": "Zero", "label": "Zero, eight years" },
+          { "word": "rock", "label": "the rock" }
+        ],
+        "answer": 0,
+        "right": "Yes! Belle is eleven months. Zero is eight.",
+        "wrong": "Not quite. Belle is the puppy. Zero is eight."
+      }
+    ]
+  },
+  "pins": [
+    { "id": "star", "name": "Star pin", "page": 1, "at": [0.4, 0, -0.2] },
+    { "id": "rose", "name": "Rose pin", "page": 8, "at": [0.2, 0, 0.3] }
+  ]
+}

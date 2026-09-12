@@ -1,0 +1,10 @@
+/* Andika (SIL OFL) for early readers, Fredoka and Baloo 2 (OFL) for UI. Downloaded from Google Fonts,
+   subset to Latin (the other scripts fall back to system fonts) and packed as woff2 by fontTools. */
+@font-face { font-family: 'Andika'; font-style: normal; font-weight: 400; font-display: swap; src: url("/sc/public/fonts/andika-400.dfe21cd8b12ff215.woff2") format('woff2'); }
+@font-face { font-family: 'Andika'; font-style: normal; font-weight: 700; font-display: swap; src: url("/sc/public/fonts/andika-700.b285d862c2c2a895.woff2") format('woff2'); }
+@font-face { font-family: 'Fredoka'; font-style: normal; font-weight: 400; font-display: swap; src: url("/sc/public/fonts/fredoka-400.4343c8406fa0c063.woff2") format('woff2'); }
+@font-face { font-family: 'Fredoka'; font-style: normal; font-weight: 500; font-display: swap; src: url("/sc/public/fonts/fredoka-500.43219fb92dc3f7c3.woff2") format('woff2'); }
+@font-face { font-family: 'Fredoka'; font-style: normal; font-weight: 600; font-display: swap; src: url("/sc/public/fonts/fredoka-600.ac77fa0b85fb10eb.woff2") format('woff2'); }
+@font-face { font-family: 'Fredoka'; font-style: normal; font-weight: 700; font-display: swap; src: url("/sc/public/fonts/fredoka-700.1c5bfb9a629ff100.woff2") format('woff2'); }
+@font-face { font-family: 'Baloo 2'; font-style: normal; font-weight: 600; font-display: swap; src: url("/sc/public/fonts/baloo-2-600.822ee69e80b502dd.woff2") format('woff2'); }
+@font-face { font-family: 'Baloo 2'; font-style: normal; font-weight: 800; font-display: swap; src: url("/sc/public/fonts/baloo-2-800.97203f257be192fd.woff2") format('woff2'); }

@@ -1,0 +1,134 @@
+{
+  "id": "elon-physics-wonder",
+  "title": "Elon and the Physics of Wonder",
+  "subtitle": "Ask why, then try",
+  "author": "Olivia's Shelf",
+  "ageRange": "6 to 10",
+  "readingLevel": "Early chapter",
+  "blurb": "Olivia visits a sunny workshop, where Elon turns falling apples, magnets and paper rockets into physics she can touch.",
+  "cover": "art/cover.jpg",
+  "scenes": "scenes.js",
+  "colors": {
+    "cloth": "#2c3a4a",
+    "endpaper": { "base": "#1c2836", "ink": "#f0c978", "pattern": "stars" }
+  },
+  "hero": { "name": "Olivia", "felt": "otto" },
+  "magic": {
+    "launch": "The little rocket pushed the air, and the air pushed back.",
+    "drop": "Everything falls. That pull has a name: gravity."
+  },
+  "narrator": {
+    "openai": {
+      "model": "gpt-4o-mini-tts",
+      "voice": "onyx",
+      "speed": 0.94,
+      "instructions": "Warm, clear storyteller reading a science picture book to a child. Curious, never lecturing. Pause at full stops."
+    }
+  },
+  "pages": [
+    {
+      "id": "shop",
+      "scene": "workshop",
+      "heading": "The workshop",
+      "text": "{Olivia} pushed open the {workshop} door. {Elon:elon/wave} looked up from a chalkboard. \"Hello,\" he said. \"Today we {ask:olivia/ask} why. Then we {try:elon/teach}.\"",
+      "hint": "Tap Elon. Tap Olivia. Tap the little rocket.",
+      "words": ["Olivia", "workshop", "Elon", "ask", "try"]
+    },
+    {
+      "id": "apple",
+      "scene": "apple-fall",
+      "heading": "Why things fall",
+      "text": "An {apple:apple/fall} hung in the air. \"Let go,\" said {Elon:elon/look}. The apple {fell:apple/drop}. \"That pull is {gravity},\" said Elon. \"The Earth is hugging everything.\"",
+      "hint": "Tap the apple and watch it fall.",
+      "words": ["apple", "fell", "gravity", "Elon"]
+    },
+    {
+      "id": "push",
+      "scene": "rocket-push",
+      "heading": "Push, and it pushes back",
+      "text": "\"A {rocket:rocket/push} does not fly by magic,\" said {Elon:elon/teach}. \"It {pushes:rocket/fly} the air down. The air {pushes} the rocket up. Every action has a partner.\"",
+      "hint": "Tap the rocket. Watch it lift.",
+      "words": ["rocket", "pushes", "air", "up"]
+    },
+    {
+      "id": "magnet",
+      "scene": "magnets",
+      "heading": "Invisible hands",
+      "text": "{Olivia:olivia/ask} held a {magnet:magnet/pull}. It tugged without touching. \"Some forces you cannot see,\" said {Elon:elon/look}. \"Electricity is a river of tiny sparks. Magnets are their quiet cousins.\"",
+      "hint": "Tap the magnet.",
+      "words": ["magnet", "forces", "electricity", "sparks"]
+    },
+    {
+      "id": "stars",
+      "scene": "star-board",
+      "heading": "Suns far away",
+      "text": "They stood under a chalkboard {sky:stars/glow}. \"{Stars:stars/glow} are suns,\" said {Elon:elon/teach}. \"They look small because they are very far. Light is the fastest thing we know.\"",
+      "hint": "Tap the starry board.",
+      "words": ["sky", "stars", "suns", "light"]
+    },
+    {
+      "id": "go",
+      "scene": "launch",
+      "heading": "Try",
+      "text": "\"Now we {try:rocket/fly},\" said {Elon:elon/wave}. {Olivia:olivia/run} counted. Three, two, one. The paper {rocket:rocket/fly} hopped, then {flew}. Physics is a promise you can test.",
+      "hint": "Tap the rocket to launch.",
+      "words": ["try", "counted", "rocket", "flew"]
+    },
+    {
+      "id": "why",
+      "scene": "ask-why",
+      "heading": "Keep asking why",
+      "text": "The sun went gold in the {workshop} window. \"The best engine is a question,\" said {Elon:elon/teach}. {Olivia:olivia/ask} smiled. \"Why?\" \"Yes,\" said Elon. \"That one. Keep it.\"",
+      "hint": "Tap Olivia. Tap Elon.",
+      "words": ["workshop", "question", "why", "keep"]
+    }
+  ],
+  "end": {
+    "heading": "The End",
+    "text": "You {read} a whole {story} of falling, pushing and stars. Ask why. Then try.",
+    "prompt": "If you could test one question tomorrow, what would it be?"
+  },
+  "credits": "Painted for Olivia's Shelf from a family photo of Olivia. A picture-book inventor teaches physics; this is not a biography.",
+  "quiz": {
+    "folder": "quiz",
+    "questions": [
+      {
+        "q": "What pulls the apple down?",
+        "options": [
+          { "word": "gravity", "label": "gravity" },
+          { "word": "wind", "label": "the wind" },
+          { "word": "magnet", "label": "a magnet" }
+        ],
+        "answer": 0,
+        "right": "Yes! Gravity is the Earth's hug. It pulls the apple down.",
+        "wrong": "Not quite. Elon called that pull gravity."
+      },
+      {
+        "q": "How does a rocket go up?",
+        "options": [
+          { "word": "push", "label": "it pushes, and the air pushes back" },
+          { "word": "wings", "label": "it flaps wings" },
+          { "word": "magic", "label": "magic" }
+        ],
+        "answer": 0,
+        "right": "That's right! Every push has a partner push.",
+        "wrong": "Hmm. The rocket pushes the air down, and the air pushes the rocket up."
+      },
+      {
+        "q": "What are stars?",
+        "options": [
+          { "word": "suns", "label": "suns, very far away" },
+          { "word": "lamps", "label": "tiny lamps" },
+          { "word": "holes", "label": "holes in the night" }
+        ],
+        "answer": 0,
+        "right": "Yes! Stars are suns. They look small because they are far.",
+        "wrong": "Not quite. Elon said stars are suns, very far away."
+      }
+    ]
+  },
+  "pins": [
+    { "id": "star", "name": "Star pin", "page": 5, "at": [0.4, 0, -0.2] },
+    { "id": "moon", "name": "Moon pin", "page": 6, "at": [0.36, 0, 0.2] }
+  ]
+}

@@ -1,0 +1,32 @@
+# deps & build
+node_modules/
+.vercel/
+.tanstack/
+.nitro/
+.output/
+dist/
+*.local
+
+# sandbox / QA only
+screenshots/
+artifacts/
+attachments/
+*.log
+.project_id
+.node_modules.lock
+
+# Grok builder internals (not the app)
+.grok/skills/
+.grok/references/
+.grok/*.jpg
+.grok/*.png
+.grok/*.html
+.grok/preview.log
+.grok/status
+.grok/og-pending
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
