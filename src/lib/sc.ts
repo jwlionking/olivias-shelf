@@ -1,4 +1,5 @@
 import catalog from "./sc-catalog.json";
+import { cdn } from "./cdn";
 
 const map = catalog as Record<string, string>;
 
@@ -12,7 +13,7 @@ export const FREE_BOOK_IDS = [
 ] as const;
 
 export function sc(key: string): string {
-  return map[key] ?? `/sc/${key}`;
+  return cdn(map[key] ?? `/sc/${key}`);
 }
 
 export function isFreeBook(id: string) {
@@ -20,39 +21,39 @@ export function isFreeBook(id: string) {
 }
 
 export function coverUrl(id: string) {
-  return (
+  return cdn(
     map[`books/${id}/art/cover.jpg`] ||
-    map[`books/${id}/art/cover-shelf.webp`] ||
-    `/books/${id}/art/cover.jpg`
+      map[`books/${id}/art/cover-shelf.webp`] ||
+      `/books/${id}/art/cover.jpg`,
   );
 }
 
 export function shelfCoverUrl(id: string) {
-  return map[`books/${id}/art/cover-shelf.webp`] || `/books/${id}/art/cover-shelf.webp`;
+  return cdn(map[`books/${id}/art/cover-shelf.webp`] || `/books/${id}/art/cover-shelf.webp`);
 }
 
 export function logoUrl(id: string) {
-  return map[`books/${id}/art/logo.png`] || `/books/${id}/art/logo.png`;
+  return cdn(map[`books/${id}/art/logo.png`] || `/books/${id}/art/logo.png`);
 }
 
 export function wallUrl(id: string) {
-  return (
-    map[`public/textures/walls/${id}.jpg`] ||
-    `/textures/walls/${id}.jpg`
-  );
+  return cdn(map[`public/textures/walls/${id}.jpg`] || `/textures/walls/${id}.jpg`);
 }
 
 export function heroModelUrl(id: string, file: string) {
-  return map[`books/${id}/${file}`];
+  const found = map[`books/${id}/${file}`];
+  return found ? cdn(found) : found;
 }
 
 export function voiceUrl(id: string, page: number) {
-  return map[`books/${id}/voice/page-${page + 1}.mp3`];
+  const found = map[`books/${id}/voice/page-${page + 1}.mp3`];
+  return found ? cdn(found) : found;
 }
 
 export function wordCardUrl(id: string, word: string) {
   const key = `books/${id}/words/cards/${word.toLowerCase()}.jpg`;
-  return map[key];
+  const found = map[key];
+  return found ? cdn(found) : found;
 }
 
 export const BRAND = {
@@ -98,5 +99,7 @@ export const TOY_MODELS = [
 ] as const;
 
 export function toyUrl(name: string) {
-  return map[`public/models/toys/${name}.glb`];
+  const found = map[`public/models/toys/${name}.glb`];
+  return found ? cdn(found) : found;
 }
+
