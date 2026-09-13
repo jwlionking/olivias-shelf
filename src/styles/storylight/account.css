@@ -4,5 +4,5 @@
 #account-dialog [hidden] { display: none !important; }
 #account-dialog button:disabled { opacity: .6; cursor: wait; }
 .account-membership:empty, #account-status:empty, #account-identity:empty { display: none; }
-.account-plans-link { display: block; text-align: center; font-size: 14px; font-weight: 800; color: #8d4f1f; margin: 16px 0 4px; }
+.account-plans-link { display: block; text-align: center; font-size: 14px; font-weight: 800; color: #6e3c14; margin: 16px 0 4px; }
 

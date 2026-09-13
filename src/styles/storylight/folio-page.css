@@ -110,7 +110,7 @@
   width: min(680px, 94vw);
 }
 .folio-page .legal-copy {
-  color: #5a4a35;
+  color: #3f3224;
   font-size: 16px;
   line-height: 1.6;
   font-family: "Andika", "Fredoka", system-ui, sans-serif;
@@ -179,7 +179,7 @@
   font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #a5642f;
+  color: #7a3f16;
   font-weight: 700;
 }
 .folio-form input {

@@ -8,11 +8,11 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: "bg-comet text-cream hover:bg-comet-deep",
+        primary: "bg-comet-deep text-white hover:bg-[#a83224]",
         night: "bg-night text-cream hover:bg-night-2",
         cream: "bg-cream text-ink border border-line hover:bg-paper-2",
         ghost: "bg-transparent text-ink hover:bg-paper-2",
-        nightGhost: "bg-white/8 text-cream hover:bg-white/14 border border-white/10",
+        nightGhost: "bg-white/12 text-cream hover:bg-white/20 border border-white/20",
       },
       size: {
         sm: "h-9 px-3.5 text-sm",

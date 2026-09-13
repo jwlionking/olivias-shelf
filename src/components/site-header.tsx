@@ -37,7 +37,7 @@ export function SiteHeader({ night = false }: { night?: boolean }) {
                     ? "bg-white/12 text-cream"
                     : "bg-paper-2 text-ink"
                   : night
-                    ? "text-cream/70 hover:text-cream"
+                    ? "text-cream/90 hover:text-cream"
                     : "text-ink-soft hover:text-ink",
               )}
             >
