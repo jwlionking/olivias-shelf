@@ -1,0 +1,31 @@
+{
+  "id": "elon-ice-steam",
+  "title": "Olivia and the Three Faces of Water",
+  "subtitle": "Ice, puddle, cloud — same stuff",
+  "author": "Olivia's Shelf",
+  "ageRange": "6 to 10",
+  "readingLevel": "Early chapter",
+  "blurb": "Olivia watches an ice cube become a puddle, then a cloud on the window, and learns that water can wear three faces.",
+  "cover": "art/cover.jpg",
+  "scenes": "scenes.js",
+  "colors": {"cloth": "#2a4a6a", "endpaper": {"base": "#1c2836", "ink": "#f0c978", "pattern": "stars"}},
+  "hero": {"name": "Olivia", "felt": "otto"},
+  "magic": {"launch": "The little rocket pushed the air, and the air pushed back.", "drop": "Everything falls. That pull has a name: gravity."},
+  "narrator": {"openai": {"model": "gpt-4o-mini-tts", "voice": "onyx", "speed": 0.94, "instructions": "Warm, clear storyteller reading a science picture book to a child. Curious, never lecturing. Pause at full stops."}},
+  "pages": [
+    {"id": "shop", "scene": "workshop", "heading": "Water standing still", "text": "{Olivia} held an {ice} cube on the {workshop} bench. Hard. Cold. \"That is water standing still,\" said {Elon:elon/look}.", "hint": "Tap Olivia. Tap Elon.", "words": ["Olivia", "ice", "workshop", "Elon"]},
+    {"id": "melt", "scene": "apple-fall", "heading": "A sliding face", "text": "The cube became a {puddle} in her palm. \"Same water, now sliding,\" said {Elon:elon/teach}. \"{Heat} made it change face.\"", "hint": "Tap the apple. Tap Elon.", "words": ["puddle", "Elon", "Heat"]},
+    {"id": "steam", "scene": "workshop", "heading": "A flying face", "text": "The puddle vanished from the warm window. \"It did not disappear,\" said Elon. \"It became {air}-water. We call that {steam}.\"", "hint": "Tap Olivia.", "words": ["air", "steam"]},
+    {"id": "back", "scene": "workshop", "heading": "Faces can turn back", "text": "Steam on a cold pane turned back into {drops}. \"Faces can change both {ways},\" said Elon.", "hint": "Tap the workshop.", "words": ["drops", "ways"]},
+    {"id": "cloud", "scene": "star-board", "heading": "Clouds are drops", "text": "They looked at a {cloud:stars/glow}. \"Clouds are tiny drops,\" said {Elon:elon/teach}. \"{Rain} is those drops holding hands and falling.\"", "hint": "Tap the starry board.", "words": ["cloud", "Elon", "Rain"]},
+    {"id": "why", "scene": "ask-why", "heading": "Keep asking why", "text": "\"Why can water be three things?\" asked {Olivia:olivia/ask}. \"Its tiny bits can hold, slide, or fly,\" said {Elon:elon/teach}. \"Ask why again tomorrow.\"", "hint": "Tap Olivia. Tap Elon.", "words": ["Olivia", "Elon"]}
+  ],
+  "end": {"heading": "The End", "text": "Water can be ice, puddle, or cloud. Same stuff. Three faces.", "prompt": "Where will you look for water's three faces tomorrow?"},
+  "credits": "Painted for Olivia's Shelf. Elon is a picture-book inventor who teaches physics; this is not a biography.",
+  "quiz": {"folder": "quiz", "questions": [
+    {"q": "What are water's three faces?", "options": [{"word": "ice-puddle-and-steam", "label": "ice, puddle, and steam"}, {"word": "rock-wood-and-glass", "label": "rock, wood, and glass"}, {"word": "red-blue-and-green", "label": "red, blue, and green"}], "answer": 0, "right": "Yes! Solid, liquid, and gas.", "wrong": "Ice, sliding water, and steam."},
+    {"q": "What makes ice change face?", "options": [{"word": "heat", "label": "heat"}, {"word": "a-magnet", "label": "a magnet"}, {"word": "a-song", "label": "a song"}], "answer": 0, "right": "That's right. Heat speeds the tiny bits.", "wrong": "Heat made it change face."},
+    {"q": "What is a cloud?", "options": [{"word": "tiny-drops-of-water", "label": "tiny drops of water"}, {"word": "cotton", "label": "cotton"}, {"word": "smoke-from-stars", "label": "smoke from stars"}], "answer": 0, "right": "Yes. Tiny drops. Rain is those drops falling.", "wrong": "Clouds are tiny drops of water."}
+  ]},
+  "pins": [{"id": "star", "name": "Star pin", "page": 4, "at": [0.4, 0, -0.2]}, {"id": "moon", "name": "Moon pin", "page": 5, "at": [0.36, 0, 0.2]}]
+}
