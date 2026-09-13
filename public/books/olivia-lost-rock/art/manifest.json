@@ -1,0 +1,61 @@
+{
+  "cards": [
+    {
+      "id": "cover",
+      "file": "cover.jpg",
+      "width": 1200,
+      "height": 1800,
+      "cutout": false,
+      "copy": "Painting cover\u2026"
+    },
+    {
+      "id": "olivia-stand",
+      "file": "olivia-stand.webp",
+      "width": 529,
+      "height": 1081,
+      "cutout": true,
+      "copy": "Waking olivia stand\u2026"
+    },
+    {
+      "id": "zero",
+      "file": "zero.webp",
+      "width": 641,
+      "height": 920,
+      "cutout": true,
+      "copy": "Waking zero\u2026"
+    },
+    {
+      "id": "belle",
+      "file": "belle.webp",
+      "width": 631,
+      "height": 1057,
+      "cutout": true,
+      "copy": "Waking belle\u2026"
+    },
+    {
+      "id": "rock",
+      "file": "rock.webp",
+      "width": 697,
+      "height": 1191,
+      "cutout": true,
+      "copy": "Waking rock\u2026"
+    },
+    {
+      "id": "patio",
+      "file": "patio.jpg",
+      "width": 1600,
+      "height": 1067,
+      "cutout": false,
+      "copy": "Painting patio\u2026"
+    },
+    {
+      "id": "garden",
+      "file": "garden.jpg",
+      "width": 1600,
+      "height": 1067,
+      "cutout": false,
+      "copy": "Painting garden\u2026"
+    }
+  ],
+  "provenance": "Gouache picture-book paintings from family photos in grok-imagine-references (Olivia, Zero, Belle, Home)."
+}

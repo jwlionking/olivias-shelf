@@ -1,0 +1,213 @@
+{
+  "author": "Olivia's Shelf",
+  "ageRange": "4 to 8",
+  "readingLevel": "Early chapter",
+  "cover": "art/cover.jpg",
+  "scenes": "scenes.js",
+  "hero": {
+    "name": "Olivia",
+    "felt": "otto"
+  },
+  "narrator": {
+    "grok": {
+      "voice": "carina",
+      "language": "en",
+      "instructions": "Warm gentle storyteller reading a family picture book. Soft, clear, never rushed. Olivia is curious. Zero is calm. Belle is bouncy."
+    },
+    "openai": {
+      "model": "grok-tts",
+      "voice": "carina",
+      "speed": 0.92,
+      "instructions": "Warm gentle storyteller reading a family picture book. Soft, clear, never rushed."
+    },
+    "bundled": {
+      "folder": "voice",
+      "format": "mp3",
+      "timings": true
+    }
+  },
+  "credits": "Painted from family photos of Olivia, Zero, Belle, and home.",
+  "pins": [
+    {
+      "id": "star",
+      "name": "Star pin",
+      "page": 2,
+      "at": [
+        0.4,
+        0,
+        -0.2
+      ]
+    },
+    {
+      "id": "moon",
+      "name": "Moon pin",
+      "page": 5,
+      "at": [
+        0.3,
+        0,
+        0.2
+      ]
+    }
+  ],
+  "id": "olivia-two-sisters",
+  "title": "Olivia and the Two Sisters",
+  "subtitle": "Zero is calm. Belle is bounce.",
+  "blurb": "Olivia sits on the beige couch with Zero, who loves rocks, and Belle, who never sits still. Two German shepherd sisters. One girl. One home.",
+  "colors": {
+    "cloth": "#6b5340",
+    "endpaper": {
+      "base": "#2a241c",
+      "ink": "#e8c48a",
+      "pattern": "stars"
+    }
+  },
+  "magic": {
+    "home": "Two sisters. One couch. All happy."
+  },
+  "pages": [
+    {
+      "id": "meet",
+      "scene": "couch",
+      "heading": "The couch",
+      "text": "{Olivia} sat on the beige {couch}. On one side sat {Zero:zero/wag}, brown as toast, calm as a Sunday. On the other bounced {Belle:belle/wag}, jet black with tan legs, almost as big, never still.",
+      "hint": "Tap Olivia. Tap Zero. Tap Belle.",
+      "words": [
+        "Olivia",
+        "Zero",
+        "Belle",
+        "couch"
+      ]
+    },
+    {
+      "id": "zero",
+      "scene": "couch",
+      "heading": "Zero is calm",
+      "text": "{Zero:zero/sniff} is eight. She loves {rocks:rock/clack}. Smooth ones. Stripey ones. The one that fits her paw just so. Olivia whispered, \"You are a quiet queen.\"",
+      "hint": "Tap Zero.",
+      "words": [
+        "Zero",
+        "rocks",
+        "Olivia"
+      ]
+    },
+    {
+      "id": "belle",
+      "scene": "couch",
+      "heading": "Belle is bounce",
+      "text": "{Belle:belle/wreck} is eleven months. She wrecks the pillow pile. She play-bites the air. Her tail says, I have an idea. Olivia laughed. \"You are a wrecking ball with ears.\"",
+      "hint": "Tap Belle.",
+      "words": [
+        "Belle",
+        "Olivia"
+      ]
+    },
+    {
+      "id": "yard",
+      "scene": "patio",
+      "heading": "Out the door",
+      "text": "The {yard} was red clay and green woods. {Belle:belle/run} zoomed. {Zero:zero/run} followed, because sisters do. {Olivia:olivia/run} ran after both.",
+      "hint": "Tap the yard.",
+      "words": [
+        "yard",
+        "Belle",
+        "Zero",
+        "Olivia"
+      ]
+    },
+    {
+      "id": "different",
+      "scene": "patio",
+      "heading": "Different is good",
+      "text": "\"Why is Zero still and Belle wild?\" asked {Olivia:olivia/ask}. Zero's ears said, I am the older one. Belle's tail said, I am the puppy. That is how sisters work.",
+      "hint": "Tap Olivia.",
+      "words": [
+        "Olivia",
+        "Zero",
+        "Belle"
+      ]
+    },
+    {
+      "id": "home",
+      "scene": "couch",
+      "heading": "Back on the couch",
+      "text": "Back on the {couch}. {Zero:zero/sleep} with her rock. {Belle:belle/wag} with her wiggle. {Olivia} in the middle. Two sisters. One girl. All happy.",
+      "hint": "Tap them goodnight.",
+      "words": [
+        "couch",
+        "Zero",
+        "Belle",
+        "Olivia"
+      ]
+    }
+  ],
+  "end": {
+    "heading": "The End",
+    "text": "You {read} the whole {story}. Zero is calm. Belle is bounce. Olivia loves them both.",
+    "prompt": "If you had two dog sisters, which one would you sit beside first?"
+  },
+  "quiz": {
+    "folder": "quiz",
+    "questions": [
+      {
+        "q": "Who is the calm older sister?",
+        "options": [
+          {
+            "word": "Zero",
+            "label": "Zero"
+          },
+          {
+            "word": "Belle",
+            "label": "Belle"
+          },
+          {
+            "word": "Olivia",
+            "label": "Olivia"
+          }
+        ],
+        "answer": 0,
+        "right": "Yes! Zero is eight, and calm as a Sunday.",
+        "wrong": "Zero is the calm one. Belle is the puppy."
+      },
+      {
+        "q": "Who never sits still?",
+        "options": [
+          {
+            "word": "Belle",
+            "label": "Belle"
+          },
+          {
+            "word": "Zero",
+            "label": "Zero"
+          },
+          {
+            "word": "the-couch",
+            "label": "the couch"
+          }
+        ],
+        "answer": 0,
+        "right": "That's right. Belle is bounce.",
+        "wrong": "Belle is the one who never sits still."
+      },
+      {
+        "q": "Where do they all sit together?",
+        "options": [
+          {
+            "word": "the-couch",
+            "label": "the couch"
+          },
+          {
+            "word": "the-truck",
+            "label": "the truck"
+          },
+          {
+            "word": "the-moon",
+            "label": "the moon"
+          }
+        ],
+        "answer": 0,
+        "right": "Yes. Home is the beige couch.",
+        "wrong": "They sit together on the couch."
+      }
+    ]
+  }
+}

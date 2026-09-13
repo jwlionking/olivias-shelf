@@ -1,0 +1,205 @@
+{
+  "author": "Olivia's Shelf",
+  "ageRange": "4 to 8",
+  "readingLevel": "Early chapter",
+  "cover": "art/cover.jpg",
+  "scenes": "scenes.js",
+  "hero": {
+    "name": "Olivia",
+    "felt": "otto"
+  },
+  "narrator": {
+    "grok": {
+      "voice": "carina",
+      "language": "en",
+      "instructions": "Warm gentle storyteller reading a family picture book. Soft, clear, never rushed. Olivia is curious. Zero is calm. Belle is bouncy."
+    },
+    "openai": {
+      "model": "grok-tts",
+      "voice": "carina",
+      "speed": 0.92,
+      "instructions": "Warm gentle storyteller reading a family picture book. Soft, clear, never rushed."
+    },
+    "bundled": {
+      "folder": "voice",
+      "format": "mp3",
+      "timings": true
+    }
+  },
+  "credits": "Painted from family photos of Olivia, Zero, Belle, and home.",
+  "pins": [
+    {
+      "id": "star",
+      "name": "Star pin",
+      "page": 2,
+      "at": [
+        0.4,
+        0,
+        -0.2
+      ]
+    },
+    {
+      "id": "moon",
+      "name": "Moon pin",
+      "page": 5,
+      "at": [
+        0.3,
+        0,
+        0.2
+      ]
+    }
+  ],
+  "id": "olivia-house-hill",
+  "title": "Olivia and the House on the Hill",
+  "subtitle": "Home is the white house.",
+  "blurb": "Olivia walks the red clay in front of her long white house \u2014 dark metal roof, wooden deck, white pickup, woods all around \u2014 and learns the shape of home.",
+  "colors": {
+    "cloth": "#5a6a78",
+    "endpaper": {
+      "base": "#1a2430",
+      "ink": "#d8e0e8",
+      "pattern": "stars"
+    }
+  },
+  "magic": {
+    "home": "The white house kept them. That is what home does."
+  },
+  "pages": [
+    {
+      "id": "look",
+      "scene": "house",
+      "heading": "The white house",
+      "text": "{Olivia} stood in the red clay and looked up. Long white walls. A dark metal roof. A little wooden deck. \"That is my {home},\" she told the woods, in case the woods did not know.",
+      "hint": "Tap Olivia. Tap home.",
+      "words": [
+        "Olivia",
+        "home"
+      ]
+    },
+    {
+      "id": "deck",
+      "scene": "house",
+      "heading": "The little deck",
+      "text": "The deck was a wooden pocket on the front. A black door. A wreath. {Olivia:olivia/wave} waved from the clay as if she were arriving from far away, which she was not, but it felt true.",
+      "hint": "Tap Olivia.",
+      "words": [
+        "Olivia"
+      ]
+    },
+    {
+      "id": "truck",
+      "scene": "house",
+      "heading": "The white truck",
+      "text": "A white pickup slept on the clay like a big tame animal. {Zero:zero/sniff} sniffed a tire. {Belle:belle/wag} wanted to climb it. {Olivia} said, \"Not today.\"",
+      "hint": "Tap Zero. Tap Belle.",
+      "words": [
+        "Zero",
+        "Belle",
+        "Olivia"
+      ]
+    },
+    {
+      "id": "woods",
+      "scene": "house",
+      "heading": "The woods around",
+      "text": "Green woods wrapped the hill the way arms wrap a sleep. {Olivia:olivia/ask} liked that. Home was not just a house. Home was the trees that kept it company.",
+      "hint": "Tap home.",
+      "words": [
+        "Olivia"
+      ]
+    },
+    {
+      "id": "garden",
+      "scene": "garden",
+      "heading": "Around the corner",
+      "text": "Around the corner, the {garden} tables waited, and the gravel, and the glass doors. {Olivia:olivia/run} knew every turn. Knowing a place is a kind of love.",
+      "hint": "Tap the garden.",
+      "words": [
+        "garden",
+        "Olivia"
+      ]
+    },
+    {
+      "id": "in",
+      "scene": "house",
+      "heading": "Inside",
+      "text": "{Olivia} climbed the deck. {Zero:zero/sleep} and {Belle:belle/wag} came too. The black door opened. The white house took them in, the way it always does. That is the whole trick of home.",
+      "hint": "Tap them.",
+      "words": [
+        "Olivia",
+        "Zero",
+        "Belle"
+      ]
+    }
+  ],
+  "end": {
+    "heading": "The End",
+    "text": "You {read} the whole {story}. Home is the white house on the hill, and the woods, and who walks in.",
+    "prompt": "What does your home look like from the outside?"
+  },
+  "quiz": {
+    "folder": "quiz",
+    "questions": [
+      {
+        "q": "What color is the house?",
+        "options": [
+          {
+            "word": "white",
+            "label": "white"
+          },
+          {
+            "word": "purple",
+            "label": "purple"
+          },
+          {
+            "word": "gold",
+            "label": "gold"
+          }
+        ],
+        "answer": 0,
+        "right": "A long white house with a dark roof.",
+        "wrong": "The house is white."
+      },
+      {
+        "q": "What sleeps on the clay like a tame animal?",
+        "options": [
+          {
+            "word": "the-white-truck",
+            "label": "the white truck"
+          },
+          {
+            "word": "the-moon",
+            "label": "the moon"
+          },
+          {
+            "word": "a-boat",
+            "label": "a boat"
+          }
+        ],
+        "answer": 0,
+        "right": "The white pickup.",
+        "wrong": "The white truck."
+      },
+      {
+        "q": "What wraps the hill?",
+        "options": [
+          {
+            "word": "woods",
+            "label": "woods"
+          },
+          {
+            "word": "ocean",
+            "label": "ocean"
+          },
+          {
+            "word": "city",
+            "label": "city"
+          }
+        ],
+        "answer": 0,
+        "right": "Green woods, like arms around a sleep.",
+        "wrong": "Woods wrap the hill."
+      }
+    ]
+  }
+}

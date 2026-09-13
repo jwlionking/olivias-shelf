@@ -1,0 +1,206 @@
+{
+  "author": "Olivia's Shelf",
+  "ageRange": "4 to 8",
+  "readingLevel": "Early chapter",
+  "cover": "art/cover.jpg",
+  "scenes": "scenes.js",
+  "hero": {
+    "name": "Olivia",
+    "felt": "otto"
+  },
+  "narrator": {
+    "grok": {
+      "voice": "carina",
+      "language": "en",
+      "instructions": "Warm gentle storyteller reading a family picture book. Soft, clear, never rushed. Olivia is curious. Zero is calm. Belle is bouncy."
+    },
+    "openai": {
+      "model": "grok-tts",
+      "voice": "carina",
+      "speed": 0.92,
+      "instructions": "Warm gentle storyteller reading a family picture book. Soft, clear, never rushed."
+    },
+    "bundled": {
+      "folder": "voice",
+      "format": "mp3",
+      "timings": true
+    }
+  },
+  "credits": "Painted from family photos of Olivia, Zero, Belle, and home.",
+  "pins": [
+    {
+      "id": "star",
+      "name": "Star pin",
+      "page": 2,
+      "at": [
+        0.4,
+        0,
+        -0.2
+      ]
+    },
+    {
+      "id": "moon",
+      "name": "Moon pin",
+      "page": 5,
+      "at": [
+        0.3,
+        0,
+        0.2
+      ]
+    }
+  ],
+  "id": "olivia-yard-romp",
+  "title": "Olivia and the Yard Romp",
+  "subtitle": "Red clay, two tails, one laugh.",
+  "blurb": "Olivia bursts onto the red-clay yard with Belle racing ahead and Zero trotting behind. Patio chairs, a green shed, and woods full of wind.",
+  "colors": {
+    "cloth": "#8a4a28",
+    "endpaper": {
+      "base": "#2a1810",
+      "ink": "#f0c978",
+      "pattern": "stars"
+    }
+  },
+  "magic": {
+    "home": "Red clay on the shoes. Two tails. One laugh."
+  },
+  "pages": [
+    {
+      "id": "door",
+      "scene": "house",
+      "heading": "The door opens",
+      "text": "The black door on the little wooden deck swung wide. {Olivia:olivia/run} jumped down to the red clay. \"Come on!\" The {yard} was waiting.",
+      "hint": "Tap Olivia.",
+      "words": [
+        "Olivia",
+        "yard"
+      ]
+    },
+    {
+      "id": "belle",
+      "scene": "patio",
+      "heading": "Belle races",
+      "text": "{Belle:belle/run} was already a black streak across the clay. Tan legs flying. Tail like a flag. {Olivia:olivia/run} laughed so hard she had to run to keep up.",
+      "hint": "Tap Belle.",
+      "words": [
+        "Belle",
+        "Olivia"
+      ]
+    },
+    {
+      "id": "zero",
+      "scene": "patio",
+      "heading": "Zero follows",
+      "text": "{Zero:zero/run} did not race. She trotted, calm, because older sisters do. She kept one eye on Belle and one eye on {Olivia}. That is a job too.",
+      "hint": "Tap Zero.",
+      "words": [
+        "Zero",
+        "Olivia",
+        "Belle"
+      ]
+    },
+    {
+      "id": "chairs",
+      "scene": "patio",
+      "heading": "Around the chairs",
+      "text": "They looped the wooden chairs. They passed the picnic table. They sniffed the oval garden bed. The {yard} was a whole world, and it was theirs.",
+      "hint": "Tap the yard.",
+      "words": [
+        "yard"
+      ]
+    },
+    {
+      "id": "woods",
+      "scene": "patio",
+      "heading": "The woods watch",
+      "text": "Green woods stood all around, like a quiet fence. {Olivia:olivia/ask} waved at them. {Belle:belle/wag} barked once at a bird. {Zero:zero/wag} sat, queen of the clay.",
+      "hint": "Tap them.",
+      "words": [
+        "Olivia",
+        "Belle",
+        "Zero"
+      ]
+    },
+    {
+      "id": "home",
+      "scene": "house",
+      "heading": "Back to the deck",
+      "text": "Shoes full of red dust. Two tails wagging. One laugh left. They climbed the little deck. {Home} smelled like dinner and couch. The romp was done \u2014 until tomorrow.",
+      "hint": "Tap home.",
+      "words": [
+        "Home",
+        "Olivia"
+      ]
+    }
+  ],
+  "end": {
+    "heading": "The End",
+    "text": "You {read} the whole {story}. The yard is red clay, green woods, and room to run.",
+    "prompt": "If you ran a romp, who would race, and who would trot?"
+  },
+  "quiz": {
+    "folder": "quiz",
+    "questions": [
+      {
+        "q": "Who races ahead?",
+        "options": [
+          {
+            "word": "Belle",
+            "label": "Belle"
+          },
+          {
+            "word": "Zero",
+            "label": "Zero"
+          },
+          {
+            "word": "the-shed",
+            "label": "the shed"
+          }
+        ],
+        "answer": 0,
+        "right": "Yes. Belle is a black streak.",
+        "wrong": "Belle races. Zero trots."
+      },
+      {
+        "q": "What color is the yard dirt?",
+        "options": [
+          {
+            "word": "red-clay",
+            "label": "red clay"
+          },
+          {
+            "word": "blue-snow",
+            "label": "blue snow"
+          },
+          {
+            "word": "gold-sand",
+            "label": "gold sand"
+          }
+        ],
+        "answer": 0,
+        "right": "Red clay, just like home.",
+        "wrong": "The yard is red clay."
+      },
+      {
+        "q": "Who keeps one eye on everyone?",
+        "options": [
+          {
+            "word": "Zero",
+            "label": "Zero"
+          },
+          {
+            "word": "Belle",
+            "label": "Belle"
+          },
+          {
+            "word": "a-bird",
+            "label": "a bird"
+          }
+        ],
+        "answer": 0,
+        "right": "Zero is the older sister. That is her job.",
+        "wrong": "Zero watches. Belle runs."
+      }
+    ]
+  }
+}
