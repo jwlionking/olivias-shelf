@@ -1,7 +1,9 @@
-/** Production picture/audio files live on GitHub so the host deploy stays small. */
-export const ASSET_CDN = import.meta.env.PROD
-  ? "https://cdn.jsdelivr.net/gh/jwlionking/olivias-shelf@main/public"
-  : "";
+/**
+ * Pictures are served from this host. Set VITE_ASSET_CDN to a jsDelivr GitHub
+ * URL only when the deploy itself cannot host the paintings (Vercel size caps).
+ * jsDelivr's @main cache lags git, which is why the physics covers looked blank.
+ */
+export const ASSET_CDN = import.meta.env.VITE_ASSET_CDN || "";
 
 export function cdn(path: string): string {
   if (!path) return path;
