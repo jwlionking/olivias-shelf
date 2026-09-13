@@ -1,5 +1,4 @@
 import * as THREE from "three";
-import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { RoundedBoxGeometry } from "three/addons/geometries/RoundedBoxGeometry.js";
 import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
@@ -13,12 +12,13 @@ import {
   isFreeBook,
   sc,
   shelfCoverUrl,
-  toyUrl,
+  toyCardUrl,
   TOY_MODELS,
   wallUrl,
+  heroStandUrl,
 } from "@/lib/sc";
 import { playSfx } from "@/lib/sc-sound";
-import { artFilesFor, buildDiorama } from "./dioramas";
+import { artFilesFor, buildDiorama, makeFigure } from "./dioramas";
 
 export type WorldView = "loading" | "shelf" | "read";
 
@@ -119,7 +119,6 @@ export async function createWorld(
 
   const loader = new THREE.TextureLoader();
   loader.setCrossOrigin("anonymous");
-  const gltf = new GLTFLoader();
   const textures = new Map<string, THREE.Texture>();
 
   const loadTex = (key: string, url: string, srgb = true) =>
@@ -426,7 +425,7 @@ export async function createWorld(
   dioramaHost.position.set(0.54, 0.06, 0);
   bookRoot.add(dioramaHost);
   let diorama: THREE.Group | null = null;
-  const heroes = new Map<string, THREE.Object3D>();
+  const heroes = new Map<string, THREE.Texture>();
 
   let view: WorldView = "loading";
   let look = false;
@@ -479,21 +478,14 @@ export async function createWorld(
     return hits[0] ?? null;
   }
 
-  async function loadHero(id: string, model: string) {
+  async function loadHero(id: string) {
     if (heroes.has(id)) return heroes.get(id)!;
-    const url = sc(`books/${id}/${model}`);
+    const url = heroStandUrl(id);
+    if (!url) return null;
     try {
-      const g = await gltf.loadAsync(url);
-      g.scene.traverse((o) => {
-        if ((o as THREE.Mesh).isMesh) {
-          o.castShadow = true;
-          const m = o as THREE.Mesh;
-          const mat = m.material as THREE.MeshStandardMaterial;
-          if (mat) mat.envMapIntensity = 0.6;
-        }
-      });
-      heroes.set(id, g.scene);
-      return g.scene;
+      const t = await loadTex(`hero:${id}`, url);
+      heroes.set(id, t);
+      return t;
     } catch {
       return null;
     }
@@ -537,13 +529,7 @@ export async function createWorld(
       }
     }
     await loadArt(id);
-    const heroFile =
-      id === "nia-runaway-kite"
-        ? "models/nia.glb"
-        : id === "fin-glowing-sea"
-          ? "models/fin.glb"
-          : "models/otto.glb";
-    await loadHero(id, heroFile);
+    await loadHero(id);
     bookRoot.visible = true;
     bookRoot.scale.setScalar(0.001);
     bookRoot.userData.pop = 0;
@@ -629,22 +615,17 @@ export async function createWorld(
   };
   raf = requestAnimationFrame(loop);
 
-  // toys after first paint
+  // toys after first paint: painted cards, not generated meshes
   setTimeout(() => {
     TOY_MODELS.slice(0, 10).forEach((name, i) => {
-      const url = toyUrl(name);
+      const url = toyCardUrl(name);
       if (!url) return;
-      gltf.load(url, (g) => {
-        const obj = g.scene;
-        const box = new THREE.Box3().setFromObject(obj);
-        const size = box.getSize(new THREE.Vector3());
-        const s = 0.22 / Math.max(size.y, 0.01);
-        obj.scale.setScalar(s);
-        obj.position.set((i - 4.5) * 0.42, 0.02, 0);
-        obj.traverse((c) => {
-          if ((c as THREE.Mesh).isMesh) c.castShadow = true;
-        });
-        toyGroup.add(obj);
+      loader.load(url, (t) => {
+        t.colorSpace = THREE.SRGBColorSpace;
+        const fig = makeFigure(t, 0.18);
+        if (!fig) return;
+        fig.position.set((i - 4.5) * 0.42, 0, 0);
+        toyGroup.add(fig);
       });
     });
   }, 400);

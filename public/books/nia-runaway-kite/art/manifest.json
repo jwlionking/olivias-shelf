@@ -1,6 +1,14 @@
 {
  "cards": [
   {
+   "id": "nia-stand",
+   "file": "nia-stand.webp",
+   "width": 659,
+   "height": 1572,
+   "cutout": true,
+   "copy": "Waking Nia…"
+  },
+  {
    "id": "cottage-front",
    "file": "cottage-front.jpg",
    "width": 1600,
@@ -241,5 +249,5 @@
    "sha256": "723f9eaa2356a5f48f7bdb24c1b0f3ff6297add6e1ca37c64c7a725cad79ed08"
   }
  ],
- "provenance": "GPT Image 2 (Higgsfield, 2k, high) gouache picture-book illustrations; cut-outs via the Higgsfield background remover, trimmed to their alpha bounds; back cards resampled to 1600 wide JPEG. Job ids in .cache/gen/nia/jobs.json and art/prompts.json."
+ "provenance": "GPT Image 2 (Higgsfield, 2k, high) gouache picture-book illustrations; cut-outs via the Higgsfield background remover, trimmed to their alpha bounds; back cards resampled to 1600 wide JPEG. Job ids in .cache/gen/nia/jobs.json and art/prompts.json. Character stands painted with Grok Imagine; cream paper knocked out. No generated meshes."
 }

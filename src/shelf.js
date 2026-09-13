@@ -163,8 +163,8 @@ export function makeShelf({ books, textures }) {
 
   /* ---------- the lock on a Pro book ---------- */
   // a small padlock floats in front of the top-right corner of every book the reader cannot open
-  // yet: the painted one from public/models/lock.glb when it exists, a gold one built here until
-  // then. It is a child of the book, so it stays with it; textures.locked(id) says who is locked.
+  // yet: a gold one built from Three.js primitives. It is a child of the book, so it stays with
+  // it; textures.locked(id) says who is locked.
   const locked = typeof textures.locked === "function" ? textures.locked : () => false;
   // the built padlock: a rounded gold body with a cream enamel face and a keyhole, a tubular steel
   // shackle, a glossy clearcoat that catches the room, and a soft halo behind it
@@ -216,7 +216,7 @@ export function makeShelf({ books, textures }) {
   };
   const locks = [];
   items.forEach((b, i) => {
-    const model = textures.lockModel ? P.fitModel(textures.lockModel.clone(true), { height: 0.3, keep: true }) : builtLock();
+    const model = builtLock();
     model.traverse((o) => { if (o.isMesh) { o.castShadow = casting; o.userData.caster = true; o.userData.lockOf = b.id; } });
     const holder = new THREE.Group();
     holder.add(model);
@@ -232,9 +232,7 @@ export function makeShelf({ books, textures }) {
 
   /* ---------- figurines and toys ---------- */
   // every book keeps the things from its own story on the plank above it. Each toy arrives as its
-  // painted card first (a few dozen kilobytes, textures.toyFor) and pops into place; its model
-  // (a megabyte or two, textures.toyModelFor) is fetched only once its row is in view, or next to
-  // it, and takes the card's place with a fresh pop (loadToysInView)
+  // painted card (a few dozen kilobytes, textures.toyFor) and pops into place. No generated meshes.
   const toys = [];
   const shelfTop = upperY + 0.025, shelfBack = -(depth - upperDepth) / 2;
   const manifest = (textures.toyManifest || {});
@@ -282,30 +280,8 @@ export function makeShelf({ books, textures }) {
   };
   /** the cards for the row in view and the rows beside it; farther rows wait until the shelf slides there */
   const spawnToysInView = () => books.forEach((meta, i) => { if (Math.abs(Math.floor(i / PER_PAGE) - slide.page) <= 1) spawnToys(meta, i); });
-  /** The models for the toys whose row is in view (then the rows beside it), two at a time; a
-      loaded model takes its card's place with a fresh pop. Called whenever the shelf slides. */
-  let loading = 0;
-  const loadToysInView = () => {
-    if (!textures.toyModelFor) return;
-    while (loading < 2) {
-      const next = toys.find((r) => r.model === "card" && r.page === slide.page);
-      if (!next) return;
-      next.model = "loading";
-      loading++;
-      textures.toyModelFor(next.name).then((scene) => {
-        loading--;
-        if (!scene) { next.model = "none"; return; }
-        const object = P.fitModel(scene, { height: next.height, keep: true });
-        dress(object, next);
-        next.holder.remove(next.object);
-        next.object = object;
-        next.holder.add(object);
-        next.model = "model";
-        next.pop = 0.35;   // a fresh little pop as the real toy takes the card's place
-        loadToysInView();
-      }).catch(() => { loading--; next.model = "none"; loadToysInView(); });
-    }
-  };
+  /** Cards only — generated toy meshes are not loaded. Kept as a no-op so scroll still refreshes. */
+  const loadToysInView = () => {};
 
   /* ---------- api ---------- */
   const byId = (id) => items.find((b) => b.id === id);
@@ -372,7 +348,7 @@ export function makeShelf({ books, textures }) {
       loadToysInView();
       return slide.page;
     },
-    /** fetch the models for the toys in view (the cards stand in until then) */
+    /** spawn painted toy cards for the toys in view */
     loadToysInView,
     scrollBy(delta) { return api.scrollTo(slide.page + delta); },
     /** the whole span the shelf can slide across (rows of three books) */

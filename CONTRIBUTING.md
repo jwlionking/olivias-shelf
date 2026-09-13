@@ -10,10 +10,10 @@ stay. **New paintings and new voices do not come from generated 3D meshes.**
 2. **Grok Imagine** — covers, rooms, isolated cut-out props, character stands.
 3. **Grok Voice** (Carina) — bundled page narration.
 
-Do not generate meshes for new work. No Meshy, Hunyuan, or new `.glb` heroes.
-Pop-ups are painted cards that hinge and rise, the same way the original books
-do. Inherited Storylight titles (Lila, Otto, Nia, Fin, Zero & Belle) may keep
-the meshes they already ship.
+Do not generate meshes. No Meshy, Hunyuan, or `.glb` heroes. Pop-ups are
+painted cards that hinge and rise. Otto, Nia and Fin are Grok Imagine
+stands (`makePaperHero`). Toys stay as painted cards. The padlock and table
+toys are procedural Three.js.
 
 ## Original Three.js use cases to retain
 

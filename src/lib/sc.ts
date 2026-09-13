@@ -67,9 +67,20 @@ export function wallUrl(id: string) {
   return cdn(`/textures/walls/${id}.jpg`);
 }
 
-export function heroModelUrl(id: string, file: string) {
-  const found = map[`books/${id}/${file}`];
-  return found ? cdn(found) : found;
+export function heroStandUrl(id: string) {
+  const file =
+    id === "nia-runaway-kite"
+      ? "nia-stand.webp"
+      : id === "fin-glowing-sea"
+        ? "fin-stand.webp"
+        : id === "otto-shy-moon"
+          ? "otto-stand.webp"
+          : null;
+  return file ? cdn(`/books/${id}/art/${file}`) : null;
+}
+
+export function heroModelUrl(id: string, _file?: string) {
+  return heroStandUrl(id);
 }
 
 export function voiceUrl(id: string, page: number) {
@@ -124,7 +135,11 @@ export const TOY_MODELS = [
   "train",
 ] as const;
 
+export function toyCardUrl(name: string) {
+  const found = map[`public/models/toys/cards/${name}.webp`];
+  return found ? cdn(found) : cdn(`/models/toys/cards/${name}.webp`);
+}
+
 export function toyUrl(name: string) {
-  const found = map[`public/models/toys/${name}.glb`];
-  return found ? cdn(found) : found;
+  return toyCardUrl(name);
 }

@@ -1,6 +1,14 @@
 {
  "cards": [
   {
+   "id": "fin-stand",
+   "file": "fin-stand.webp",
+   "width": 619,
+   "height": 1482,
+   "cutout": true,
+   "copy": "Waking Fin…"
+  },
+  {
    "id": "reef-dark",
    "file": "reef-dark.jpg",
    "width": 1600,
@@ -191,5 +199,5 @@
    "sha256": "d40992879c1908614c9593d2bfbb3b24ca390698082499b0374c819aecbee165"
   }
  ],
- "provenance": "GPT Image 2 (Higgsfield, 2k, high) gouache picture-book illustrations; cut-outs via the Higgsfield background remover, trimmed to their alpha bounds; back cards resampled to 1600 wide JPEG. Job ids in .cache/gen/fin/jobs.json."
+ "provenance": "GPT Image 2 (Higgsfield, 2k, high) gouache picture-book illustrations; cut-outs via the Higgsfield background remover, trimmed to their alpha bounds; back cards resampled to 1600 wide JPEG. Job ids in .cache/gen/fin/jobs.json. Character stands painted with Grok Imagine; cream paper knocked out. No generated meshes."
 }

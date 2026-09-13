@@ -14,11 +14,11 @@ paper pages that turn, and a Three.js diorama that stands up on each spread.
 | Page narration (`public/books/<id>/voice/page-N.mp3`) | **Grok Voice** (Carina) via `npm run voices:generate` |
 | Pop-up motion, shelf, pages, lighting, hotspots | Original **Three.js** use cases — keep them |
 
-**Do not generate 3D meshes** for new books. No Meshy, no Hunyuan, no new
-`.glb` heroes, no image-to-3D toys, no rigged character models. Pop-ups are
-**painted cards** (`backCard`, `figure`) standing in a `Diorama`, not generated
-geometry. The original Storylight books (Lila, Otto, Nia, Fin, Zero & Belle)
-may keep the meshes they already shipped; do not add more.
+**Do not generate 3D meshes.** No Meshy, no Hunyuan, no `.glb` heroes, no
+image-to-3D toys, no rigged character models. Pop-ups are **painted cards**
+(`backCard`, `figure`, `makePaperHero`) standing in a `Diorama`, not generated
+geometry. Otto, Nia and Fin use Grok Imagine stands. Toys on the shelf are
+painted cards. The padlock and table lamp/train are procedural Three.js.
 
 ## Keep these Three.js use cases
 

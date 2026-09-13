@@ -1,5 +1,5 @@
 {
- "mode": "Hunyuan 3D v3.1 text-to-3D (pro, PBR, 40k faces) via Higgsfield, repacked with tools/repack_glb.py --max 768",
+ "mode": "Painted paper-cut cards. No generated meshes.",
  "heights": {
   "house": 0.3,
   "tree": 0.34,
@@ -222,7 +222,7 @@
   "tooth": "boing"
  },
  "pending": {
-  "note": "Models still to make through Higgsfield (image-to-3D from docs/toy-refs/<name>.png, painted in the shelf toys' own style, then tools/repack_glb.py --max 768): until public/models/toys/<name>.glb exists the same painting stands on the shelf as a cut-out card (public/models/toys/cards/<name>.webp).",
+  "note": "Toys stand on the shelf as painted cut-out cards (public/models/toys/cards/<name>.webp). Do not generate .glb meshes for them.",
   "toys": [
    "cablecar",
    "sealion",

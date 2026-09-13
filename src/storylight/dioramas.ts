@@ -6,7 +6,7 @@ export type DioramaContext = {
   scene: string;
   page: number;
   textures: Map<string, THREE.Texture>;
-  hero?: THREE.Object3D | null;
+  hero?: THREE.Texture | THREE.Object3D | null;
   t: number;
 };
 
@@ -100,19 +100,22 @@ function addPiece(group: THREE.Group, ctx: DioramaContext, piece: Piece) {
 }
 
 function addHero(group: THREE.Group, ctx: DioramaContext, x: number, z: number, scale = 0.55) {
-  if (!ctx.hero) return;
-  const h = ctx.hero.clone(true);
-  h.scale.setScalar(scale);
-  h.position.set(x, 0, z);
-  h.name = "hero";
-  h.userData.tap = "hero";
-  h.traverse((c) => {
+  const map =
+    ctx.hero && (ctx.hero as THREE.Texture).isTexture
+      ? (ctx.hero as THREE.Texture)
+      : ctx.textures.get(`hero:${ctx.bookId}`);
+  const fig = makeFigure(map, 0.28 * (scale / 0.55));
+  if (!fig) return;
+  fig.position.set(x, 0, z);
+  fig.name = "hero";
+  fig.userData.tap = "hero";
+  fig.userData.float = true;
+  fig.userData.baseY = 0;
+  fig.traverse((c) => {
     c.userData.tap = "hero";
-    if ((c as THREE.Mesh).isMesh) {
-      c.castShadow = true;
-    }
+    if ((c as THREE.Mesh).isMesh) c.castShadow = true;
   });
-  group.add(h);
+  group.add(fig);
 }
 
 function balloon(group: THREE.Group, x: number, y: number, z: number) {

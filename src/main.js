@@ -14,7 +14,6 @@ import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
 import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
 import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
-import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 import { Book } from "./book.js";
 import { buildScene } from "./scenes.js";
@@ -35,7 +34,6 @@ import { normalizeSouvenirs } from "./souvenir-state.js";
 import { Profiles, MAX_PROFILES } from "./profiles.js";
 import { makeBookmark, readPercent } from "./bookmark.js";
 import { vocabKey } from "./reading.js";
-import * as SkeletonUtils from "three/addons/utils/SkeletonUtils.js";
 
 const params = new URLSearchParams(typeof location === "undefined" ? "" : location.search);
 const DEBUG = params.has("debug");
@@ -146,7 +144,6 @@ function colorTexture(hex) {
   tex.needsUpdate = true;
   return tex;
 }
-const findSkinned = (root) => { let found = null; root.traverse((o) => { if (!found && o.isSkinnedMesh) found = o; }); return found; };
 
 /** Everything that belongs to the table, not to a book: paper, wood, cloth, the toys, the fonts. */
 async function loadShared(progress = (p, copy) => ui.setLoading(p, copy)) {
@@ -185,13 +182,11 @@ async function loadShared(progress = (p, copy) => ui.setLoading(p, copy)) {
   textures.wood.anisotropy = 8;
   // generated toys for the table (procedural ones stand in when a model is missing)
   textures.toys = {};
-  // the story toys (public/models/toys): which book owns which, and how tall they stand
+  // the story toys: painted cut-out cards on the plank (public/models/toys/cards)
   try { textures.toyManifest = await (await fetch(assetUrl("public/models/toys/manifest.json"))).json(); } catch (error) { textures.toyManifest = {}; }
   textures.toyFor = loadToy;
-  // no toy model is fetched before the shelf shows: the lamp, the train, the magnifier and the
-  // crayons are procedural for a moment and swap for their models once the shelf is up
-  textures.toyModelFor = loadToyModel;
-  try { textures.lockModel = isMapped("public/models/lock.glb") ? (await new GLTFLoader().loadAsync("public/models/lock.glb")).scene : null; } catch (error) { textures.lockModel = null; }
+  textures.toyModelFor = null;
+  textures.lockModel = null;
   tick(t("loadTidy"));
   // covers: the first row's before the shelf shows, the other rows in the background (the shelf
   // wears a printed placeholder until each arrives and swaps it in)
@@ -257,13 +252,15 @@ async function loadBook(id, progress = (p, copy) => ui.setLoading(p, copy)) {
     artList = manifest.cards || [];
   } catch (error) { artList = []; }
   const hero = story.hero || {};
-  const clipNames = hero.clips || [];
-  const steps = 4 + artList.length + clipNames.length;
+  const steps = 5 + artList.length;
   let done = 0;
   const tick = (copy) => { check(); done++; progress(done / steps, copy); };
   for (const entry of Object.values(textures.art)) if (entry.texture) entry.texture.dispose();
   textures.art = {};
   textures.cover = (textures.covers && textures.covers[id]) || null;
+  textures.heroStand = null;
+  textures.heroGltf = null;
+  textures.heroClips = {};
   tick(t("loadCover"));
   const paintedCover = await optional(`${BOOK_BASE}/${story.cover || "art/cover.jpg"}`, 6000)
     || await optional(`${BOOK_BASE}/art/cover-shelf.webp`, 4000)
@@ -277,61 +274,34 @@ async function loadBook(id, progress = (p, copy) => ui.setLoading(p, copy)) {
     if (book && book.setCover) book.setCover(paintedCover);
   }
   const loadCard = async (card) => {
+    if (textures.art[card.id]) {
+      try { tick(card.copy || "Painting the pictures…"); } catch (error) { if (!error.cancelled) throw error; }
+      return;
+    }
     const tex = await optional(`${BOOK_BASE}/art/${card.file}`, 8000);
     if (tex) { tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 8; textures.art[card.id] = { texture: tex, ...card }; }
     try { tick(card.copy || "Painting the pictures…"); } catch (error) { if (!error.cancelled) throw error; }
   };
+  const standFile = hero.stand || null;
+  const standId = standFile ? standFile.replace(/\.[^.]+$/, "") : null;
+  if (standFile) {
+    const tex = await optional(`${BOOK_BASE}/art/${standFile}`, 8000);
+    if (tex && BOOK_ID === id && pick === state.pick) {
+      tex.colorSpace = THREE.SRGBColorSpace;
+      tex.anisotropy = 8;
+      textures.heroStand = tex;
+      textures.art[standId] = { texture: tex, id: standId, file: standFile, cutout: true };
+    }
+  }
+  tick(t("loadHero", { name: hero.name || t("theHero") }));
   const firstIds = new Set(
-    (story.pages || []).slice(0, 2).flatMap((p) => [p.scene, p.id]).concat(["bedroom-wall", "bedroom-front", "bedroom-wall-moon"]).concat(artList.slice(0, 6).map((c) => c.id)),
+    (story.pages || []).slice(0, 2).flatMap((p) => [p.scene, p.id]).concat(["bedroom-wall", "bedroom-front", "bedroom-wall-moon"]).concat(standId ? [standId] : []).concat(artList.slice(0, 6).map((c) => c.id)),
   );
   const firstArt = artList.filter((c) => firstIds.has(c.id));
   const restArt = artList.filter((c) => !firstIds.has(c.id));
   const firstWave = firstArt.length ? firstArt : artList.slice(0, 4);
   const restWave = firstArt.length ? restArt : artList.slice(4);
-  textures.heroGltf = null;
-  textures.heroClips = {};
-  const retargetClips = (gltf) => {
-    if (!gltf) return;
-    const scratch = SkeletonUtils.clone(gltf.scene);
-    scratch.updateMatrixWorld(true);
-    const target = findSkinned(scratch);
-    const bindHipY = (skinned) => { const i = skinned.skeleton.bones.findIndex((b) => b.name === "Hips"); if (i < 0) return 1; return Math.abs(new THREE.Vector3().setFromMatrixPosition(new THREE.Matrix4().copy(skinned.skeleton.boneInverses[i]).invert()).y) || 1; };
-    return { scratch, target, bindHipY };
-  };
-  const loadClipSet = async (gltf) => {
-    if (!gltf || !clipNames.length) return;
-    const rig = retargetClips(gltf);
-    if (!rig || !rig.target) return;
-    for (const name of clipNames) {
-      if (pick !== state.pick) return;
-      try {
-        const g = await withTimeout(new GLTFLoader().loadAsync(`${BOOK_BASE}/models/anim/${name}.glb`), 4000, `clip ${name}`);
-        const source = findSkinned(g.scene);
-        if (rig.target && source && g.animations[0]) {
-          const scale = rig.bindHipY(rig.target) / rig.bindHipY(source);
-          const clip = SkeletonUtils.retargetClip(rig.target, source, g.animations[0], { hip: "Hips", scale, getBoneName: (bone) => bone.name, preserveBonePositions: true, useFirstFramePosition: false, fps: 30, localOffsets: bindOffsets(rig.target, source) });
-          for (const track of clip.tracks) track.name = track.name.replace(/^\.bones\[([^\]]+)\]/, "$1");
-          clip.name = name;
-          if (BOOK_ID === id) textures.heroClips[name] = clip;
-        }
-      } catch (error) { console.warn(`${hero.name || "hero"} clip ${name} unavailable`, error); }
-    }
-    if (BOOK_ID === id && gltf) alignClipFacing(rig.scratch, [gltf.animations[0], ...Object.values(textures.heroClips)], { idle: gltf.animations[0] });
-  };
-  const heroPromise = hero.model
-    ? new GLTFLoader().loadAsync(`${BOOK_BASE}/${hero.model}`).then((g) => {
-      if (g && BOOK_ID === id && pick === state.pick) {
-        textures.heroGltf = g;
-        void loadClipSet(g);
-      }
-      return g;
-    }).catch((error) => {
-      console.warn(`${hero.name || "hero"} model missing, using the felt figure`, error);
-      return null;
-    })
-    : Promise.resolve(null);
   const artReady = mapPool(firstWave, 4, loadCard);
-  void heroPromise;
   setTimeout(() => { if (pick === state.pick) void mapPool(restWave, 3, loadCard); }, 800);
   void (async () => {
     try {
@@ -349,8 +319,6 @@ async function loadBook(id, progress = (p, copy) => ui.setLoading(p, copy)) {
     const tex = await optional(key, 2500);
     if (tex && BOOK_ID === id) { tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 4; textures.pins[pin.id] = tex; }
   }));
-  tick(t("loadHero", { name: hero.name || t("theHero") }));
-  for (const name of clipNames) tick(t("loadMoves", { name: hero.name || t("theHero") }));
   // music and ambience load behind the open button so a large m4a cannot pin the cover
   const audio = story.audio || {};
   void (async () => {
@@ -509,46 +477,15 @@ function setupRenderer() {
   state.tableLamp = lamp;
   const blocks = place(P.makeBlocks(["O", "T", "T"]), 1.55, -0.95, -0.5, 1.9, "blocks");
   state.tableBlocks = blocks;
-  // the train, the magnifier and the crayons: procedural stand-ins now, their models once the shelf
-  // is up (upgradeTableToys), so the first screen is not waiting on five megabytes of toys
   const tableToys = {
-    train: { spot: [0.7, -1.4, -0.55], model: (m) => P.makeModelToy(m, { length: 0.46, keep: true, kind: "train" }), stand: () => P.makeTrain(), standScale: 1.9 },
-    magnifier: { spot: [1.28, 0.55, 0.55], model: (m) => P.makeModelToy(m, { length: 0.36, flat: true, kind: "magnifier" }), stand: () => P.makeMagnifier(), standScale: 1 },
-    crayons: { spot: [-1.42, 0.62, 0], model: (m) => P.makeModelToy(m, { height: 0.22, kind: "crayons" }), stand: () => P.makeCrayonCup(), standScale: 1.3 },
+    train: { spot: [0.7, -1.4, -0.55], stand: () => P.makeTrain(), standScale: 1.9 },
+    magnifier: { spot: [1.28, 0.55, 0.55], stand: () => P.makeMagnifier(), standScale: 1 },
+    crayons: { spot: [-1.42, 0.62, 0], stand: () => P.makeCrayonCup(), standScale: 1.3 },
   };
   for (const [name, spec] of Object.entries(tableToys)) {
     const [x, z, ry] = spec.spot;
-    place(toys[name] ? spec.model(toys[name]) : spec.stand(), x, z, ry, toys[name] ? 1 : spec.standScale, name);
+    place(spec.stand(), x, z, ry, spec.standScale, name);
   }
-  state.upgradeTableToys = async () => {
-    // the lamp first (it lights the room): the model takes the procedural lamp's place, aimed the same way
-    if (!toys.lamp && textures.toyModelFor) {
-      const model = await textures.toyModelFor("lamp");
-      if (model && state.tableLamp) {
-        const old = state.tableLamp;
-        const fresh = place(P.makeLamp(model), -1.5, -1.3, 0, 2.6, "lamp");
-        fresh.aim(new THREE.Vector3(-0.15, 0, 0.85));
-        if (old.state && fresh.set) fresh.set(old.state.on !== false);
-        scene.remove(old.group);
-        state.decor.splice(state.decor.indexOf(old), 1);
-        state.tableLamp = fresh;
-      }
-    }
-    for (const [name, spec] of Object.entries(tableToys)) {
-      if (toys[name] || !textures.toyModelFor) continue;
-      const model = await textures.toyModelFor(name);
-      if (!model) continue;
-      const old = state.decor.find((d) => d.name === name);
-      if (old) { scene.remove(old.group); state.decor.splice(state.decor.indexOf(old), 1); }
-      const [x, z, ry] = spec.spot;
-      const api = place(spec.model(model), x, z, ry, 1, name);
-      // a little pop as the real toy takes its place
-      api.group.scale.setScalar(0.001);
-      const t0 = performance.now();
-      const grow = () => { const k = Math.min(1, (performance.now() - t0) / 500); api.group.scale.setScalar(Math.max(0.001, P.easeOutBack(k))); if (k < 1) requestAnimationFrame(grow); };
-      requestAnimationFrame(grow);
-    }
-  };
   place(P.makeBall(), 1.62, -0.35, 0, 1, "ball");
   place(P.makeBookStack(), -1.9, -0.25, 0.25, 1, "books");
 
@@ -572,16 +509,15 @@ function setupRenderer() {
   scene.add(skirting);
 
   // the library, on an open shelf against the wall
-  // the lock on the books a guest cannot open yet (public/models/lock.glb when it exists)
+  // the lock on the books a guest cannot open yet (procedural gold padlock)
   textures.locked = (id) => !canReadBook(id);
   shelf = makeShelf({ books: library.books, textures });
-  // progressive loading: the row in view gets its toy models first, then the table's toys, then the neighbours
+  // painted toy cards for the row in view, then later covers and sounds
   setTimeout(() => { if (shelf.loadToysInView) shelf.loadToysInView(); }, 400);
   setTimeout(() => { if (textures.loadLaterCovers) textures.loadLaterCovers().catch(() => {}); }, 900);
   setTimeout(() => { if (textures.loadSfx) textures.loadSfx().catch(() => {}); }, 1400);
   clearInterval(state.bytesTimer);
   ui.setLoadingBytes(downloadProgress());
-  setTimeout(() => { if (state.upgradeTableToys) state.upgradeTableToys().catch(() => {}); }, 2500);
   shelf.group.position.set(0, 0, -2.72);
   scene.add(shelf.group);
   // the covers of the saved language (the shelf is built with the English ones)
@@ -613,11 +549,8 @@ function onWheel(event) {
 /* ---------- the story toys ---------- */
 
 const toyCache = new Map();
-/** A fresh copy of a modelled toy (cached per file); null when the model is missing. */
-/** A toy without a model yet stands on the plank as a painted cut-out (public/models/toys/cards/<name>.webp,
-    painted in the shelf toys' own style, no plinth), upright the way the pop-up figures stand, lit by the
-    room like the modelled toys (the painting doubles as a bump map so the key light shapes it); a model,
-    when it arrives from Higgsfield, wins. */
+/** A toy stands on the plank as a painted cut-out (public/models/toys/cards/<name>.webp),
+    upright the way the pop-up figures stand. No generated meshes. */
 async function cutoutToy(name) {
   let texture;
   try { texture = await new THREE.TextureLoader().loadAsync(`public/models/toys/cards/${name}.webp`); } catch (error) { return null; }
@@ -633,19 +566,8 @@ async function cutoutToy(name) {
   group.userData.cutout = true;
   return group;
 }
-/** The modelled toy (cached per file), or null when there is no model. Nothing asks for it until the
-    toy is in view: the shelf shows the card first (progressive loading, see loadToy). */
-const toyModelCache = new Map();
-function loadToyModel(name) {
-  if (!toyModelCache.has(name)) toyModelCache.set(name, new GLTFLoader().loadAsync(`public/models/toys/${name}.glb`).then((g) => g.scene).catch(() => null));
-  return toyModelCache.get(name).then((scene) => (scene ? scene.clone(true) : null));
-}
-/** What a toy looks like right away: its painted card (a render of the model, or the painting that
-    stands in for a model still to come), a few dozen kilobytes instead of a megabyte or two. The
-    shelf swaps the model in when the toy's row comes into view (textures.toyModelFor). A toy with
-    no card at all falls back to its model. */
 function loadToy(name) {
-  if (!toyCache.has(name)) toyCache.set(name, cutoutToy(name).then((card) => card || loadToyModel(name)));
+  if (!toyCache.has(name)) toyCache.set(name, cutoutToy(name));
   return toyCache.get(name).then((scene) => (scene ? scene.clone(true) : null));
 }
 
@@ -943,7 +865,11 @@ function sceneContext() {
     art: textures.art,
     sound,
     story,
-    makeHero: () => (textures.heroGltf && !settings.feltOtto ? P.makeOttoModel(textures.heroGltf, textures.heroClips) : P.makeOtto()),
+    makeHero: () => {
+      const tex = textures.heroStand;
+      if (tex) return P.makePaperHero(tex, { name: (story.hero && story.hero.name) || "hero" });
+      return P.makeOtto();
+    },
     get makeOtto() { return this.makeHero; },
     onMagic: (what) => {
       const messages = story.magic || {};
@@ -1180,96 +1106,6 @@ function pulseObject(name) {
   // only the object answers: the spoken word already carries the highlight, and lighting every
   // word linked to the same object (tall, tall, tree) read as several words being spoken at once
   if (entry.onHover) { entry.onHover(true); setTimeout(() => entry.onHover && entry.onHover(false), 600); }
-}
-
-/** World yaw (radians) of a rig's shoulders for a clip at a set of times. */
-function clipYaws(root, clip, times) {
-  const mixer = new THREE.AnimationMixer(root);
-  const action = mixer.clipAction(clip);
-  action.play();
-  let L = null, R = null;
-  root.traverse((o) => { if (!o.isBone) return; if (o.name === "LeftShoulder") L = o; if (o.name === "RightShoulder") R = o; });
-  const out = [];
-  let at = 0;
-  for (const t of times) {
-    mixer.update(t - at); at = t;
-    root.updateMatrixWorld(true);
-    if (L && R) {
-      const l = L.getWorldPosition(new THREE.Vector3()), r = R.getWorldPosition(new THREE.Vector3());
-      out.push(Math.atan2(-(l.z - r.z), l.x - r.x));   // forward = the character's left axis x up
-    } else out.push(null);
-  }
-  action.stop();
-  mixer.uncacheClip(clip);
-  mixer.uncacheRoot(root);
-  return out;
-}
-
-/** Shoulder yaw of a rig in its bind pose (the a-pose faces +z), the reference every clip must face. */
-function restYaw(root) {
-  root.traverse((o) => { if (o.isSkinnedMesh) o.skeleton.pose(); });
-  root.updateMatrixWorld(true);
-  let L = null, R = null;
-  root.traverse((o) => { if (!o.isBone) return; if (o.name === "LeftShoulder") L = o; if (o.name === "RightShoulder") R = o; });
-  if (!L || !R) return null;
-  const l = L.getWorldPosition(new THREE.Vector3()), r = R.getWorldPosition(new THREE.Vector3());
-  return Math.atan2(-(l.z - r.z), l.x - r.x);
-}
-
-/** Every clip must face the way the rig's bind pose faces: the idle baked into a Meshy model can
-    be turned 25 degrees and swing 50 more while it looks around, and a retargeted library clip
-    can carry its proxy's facing. Turn each clip's hip track by its mean error (about world up,
-    in the hips' parent space); the idle also has its swing damped. */
-function alignClipFacing(scratch, clips, { idle = null, damp = 0.35 } = {}) {
-  const ref = restYaw(scratch);
-  let hips = null;
-  scratch.traverse((o) => { if (o.isBone && o.name === "Hips") hips = o; });
-  if (ref == null || !hips || !hips.parent) return;
-  const wrap = (x) => Math.atan2(Math.sin(x), Math.cos(x));
-  scratch.updateMatrixWorld(true);
-  const parentQ = hips.parent.getWorldQuaternion(new THREE.Quaternion());
-  const parentInv = parentQ.clone().invert();
-  const q = new THREE.Quaternion(), fix = new THREE.Quaternion(), yawQ = new THREE.Quaternion();
-  for (const clip of clips) {
-    if (!clip) continue;
-    const hipTrack = clip.tracks.find((t) => /Hips\.quaternion$/.test(t.name));
-    if (!hipTrack) continue;
-    const isIdle = clip === idle;
-    const times = isIdle ? Array.from(hipTrack.times) : Array.from({ length: 8 }, (_, k) => (clip.duration * k) / 8);
-    const yaws = clipYaws(scratch, clip, times);
-    if (yaws.some((y) => y == null)) continue;
-    let sx = 0, sy = 0;
-    for (const y of yaws) { sx += Math.cos(y); sy += Math.sin(y); }
-    const mean = Math.atan2(sy, sx);
-    const offset = wrap(ref - mean);
-    if (!isIdle && Math.abs(offset) < THREE.MathUtils.degToRad(4)) continue;
-    for (let i = 0; i < hipTrack.times.length; i++) {
-      // a retargeted clip keeps its own motion and just turns by the mean error; the idle's
-      // swing around its mean is damped as well
-      const swing = isIdle ? wrap(yaws[i] - mean) * (damp - 1) : 0;
-      yawQ.setFromAxisAngle(new THREE.Vector3(0, 1, 0), offset + swing);
-      fix.copy(parentInv).multiply(yawQ).multiply(parentQ);
-      q.fromArray(hipTrack.values, i * 4).premultiply(fix);
-      q.toArray(hipTrack.values, i * 4);
-    }
-    if (DEBUG) console.info(`clip ${clip.name}: facing turned ${Math.round(THREE.MathUtils.radToDeg(offset))} degrees${isIdle ? " (idle, swing damped)" : ""}`);
-  }
-  scratch.traverse((o) => { if (o.isSkinnedMesh) o.skeleton.pose(); });
-}
-
-/** Per-bone rotation offsets between two rigs' bind poses (same joints, different bone axes), so a
-    pose copied in world space from `source` lands on `target` as the same pose. */
-function bindOffsets(target, source) {
-  const offsets = {};
-  const pos = new THREE.Vector3(), scl = new THREE.Vector3(), qb = new THREE.Quaternion(), qo = new THREE.Quaternion(), m = new THREE.Matrix4();
-  target.skeleton.bones.forEach((bone, i) => {
-    const j = source.skeleton.bones.findIndex((b) => b.name === bone.name);
-    if (j < 0) return;
-    m.copy(target.skeleton.boneInverses[i]).invert().decompose(pos, qb, scl);
-    m.copy(source.skeleton.boneInverses[j]).invert().decompose(pos, qo, scl);
-    offsets[bone.name] = new THREE.Matrix4().makeRotationFromQuaternion(qo.invert().multiply(qb));
-  });
-  return offsets;
 }
 
 /** Picture card for a word, if the book has one (plural/inflection fallbacks included). */

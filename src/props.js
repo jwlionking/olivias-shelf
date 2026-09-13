@@ -354,7 +354,169 @@ export function makeOtto() {
   return api;
 }
 
-/* ---------- Otto from the generated, rigged GLB ---------- */
+/** Painted paper-cut hero. Same API as makeOtto / makeOttoModel so Otto, Nia and Fin
+    scenes keep their verbs (wave, jump, look, hold, paw, float, swim, sleep) without a
+    generated mesh. The card bounces, tilts and squashes instead of moving bones. */
+export function makePaperHero(texture, { height = 0.82, name = "hero" } = {}) {
+  const group = new THREE.Group();
+  const img = texture && texture.image;
+  const aspect = img && img.height ? img.width / img.height : 0.52;
+  const width = height * aspect;
+  const geometry = new THREE.PlaneGeometry(width, height);
+  geometry.translate(0, height / 2, 0);
+  const material = new THREE.MeshStandardMaterial({
+    map: texture,
+    transparent: true,
+    alphaTest: 0.28,
+    roughness: 0.62,
+    metalness: 0,
+    side: THREE.DoubleSide,
+    envMapIntensity: 0.7,
+  });
+  const mesh = new THREE.Mesh(geometry, material);
+  mesh.castShadow = true;
+  mesh.receiveShadow = true;
+  mesh.customDepthMaterial = new THREE.MeshDepthMaterial({
+    depthPacking: THREE.RGBADepthPacking,
+    map: texture,
+    alphaTest: 0.28,
+  });
+  group.add(mesh);
+
+  const head = new THREE.Object3D();
+  head.position.set(0, height * 0.82, 0.02);
+  group.add(head);
+  const pawL = new THREE.Object3D();
+  pawL.position.set(-width * 0.28, height * 0.5, 0.04);
+  group.add(pawL);
+  const pawR = new THREE.Object3D();
+  pawR.position.set(width * 0.28, height * 0.5, 0.04);
+  group.add(pawR);
+
+  const POSE = {
+    stand: { rx: 0, rz: 0, bob: 0.012, squash: 1 },
+    peek: { rx: -0.06, rz: -0.16, bob: 0.018, squash: 1 },
+    float: { rx: -0.18, rz: 0, bob: 0.045, squash: 1 },
+    sleep: { rx: 0.1, rz: 0.38, bob: 0.004, squash: 0.94 },
+    run: { rx: -0.08, rz: 0, bob: 0.05, squash: 1 },
+    swim: { rx: -0.32, rz: 0, bob: 0.04, squash: 1 },
+  };
+
+  const state = {
+    pose: "stand",
+    look: new THREE.Vector3(0, height * 0.8, 2),
+    wave: 0,
+    blink: 0,
+    nextBlink: 2 + Math.random() * 3,
+    hold: null,
+    holdSide: "left",
+    jump: 0,
+    lookKick: 0,
+    seed: Math.random() * 6,
+    yaw: 0,
+    pitch: 0,
+  };
+
+  const api = {
+    group,
+    head,
+    mesh,
+    state,
+    setPose(pose) {
+      state.pose = pose || "stand";
+    },
+    blink() {
+      state.blink = 0.001;
+    },
+    wave() {
+      state.wave = 1.6;
+    },
+    look() {
+      state.lookKick = 0.9;
+      state.blink = 0.001;
+    },
+    jump() {
+      state.jump = 1;
+    },
+    play(clip) {
+      if (clip === "jump") api.jump();
+      else if (clip === "look" || clip === "hold") api.look();
+      else api.wave();
+    },
+    has(clip) {
+      return ["wave", "look", "jump", "hold", "run", "hang", "doze", "swim", "idle"].includes(clip);
+    },
+    lookAt(worldPoint) {
+      state.look.copy(worldPoint);
+    },
+    hold(worldPoint, side = "left") {
+      state.hold = (state.hold || new THREE.Vector3()).copy(worldPoint);
+      state.holdSide = side;
+    },
+    paw() {
+      const node = state.holdSide === "right" ? pawR : pawL;
+      return node.getWorldPosition(new THREE.Vector3());
+    },
+    update(dt, t) {
+      const s = state;
+      const pose = POSE[s.pose] || POSE.stand;
+      s.nextBlink -= dt;
+      if (s.nextBlink < 0) {
+        api.blink();
+        s.nextBlink = 2.5 + Math.random() * 4;
+      }
+      if (s.pose === "sleep") s.blink = 0;
+      let blinkK = 0;
+      if (s.blink > 0) {
+        s.blink += dt;
+        const p = s.blink / 0.28;
+        blinkK = p < 1 ? Math.sin(p * Math.PI) : 0;
+        if (p >= 1) s.blink = 0;
+      }
+      const target = group.worldToLocal(s.look.clone());
+      let yawT = 0;
+      let pitchT = 0;
+      if (s.pose !== "sleep") {
+        yawT = clamp(Math.atan2(target.x, target.z + 0.6), -0.4, 0.4);
+        pitchT = clamp(-Math.atan2(target.y - height * 0.7, Math.hypot(target.x, target.z + 0.6)), -0.16, 0.22);
+      }
+      if (s.lookKick > 0) {
+        s.lookKick = Math.max(0, s.lookKick - dt);
+        yawT += Math.sin(s.lookKick * 8) * 0.12;
+      }
+      s.yaw += (yawT - s.yaw) * Math.min(1, dt * 5);
+      s.pitch += (pitchT - s.pitch) * Math.min(1, dt * 5);
+      let waveZ = 0;
+      if (s.wave > 0) {
+        s.wave -= dt;
+        waveZ = Math.sin(s.wave * 18) * 0.18;
+      }
+      let jumpY = 0;
+      if (s.jump > 0) {
+        s.jump = Math.max(0, s.jump - dt * 2.2);
+        jumpY = Math.sin(s.jump * Math.PI) * 0.16;
+      }
+      const breathe = 1 + Math.sin(t * 2.1 + s.seed) * 0.012;
+      const bob = Math.sin(t * (s.pose === "run" ? 8 : 1.5) + s.seed) * pose.bob;
+      let holdZ = 0;
+      if (s.hold && s.pose !== "sleep") {
+        const localHold = group.worldToLocal(s.hold.clone());
+        holdZ = clamp(Math.atan2(localHold.x, Math.max(0.05, localHold.y)), -0.22, 0.22) * 0.35;
+      }
+      mesh.position.y = bob + jumpY;
+      mesh.rotation.x = pose.rx + s.pitch;
+      mesh.rotation.y = s.yaw;
+      mesh.rotation.z = pose.rz + waveZ + holdZ;
+      const squash = pose.squash * (1 - blinkK * 0.08);
+      mesh.scale.set(breathe * (1 + blinkK * 0.04), squash * breathe, 1);
+    },
+  };
+  group.userData.otto = api;
+  group.userData.paperHero = name;
+  return api;
+}
+
+/* ---------- Otto from the generated, rigged GLB (retired; paper stands replaced these) ---------- */
 
 const _v = [0, 1, 2, 3, 4, 5, 6, 7, 8].map(() => new THREE.Vector3());
 const _q = [0, 1, 2, 3, 4].map(() => new THREE.Quaternion());

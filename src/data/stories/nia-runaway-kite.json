@@ -20,15 +20,7 @@
   },
   "hero": {
     "name": "Nia",
-    "model": "models/nia.glb",
-    "clips": [
-      "run",
-      "jump",
-      "hold",
-      "look",
-      "doze"
-    ],
-    "felt": "otto"
+    "stand": "nia-stand.webp"
   },
   "magic": {
     "clue": "A clue! A little red bow from the kite's tail.",

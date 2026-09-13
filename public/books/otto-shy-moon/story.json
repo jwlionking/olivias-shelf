@@ -20,15 +20,7 @@
   },
   "hero": {
     "name": "Otto",
-    "model": "models/otto.glb",
-    "clips": [
-      "hang",
-      "wave",
-      "doze",
-      "look",
-      "jump"
-    ],
-    "felt": "otto"
+    "stand": "otto-stand.webp"
   },
   "magic": {
     "path": "The stars made a path across the sky!",

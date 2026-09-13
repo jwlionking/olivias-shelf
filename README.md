@@ -38,7 +38,7 @@ Origin nginx vhost: `deploy/nginx/olivias-shelf.wyles.ai` (proxies to PM2 on `12
 
 TanStack Start, React 19, Three.js, Tailwind v4.
 
-Art: Grok Imagine. Voice: Grok Voice (Carina, `npm run voices:generate`). Motion: original Three.js pop-up engine (`Diorama`, `backCard`, `figure`).
+Art: Grok Imagine (covers, rooms, cut-outs, Otto/Nia/Fin stands). Voice: Grok Voice (Carina, `npm run voices:generate`). Motion: original Three.js pop-up engine (`Diorama`, `backCard`, `figure`, `makePaperHero`). No generated meshes.
 
 ## Adding books
 

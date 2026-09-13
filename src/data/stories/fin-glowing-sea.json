@@ -20,15 +20,7 @@
   },
   "hero": {
     "name": "Fin",
-    "model": "models/fin.glb",
-    "clips": [
-      "swim",
-      "wave",
-      "look",
-      "doze",
-      "jump"
-    ],
-    "felt": "otto"
+    "stand": "fin-stand.webp"
   },
   "magic": {
     "jar": "An empty jar, to fill with light.",
