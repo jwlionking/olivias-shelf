@@ -27,6 +27,10 @@ function catalogKey(path) {
   return path.replace(/^\//, "").split("?")[0];
 }
 
+function shareElonArt(key) {
+  return key.replace(/^books\/elon-[^/]+\//, "books/elon-physics-wonder/");
+}
+
 /**
  * Map a logical StoryComet asset path (books/…, public/…) onto the hashed
  * files we host under /sc, or onto the unhashed JSON we keep in /public.
@@ -43,6 +47,13 @@ export function assetUrl(url) {
   if (key === "public/audio/sfx/manifest.json") return cdn("/audio/sfx/manifest.json");
   if (/^books\/[^/]+\/(story\.json|art\/manifest\.json|words\/manifest\.json)$/.test(key)) {
     return cdn(`/${key}`);
+  }
+  // Later Elon & Olivia physics books share the first book's paintings.
+  if (/^books\/elon-(?!physics-wonder)[^/]+\/art\//.test(key) && /\.(png|jpe?g|webp|gif)$/i.test(key)) {
+    return cdn("/" + shareElonArt(key));
+  }
+  if (/^public\/textures\/walls\/elon-(?!physics-wonder)/.test(key)) {
+    return cdn("/textures/walls/elon-physics-wonder.jpg");
   }
   // Original books host unhashed paintings under /books and /textures.
   if (/^books\/[^/]+\/art\//.test(key) && /\.(png|jpe?g|webp|gif)$/i.test(key)) {
@@ -73,7 +84,7 @@ export function isMapped(url) {
   if (!url || typeof url !== "string") return false;
   const path = stripOrigin(url);
   const key = catalogKey(path);
-  return Boolean(MAP[key]);
+  return Boolean(MAP[key]) || /^books\/elon-/.test(key);
 }
 
 export { isPublicAsset };

@@ -6,11 +6,30 @@ const map = catalog as Record<string, string>;
 export const FREE_BOOK_IDS = [
   "lila-moonlit-pony",
   "elon-physics-wonder",
+  "elon-magnet-pull",
+  "elon-electric-spark",
+  "elon-light-rainbow",
+  "elon-sound-hum",
+  "elon-orbit-moon",
+  "elon-heat-jiggle",
+  "elon-force-roll",
+  "elon-float-boat",
+  "elon-air-hug",
+  "elon-ice-steam",
   "zero-and-belle",
   "otto-shy-moon",
   "nia-runaway-kite",
   "fin-glowing-sea",
 ] as const;
+
+function elonArt(id: string, file: string) {
+  const own = `books/${id}/${file}`;
+  if (map[own]) return map[own];
+  if (id.startsWith("elon-") && id !== "elon-physics-wonder") {
+    return map[`books/elon-physics-wonder/${file}`] || `/books/elon-physics-wonder/${file}`;
+  }
+  return `/books/${id}/${file}`;
+}
 
 export function sc(key: string): string {
   return cdn(map[key] ?? `/sc/${key}`);
@@ -21,15 +40,11 @@ export function isFreeBook(id: string) {
 }
 
 export function coverUrl(id: string) {
-  return cdn(
-    map[`books/${id}/art/cover.jpg`] ||
-      map[`books/${id}/art/cover-shelf.webp`] ||
-      `/books/${id}/art/cover.jpg`,
-  );
+  return cdn(elonArt(id, "art/cover.jpg"));
 }
 
 export function shelfCoverUrl(id: string) {
-  return cdn(map[`books/${id}/art/cover-shelf.webp`] || `/books/${id}/art/cover-shelf.webp`);
+  return cdn(elonArt(id, "art/cover-shelf.webp"));
 }
 
 export function logoUrl(id: string) {
@@ -37,6 +52,9 @@ export function logoUrl(id: string) {
 }
 
 export function wallUrl(id: string) {
+  if (id.startsWith("elon-") && id !== "elon-physics-wonder") {
+    return cdn(map[`public/textures/walls/elon-physics-wonder.jpg`] || `/textures/walls/elon-physics-wonder.jpg`);
+  }
   return cdn(map[`public/textures/walls/${id}.jpg`] || `/textures/walls/${id}.jpg`);
 }
 
@@ -102,4 +120,3 @@ export function toyUrl(name: string) {
   const found = map[`public/models/toys/${name}.glb`];
   return found ? cdn(found) : found;
 }
-
