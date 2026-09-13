@@ -1,9 +1,19 @@
 // @ts-nocheck
-/** Vite-static scene module map. Runtime `new URL(\`../books/${id}/scenes.js\`)` cannot be bundled. */
+/** Vite-static scene module map. Runtime `new URL(`../books/${id}/scenes.js`)` cannot be bundled. */
 
 const loaders = {
   "lila-moonlit-pony": () => import("./books/lila-moonlit-pony/scenes.js"),
   "elon-physics-wonder": () => import("./books/elon-physics-wonder/scenes.js"),
+  "elon-magnet-pull": () => import("./books/elon-magnet-pull/scenes.js"),
+  "elon-electric-spark": () => import("./books/elon-electric-spark/scenes.js"),
+  "elon-light-rainbow": () => import("./books/elon-light-rainbow/scenes.js"),
+  "elon-sound-hum": () => import("./books/elon-sound-hum/scenes.js"),
+  "elon-orbit-moon": () => import("./books/elon-orbit-moon/scenes.js"),
+  "elon-heat-jiggle": () => import("./books/elon-heat-jiggle/scenes.js"),
+  "elon-force-roll": () => import("./books/elon-force-roll/scenes.js"),
+  "elon-float-boat": () => import("./books/elon-float-boat/scenes.js"),
+  "elon-air-hug": () => import("./books/elon-air-hug/scenes.js"),
+  "elon-ice-steam": () => import("./books/elon-ice-steam/scenes.js"),
   "zero-and-belle": () => import("./books/zero-and-belle/scenes.js"),
   "otto-shy-moon": () => import("./books/otto-shy-moon/scenes.js"),
   "nia-runaway-kite": () => import("./books/nia-runaway-kite/scenes.js"),

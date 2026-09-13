@@ -1,5 +1,5 @@
 // @ts-nocheck
-export const FREE_BOOK_IDS=Object.freeze(['lila-moonlit-pony','elon-physics-wonder','zero-and-belle','otto-shy-moon','nia-runaway-kite','fin-glowing-sea']);
+export const FREE_BOOK_IDS=Object.freeze(['lila-moonlit-pony','elon-physics-wonder','elon-magnet-pull','elon-electric-spark','elon-light-rainbow','elon-sound-hum','elon-orbit-moon','elon-heat-jiggle','elon-force-roll','elon-float-boat','elon-air-hug','elon-ice-steam','zero-and-belle','otto-shy-moon','nia-runaway-kite','fin-glowing-sea']);
 export const isFreeBook=id=>FREE_BOOK_IDS.includes(id);
 export function isPublicAsset(file) {
   if(file.startsWith('public/'))return true;
