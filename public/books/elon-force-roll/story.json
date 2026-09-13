@@ -1,0 +1,31 @@
+{
+  "id": "elon-force-roll",
+  "title": "Olivia and the Stubborn Cart",
+  "subtitle": "Things keep doing what they were doing",
+  "author": "Olivia's Shelf",
+  "ageRange": "6 to 10",
+  "readingLevel": "Early chapter",
+  "blurb": "Olivia pushes a little cart and learns that a force is a push or a pull — and that moving things want to keep moving.",
+  "cover": "art/cover.jpg",
+  "scenes": "scenes.js",
+  "colors": {"cloth": "#4a2a1a", "endpaper": {"base": "#1c2836", "ink": "#f0c978", "pattern": "stars"}},
+  "hero": {"name": "Olivia", "felt": "otto"},
+  "magic": {"launch": "The little rocket pushed the air, and the air pushed back.", "drop": "Everything falls. That pull has a name: gravity."},
+  "narrator": {"openai": {"model": "gpt-4o-mini-tts", "voice": "onyx", "speed": 0.94, "instructions": "Warm, clear storyteller reading a science picture book to a child. Curious, never lecturing. Pause at full stops."}},
+  "pages": [
+    {"id": "shop", "scene": "workshop", "heading": "It wanted to keep going", "text": "{Olivia} pushed a little {cart} across the {workshop} floor. It rolled. Then it wanted to keep rolling.", "hint": "Tap Olivia.", "words": ["Olivia", "cart", "workshop"]},
+    {"id": "force", "scene": "rocket-push", "heading": "A push or a pull", "text": "\"A {force} is a push or a {pull},\" said {Elon:elon/teach}. \"No force, and a still cart stays still.\"", "hint": "Tap the rocket. Tap Elon.", "words": ["force", "pull", "Elon"]},
+    {"id": "inertia", "scene": "workshop", "heading": "Stubborn motion", "text": "\"A moving cart keeps {moving} until something slows it,\" said Elon. \"That stubbornness is called {inertia}.\"", "hint": "Tap Olivia.", "words": ["moving", "inertia"]},
+    {"id": "heavy", "scene": "apple-fall", "heading": "Heavy is harder", "text": "A heavier cart was harder to start. Harder to {stop} too. \"More stuff means more stubborn,\" said {Elon:elon/teach}.", "hint": "Tap the apple.", "words": ["stop", "Elon"]},
+    {"id": "rocket", "scene": "launch", "heading": "Push back", "text": "The little {rocket:rocket/whoosh} pushed air backward. The air pushed the rocket {forward}. \"Every push has a push back,\" said Elon.", "hint": "Tap the rocket.", "words": ["rocket", "forward"]},
+    {"id": "why", "scene": "ask-why", "heading": "Keep asking why", "text": "\"Why do I lean when the cart stops?\" asked {Olivia:olivia/ask}. \"Your body wanted to keep going,\" said {Elon:elon/teach}. \"Ask why again tomorrow.\"", "hint": "Tap Olivia. Tap Elon.", "words": ["Olivia", "Elon"]}
+  ],
+  "end": {"heading": "The End", "text": "A force is a push or a pull. Things keep doing what they were doing until a force changes them.", "prompt": "What would you roll, then stop, tomorrow?"},
+  "credits": "Painted for Olivia's Shelf. Elon is a picture-book inventor who teaches physics; this is not a biography.",
+  "quiz": {"folder": "quiz", "questions": [
+    {"q": "What is a force?", "options": [{"word": "a-push-or-a-pull", "label": "a push or a pull"}, {"word": "a-color", "label": "a color"}, {"word": "a-song", "label": "a song"}], "answer": 0, "right": "Yes! Push or pull. That is a force.", "wrong": "Elon said a force is a push or a pull."},
+    {"q": "What do moving things want to do?", "options": [{"word": "keep-moving", "label": "keep moving"}, {"word": "turn-into-birds", "label": "turn into birds"}, {"word": "get-lighter", "label": "get lighter"}], "answer": 0, "right": "That's right. That stubbornness is inertia.", "wrong": "They keep moving until something slows them."},
+    {"q": "What does a rocket do?", "options": [{"word": "pushes-air-back-so-air-pushes-it-forward", "label": "pushes air back so air pushes it forward"}, {"word": "swims", "label": "swims"}, {"word": "hides", "label": "hides"}], "answer": 0, "right": "Yes. Every push has a push back.", "wrong": "The rocket pushes air backward."}
+  ]},
+  "pins": [{"id": "star", "name": "Star pin", "page": 4, "at": [0.4, 0, -0.2]}, {"id": "moon", "name": "Moon pin", "page": 5, "at": [0.36, 0, 0.2]}]
+}
