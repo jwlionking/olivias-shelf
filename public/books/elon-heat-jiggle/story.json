@@ -1,0 +1,31 @@
+{
+  "id": "elon-heat-jiggle",
+  "title": "Olivia and the Quiet Fire",
+  "subtitle": "Heat is a tiny dance",
+  "author": "Olivia's Shelf",
+  "ageRange": "6 to 10",
+  "readingLevel": "Early chapter",
+  "blurb": "Olivia holds a sun-warm stone and learns that heat is tiny bits dancing — faster when things feel warm.",
+  "cover": "art/cover.jpg",
+  "scenes": "scenes.js",
+  "colors": {"cloth": "#7a3a1c", "endpaper": {"base": "#1c2836", "ink": "#f0c978", "pattern": "stars"}},
+  "hero": {"name": "Olivia", "felt": "otto"},
+  "magic": {"launch": "The little rocket pushed the air, and the air pushed back.", "drop": "Everything falls. That pull has a name: gravity."},
+  "narrator": {"openai": {"model": "gpt-4o-mini-tts", "voice": "onyx", "speed": 0.94, "instructions": "Warm, clear storyteller reading a science picture book to a child. Curious, never lecturing. Pause at full stops."}},
+  "pages": [
+    {"id": "shop", "scene": "workshop", "heading": "A quiet fire", "text": "{Olivia} held a sun-warm {stone} on the {workshop} bench. \"{Elon:elon/look},\" she said. \"It feels like a quiet fire.\"", "hint": "Tap Olivia. Tap Elon.", "words": ["Olivia", "stone", "workshop", "Elon"]},
+    {"id": "dance", "scene": "apple-fall", "heading": "Tiny bits dancing", "text": "\"{Heat} is tiny bits {dancing},\" said {Elon:elon/teach}. \"A faster dance feels warmer. A slower dance feels cooler.\"", "hint": "Tap Elon. Tap the apple.", "words": ["Heat", "dancing", "Elon"]},
+    {"id": "share", "scene": "workshop", "heading": "Heat likes to share", "text": "Olivia poured warm water into cold. Soon they felt the {same}. \"Heat likes to {share},\" said Elon. \"It flows from warm to cool.\"", "hint": "Tap Olivia.", "words": ["same", "share"]},
+    {"id": "faces", "scene": "workshop", "heading": "Melt and steam", "text": "An ice cube {melted} in her palm. Steam lifted from the kettle. \"Same water,\" said Elon. \"The dance got fast enough to {fly}.\"", "hint": "Tap the workshop.", "words": ["melted", "fly"]},
+    {"id": "sun", "scene": "star-board", "heading": "The Sun is a giant fire", "text": "They looked at the {Sun:stars/glow}. \"Its dance travels here as {light},\" said {Elon:elon/teach}. \"Then the stone feels warm.\"", "hint": "Tap the starry board.", "words": ["Sun", "light", "Elon"]},
+    {"id": "why", "scene": "ask-why", "heading": "Keep asking why", "text": "\"Why do rubbing hands get warm?\" asked {Olivia:olivia/ask}. \"You are making the tiny bits dance,\" said {Elon:elon/teach}. \"Ask why again tomorrow.\"", "hint": "Tap Olivia. Tap Elon.", "words": ["Olivia", "Elon"]}
+  ],
+  "end": {"heading": "The End", "text": "Heat is a tiny dance. Faster feels warm. Heat likes to share.", "prompt": "What would you warm with your hands tomorrow?"},
+  "credits": "Painted for Olivia's Shelf. Elon is a picture-book inventor who teaches physics; this is not a biography.",
+  "quiz": {"folder": "quiz", "questions": [
+    {"q": "What is heat?", "options": [{"word": "tiny-bits-dancing", "label": "tiny bits dancing"}, {"word": "a-color", "label": "a color"}, {"word": "a-magnet", "label": "a magnet"}], "answer": 0, "right": "Yes! Faster dance, warmer thing.", "wrong": "Elon said heat is tiny bits dancing."},
+    {"q": "Which way does heat like to flow?", "options": [{"word": "from-warm-to-cool", "label": "from warm to cool"}, {"word": "from-cool-to-warm", "label": "from cool to warm"}, {"word": "in-a-circle-only", "label": "in a circle only"}], "answer": 0, "right": "That's right. Heat shares itself toward cooler things.", "wrong": "Heat flows from warm to cool."},
+    {"q": "Why do rubbing hands feel warm?", "options": [{"word": "you-make-the-tiny-bits-dance", "label": "you make the tiny bits dance"}, {"word": "the-air-is-angry", "label": "the air is angry"}, {"word": "magic-soap", "label": "magic soap"}], "answer": 0, "right": "Yes. Rubbing speeds the tiny dance.", "wrong": "You are making the tiny bits dance."}
+  ]},
+  "pins": [{"id": "star", "name": "Star pin", "page": 4, "at": [0.4, 0, -0.2]}, {"id": "moon", "name": "Moon pin", "page": 5, "at": [0.36, 0, 0.2]}]
+}
