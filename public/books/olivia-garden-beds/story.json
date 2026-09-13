@@ -1,0 +1,203 @@
+{
+  "author": "Olivia's Shelf",
+  "ageRange": "4 to 8",
+  "readingLevel": "Early chapter",
+  "cover": "art/cover.jpg",
+  "scenes": "scenes.js",
+  "hero": {
+    "name": "Olivia",
+    "felt": "otto"
+  },
+  "narrator": {
+    "grok": {
+      "voice": "carina",
+      "language": "en",
+      "instructions": "Warm gentle storyteller reading a family picture book. Soft, clear, never rushed. Olivia is curious. Zero is calm. Belle is bouncy."
+    },
+    "openai": {
+      "model": "grok-tts",
+      "voice": "carina",
+      "speed": 0.92,
+      "instructions": "Warm gentle storyteller reading a family picture book. Soft, clear, never rushed."
+    },
+    "bundled": {
+      "folder": "voice",
+      "format": "mp3",
+      "timings": true
+    }
+  },
+  "credits": "Painted from family photos of Olivia, Zero, Belle, and home.",
+  "pins": [
+    {
+      "id": "star",
+      "name": "Star pin",
+      "page": 2,
+      "at": [
+        0.4,
+        0,
+        -0.2
+      ]
+    },
+    {
+      "id": "moon",
+      "name": "Moon pin",
+      "page": 5,
+      "at": [
+        0.3,
+        0,
+        0.2
+      ]
+    }
+  ],
+  "id": "olivia-garden-beds",
+  "title": "Olivia and the Garden Beds",
+  "subtitle": "Dirt under the fingernails.",
+  "blurb": "Olivia waters the wooden raised beds beside the white house \u2014 lettuce, pots, a chicken coop, and a green can that makes the plants drink.",
+  "colors": {
+    "cloth": "#3a6a3a",
+    "endpaper": {
+      "base": "#142014",
+      "ink": "#c8e8a0",
+      "pattern": "stars"
+    }
+  },
+  "magic": {
+    "home": "The plants drank. Olivia did too \u2014 a glass of water, after."
+  },
+  "pages": [
+    {
+      "id": "beds",
+      "scene": "garden",
+      "heading": "The wooden beds",
+      "text": "{Olivia} stood by the wooden {garden} beds. Leaves were already busy being green. \"Thirsty?\" she asked them, as if leaves could answer.",
+      "hint": "Tap Olivia. Tap the garden.",
+      "words": [
+        "Olivia",
+        "garden"
+      ]
+    },
+    {
+      "id": "can",
+      "scene": "garden",
+      "heading": "The green can",
+      "text": "The green watering {can:can/pour} was heavier than it looked. {Olivia:olivia/ask} tipped it. A silver ribbon of water landed on the dirt. The dirt went dark and glad.",
+      "hint": "Tap the can.",
+      "words": [
+        "can",
+        "Olivia"
+      ]
+    },
+    {
+      "id": "pots",
+      "scene": "garden",
+      "heading": "Little pots",
+      "text": "Colored pots sat on the gravel like a tiny town. {Olivia} gave each one a sip. \"Fair is fair,\" she said. Even the smallest pot got a drink.",
+      "hint": "Tap Olivia.",
+      "words": [
+        "Olivia"
+      ]
+    },
+    {
+      "id": "coop",
+      "scene": "garden",
+      "heading": "The wire house",
+      "text": "A little wire house stood in the gravel. Something rustled. {Olivia} whispered, \"We are growing lunch. You can watch.\" The rustle said, all right.",
+      "hint": "Tap the garden.",
+      "words": [
+        "Olivia"
+      ]
+    },
+    {
+      "id": "house",
+      "scene": "house",
+      "heading": "The white house watches",
+      "text": "The white {home} with the dark roof watched the garden the way a kind giant watches. {Olivia:olivia/wave} waved at the windows. The windows shone back.",
+      "hint": "Tap home.",
+      "words": [
+        "home",
+        "Olivia"
+      ]
+    },
+    {
+      "id": "done",
+      "scene": "garden",
+      "heading": "Dirt under the nails",
+      "text": "The {can:can/pour} was empty. {Olivia}'s fingernails had a line of dirt, like a badge. The leaves looked taller. Maybe they were. Maybe she was.",
+      "hint": "Tap Olivia. Tap the can.",
+      "words": [
+        "can",
+        "Olivia"
+      ]
+    }
+  ],
+  "end": {
+    "heading": "The End",
+    "text": "You {read} the whole {story}. Gardens drink. Then they grow. That is the deal.",
+    "prompt": "If you had a watering can, what would you grow first?"
+  },
+  "quiz": {
+    "folder": "quiz",
+    "questions": [
+      {
+        "q": "What does Olivia use to water?",
+        "options": [
+          {
+            "word": "a-green-can",
+            "label": "a green can"
+          },
+          {
+            "word": "a-rocket",
+            "label": "a rocket"
+          },
+          {
+            "word": "a-rock",
+            "label": "a rock"
+          }
+        ],
+        "answer": 0,
+        "right": "A green watering can, heavier than it looks.",
+        "wrong": "She uses a green watering can."
+      },
+      {
+        "q": "Where do the plants live?",
+        "options": [
+          {
+            "word": "wooden-beds",
+            "label": "wooden beds"
+          },
+          {
+            "word": "the-couch",
+            "label": "the couch"
+          },
+          {
+            "word": "the-truck",
+            "label": "the truck"
+          }
+        ],
+        "answer": 0,
+        "right": "In the wooden raised beds by the house.",
+        "wrong": "They live in the wooden garden beds."
+      },
+      {
+        "q": "What is under Olivia's nails at the end?",
+        "options": [
+          {
+            "word": "dirt",
+            "label": "dirt"
+          },
+          {
+            "word": "gold",
+            "label": "gold"
+          },
+          {
+            "word": "jam",
+            "label": "jam"
+          }
+        ],
+        "answer": 0,
+        "right": "Dirt. That is a gardener's badge.",
+        "wrong": "Dirt under the fingernails."
+      }
+    ]
+  }
+}

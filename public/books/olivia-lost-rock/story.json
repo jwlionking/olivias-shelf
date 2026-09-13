@@ -1,0 +1,214 @@
+{
+  "author": "Olivia's Shelf",
+  "ageRange": "4 to 8",
+  "readingLevel": "Early chapter",
+  "cover": "art/cover.jpg",
+  "scenes": "scenes.js",
+  "hero": {
+    "name": "Olivia",
+    "felt": "otto"
+  },
+  "narrator": {
+    "grok": {
+      "voice": "carina",
+      "language": "en",
+      "instructions": "Warm gentle storyteller reading a family picture book. Soft, clear, never rushed. Olivia is curious. Zero is calm. Belle is bouncy."
+    },
+    "openai": {
+      "model": "grok-tts",
+      "voice": "carina",
+      "speed": 0.92,
+      "instructions": "Warm gentle storyteller reading a family picture book. Soft, clear, never rushed."
+    },
+    "bundled": {
+      "folder": "voice",
+      "format": "mp3",
+      "timings": true
+    }
+  },
+  "credits": "Painted from family photos of Olivia, Zero, Belle, and home.",
+  "pins": [
+    {
+      "id": "star",
+      "name": "Star pin",
+      "page": 2,
+      "at": [
+        0.4,
+        0,
+        -0.2
+      ]
+    },
+    {
+      "id": "moon",
+      "name": "Moon pin",
+      "page": 5,
+      "at": [
+        0.3,
+        0,
+        0.2
+      ]
+    }
+  ],
+  "id": "olivia-lost-rock",
+  "title": "Olivia and the Lost Rock",
+  "subtitle": "Sisters help find treasure.",
+  "blurb": "Zero's favorite rock goes missing. Belle has an idea. Olivia leads the search across the patio, the garden, and the grass until the treasure comes home.",
+  "colors": {
+    "cloth": "#4a6a3a",
+    "endpaper": {
+      "base": "#1c2818",
+      "ink": "#d8e8a8",
+      "pattern": "stars"
+    }
+  },
+  "magic": {
+    "rock": "There it is. Smooth as a secret."
+  },
+  "pages": [
+    {
+      "id": "gone",
+      "scene": "patio",
+      "heading": "The rock is gone",
+      "text": "{Zero:zero/sniff} looked at her paws. The smooth {rock:rock/clack} was not there. {Olivia} said, \"We will find it.\" {Belle:belle/wag}'s tail said, I have an idea.",
+      "hint": "Tap Zero. Tap Olivia.",
+      "words": [
+        "Zero",
+        "rock",
+        "Olivia",
+        "Belle"
+      ]
+    },
+    {
+      "id": "idea",
+      "scene": "patio",
+      "heading": "Belle's idea",
+      "text": "{Belle:belle/run} zoomed across the {yard}. Maybe she took it. Maybe she was helping. {Olivia:olivia/run} and {Zero:zero/run} followed, because that is what a search party does.",
+      "hint": "Tap Belle.",
+      "words": [
+        "Belle",
+        "yard",
+        "Olivia",
+        "Zero"
+      ]
+    },
+    {
+      "id": "chairs",
+      "scene": "patio",
+      "heading": "Under the chairs",
+      "text": "They looked under the wooden chairs. They looked by the picnic table. No {rock:rock/clack}. {Olivia:olivia/ask} said, \"Where would a treasure hide?\"",
+      "hint": "Tap the yard.",
+      "words": [
+        "rock",
+        "Olivia"
+      ]
+    },
+    {
+      "id": "garden",
+      "scene": "garden",
+      "heading": "In the garden",
+      "text": "The {garden} smelled like dirt and leaves. {Zero:zero/sniff} put her nose down. {Belle:belle/wreck} splashed a watering pot. {Olivia} looked between the green.",
+      "hint": "Tap Zero. Tap the garden.",
+      "words": [
+        "garden",
+        "Zero",
+        "Belle",
+        "Olivia"
+      ]
+    },
+    {
+      "id": "found",
+      "scene": "garden",
+      "heading": "There it is",
+      "text": "In the grass sat the {rock:rock/find}. Smooth as a secret. {Zero:zero/wag} nosed it kind. {Belle:belle/wag} dropped a tiny pebble beside it. \"Yours,\" said the pebble.",
+      "hint": "Tap the rock.",
+      "words": [
+        "rock",
+        "Zero",
+        "Belle"
+      ]
+    },
+    {
+      "id": "home",
+      "scene": "patio",
+      "heading": "Treasure home",
+      "text": "{Olivia} carried the {rock:rock/clack} as far as the patio. Then she gave it back. {Zero:zero/sleep} kept it. {Belle:belle/wag} kept bouncing. The search was done.",
+      "hint": "Tap them.",
+      "words": [
+        "Olivia",
+        "rock",
+        "Zero",
+        "Belle"
+      ]
+    }
+  ],
+  "end": {
+    "heading": "The End",
+    "text": "You {read} the whole {story}. Lost things can come home when sisters look together.",
+    "prompt": "If you lost a treasure, who would help you look?"
+  },
+  "quiz": {
+    "folder": "quiz",
+    "questions": [
+      {
+        "q": "Whose rock went missing?",
+        "options": [
+          {
+            "word": "Zero",
+            "label": "Zero's"
+          },
+          {
+            "word": "Belle",
+            "label": "Belle's"
+          },
+          {
+            "word": "Olivia",
+            "label": "Olivia's"
+          }
+        ],
+        "answer": 0,
+        "right": "Yes. Zero keeps a smooth rock like a treasure.",
+        "wrong": "It was Zero's favorite rock."
+      },
+      {
+        "q": "Who zoomed off first?",
+        "options": [
+          {
+            "word": "Belle",
+            "label": "Belle"
+          },
+          {
+            "word": "Zero",
+            "label": "Zero"
+          },
+          {
+            "word": "the-rock",
+            "label": "the rock"
+          }
+        ],
+        "answer": 0,
+        "right": "Belle always has an idea, and the idea is run.",
+        "wrong": "Belle zoomed first."
+      },
+      {
+        "q": "Where did they find it?",
+        "options": [
+          {
+            "word": "in-the-grass",
+            "label": "in the grass"
+          },
+          {
+            "word": "in-the-truck",
+            "label": "in the truck"
+          },
+          {
+            "word": "on-the-moon",
+            "label": "on the moon"
+          }
+        ],
+        "answer": 0,
+        "right": "In the grass, smooth as a secret.",
+        "wrong": "They found it in the grass."
+      }
+    ]
+  }
+}
