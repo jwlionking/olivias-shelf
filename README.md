@@ -23,12 +23,12 @@ Public URL: https://olivias-shelf.wyles.ai
 
 ```bash
 npm install
-npm run build
+RAYON_NUM_THREADS=1 npm run build
 pm2 start deploy/ecosystem.config.cjs
 pm2 save
 ```
 
-Origin nginx vhost: `deploy/nginx/olivias-shelf.wyles.ai` (proxies to PM2 on `127.0.0.1:3046`).
+Origin nginx vhost: `deploy/nginx/olivias-shelf.wyles.ai` (proxies to PM2 on `127.0.0.1:3046`). Rebuilds on this host need `RAYON_NUM_THREADS=1` so the Vite/Rolldown thread pool does not hit the process cap.
 
 ## Stack
 
