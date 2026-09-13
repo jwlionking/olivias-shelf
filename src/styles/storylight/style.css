@@ -8,7 +8,8 @@
   --cream: #f8f0dd;
   --paper: #f3e8cf;
   --ink: #2c2a3e;
-  --ink-soft: #5a5470;
+  --ink-strong: #1c1410;
+  --ink-soft: #4a3d28;
   --honey: #d9a45c;
   --oak: #c98d4f;
   --gold: #e6bd66;
@@ -33,7 +34,8 @@ body.sc-live {
   -webkit-font-smoothing: antialiased;
   user-select: none;
 }
-body.sc-live button { font: inherit; cursor: pointer; }
+/* font-family only — the font shorthand was clobbering pill/round button weight. */
+body.sc-live button { font-family: inherit; cursor: pointer; }
 body:not(.sc-live) #sc-root,
 body:not(.sc-live) #sparkles { display: none !important; }
 #sc-root[hidden] { display: none !important; }
@@ -100,7 +102,7 @@ img { display: block; }
   box-shadow: 0 5px 9px #05081a70;
   transition: transform 260ms var(--spring);
 }
-.round-button .icon { width: 27px; height: 27px; }
+.round-button .icon { width: 27px; height: 27px; filter: drop-shadow(0 0 0.7px #2a1608) drop-shadow(0 1px 1.5px rgba(42, 22, 8, 0.45)); }
 .round-button.big { width: 78px; height: 78px; }
 .round-button.big .icon { width: 38px; height: 38px; }
 .round-button:hover { transform: translateY(-3px) scale(1.08) rotate(-3deg); box-shadow: 0 9px 14px #05081a80; }
@@ -130,23 +132,27 @@ img { display: block; }
   min-height: 66px;
   padding: 10px 34px;
   border: 0;
-  color: var(--ink);
-  font-weight: 600;
+  color: var(--ink-strong);
+  font-family: var(--ui-font);
+  font-weight: 700;
   font-size: 20px;
   letter-spacing: 0.01em;
+  -webkit-font-smoothing: auto;
+  text-shadow: 0 1px 0 #fff9ec;
   background: transparent;
   border-image: url("/sc/public/ui/pill.f374995659899b10.webp") 112 fill / 33px / 0 stretch;
   border-radius: 999px;
   box-shadow: 0 6px 10px #05081a70;
-  transition: transform 260ms var(--spring), color 200ms;
+  transition: transform 260ms var(--spring), color 200ms, text-shadow 200ms;
   white-space: nowrap;
 }
-.pill-button .icon { width: 26px; height: 26px; }
+.pill-button .icon { width: 26px; height: 26px; filter: drop-shadow(0 0 0.7px #2a1608) drop-shadow(0 1px 1.5px rgba(42, 22, 8, 0.4)); }
 .pill-button:hover { transform: translateY(-3px) scale(1.04); box-shadow: 0 10px 16px #05081a80; }
 .pill-button:hover .icon { transform: scale(1.15) rotate(-6deg); }
 .pill-button:active, .pill-button[aria-pressed="true"] {
   border-image-source: url("/sc/public/ui/pill-pressed.86ee68b30db5e1d0.webp");
-  color: var(--cream);
+  color: #1a0e0c;
+  text-shadow: 0 1px 0 rgba(255, 236, 220, 0.65);
   transform: translateY(1px);
 }
 .pill-button:active { transition-duration: 80ms; transform: translateY(2px) scale(0.97); }
@@ -199,8 +205,8 @@ img { display: block; }
   width: 15px;
   height: 15px;
   background: url("/sc/public/ui/icons/star.35ce01e1ac338d99.webp") center / contain no-repeat;
-  opacity: 0.28;
-  opacity: 0.38;
+  opacity: 0.58;
+  filter: drop-shadow(0 1px 2px #05081a99);
   transition: opacity 400ms, transform 400ms var(--spring);
 }
 .progress-dots i:hover { transform: scale(1.3); opacity: 0.9; }
@@ -260,6 +266,7 @@ img { display: block; }
   transform-origin: 50% 50%;
   padding: 0;
   color: var(--ink);
+  -webkit-font-smoothing: auto;
   background: url("/sc/public/textures/paper.7b1612c72db0354d.webp") center / cover, var(--paper);
   border-radius: 8px;
   box-shadow:
@@ -321,14 +328,14 @@ img { display: block; }
 .text-panel .corner.tl { left: 10px; top: 10px; }
 .text-panel .corner.br { right: 10px; bottom: 10px; transform: scale(-1); }
 .text-panel-inner { padding: 44px 46px 30px 50px; display: flex; flex-direction: column; gap: 10px; }
-.page-eyebrow { font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; color: #a5642f; font-weight: 600; }
+.page-eyebrow { font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; color: #7a3f16; font-weight: 700; }
 .page-heading {
   margin: 0 0 6px;
   font-family: "Baloo 2", var(--ui-font);
   font-weight: 800;
   font-size: clamp(24px, min(2.5vw, 4.2vh), 38px);   /* follows the card's width, capped by the screen height */
   line-height: 1.05;
-  color: #8d4f1f;
+  color: #6e3c14;
   animation: heading-in 600ms var(--spring) both;
   animation-delay: 120ms;
 }
@@ -369,7 +376,7 @@ img { display: block; }
 .text-panel.self-read .page-words .word { color: #3a3552; }
 .page-foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 6px; border-top: 1px solid #c9b48a66; padding-top: 12px; }
 .page-hint { display: none; }
-.zoom-hint { font-size: 12px; letter-spacing: 0.06em; color: #a58d66; text-align: left; }
+.zoom-hint { font-size: 12px; letter-spacing: 0.06em; color: #5c4324; text-align: left; }
 
 /* the big word that pops out when you tap one */
 .word-zoom {
@@ -502,7 +509,7 @@ img { display: block; }
 }
 
 /* ---------- loading / title screen ---------- */
-.loading-bytes { margin: -4px 0 0; font-size: 13px; letter-spacing: 0.04em; color: #8c6a3c; font-variant-numeric: tabular-nums; min-height: 1.2em; }
+.loading-bytes { margin: -4px 0 0; font-size: 13px; letter-spacing: 0.04em; color: #5c4324; font-variant-numeric: tabular-nums; min-height: 1.2em; }
 .loading-bytes:empty { display: none; }
 #loading {
   position: absolute;
@@ -607,6 +614,7 @@ img { display: block; }
   padding: 40px 48px 34px;
   text-align: center;
   color: var(--ink);
+  -webkit-font-smoothing: auto;
   background: url("/sc/public/textures/paper.7b1612c72db0354d.webp") center / cover, var(--paper);
   border-radius: 6px;
   box-shadow:
@@ -637,7 +645,7 @@ img { display: block; }
 .loading-card .corner.tr { right: 10px; top: 10px; transform: scaleX(-1); }
 .loading-card .corner.bl { left: 10px; bottom: 10px; transform: scaleY(-1); }
 .loading-card .corner.br { right: 10px; bottom: 10px; transform: scale(-1); }
-.eyebrow { font-size: 11px; letter-spacing: 0.28em; color: #a5642f; font-weight: 600; }
+.eyebrow { font-size: 11px; letter-spacing: 0.28em; color: #7a3f16; font-weight: 700; }
 .loading-card h1 {
   margin: 0;
   line-height: 0;
@@ -648,7 +656,7 @@ img { display: block; }
 }
 .loading-logo { width: 380px; max-width: 80vw; height: auto; animation: logo-float 5s ease-in-out infinite; }
 @keyframes logo-float { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-6px) rotate(-1deg); } }
-.loading-blurb { margin: 0; max-width: 420px; font-size: 16px; line-height: 1.55; color: #5a4a35; }
+.loading-blurb { margin: 0; max-width: 420px; font-size: 16px; line-height: 1.55; color: #3f3224; }
 .loading-progress {
   width: 260px;
   height: 10px;
@@ -664,8 +672,8 @@ img { display: block; }
   background: linear-gradient(90deg, var(--honey), var(--gold));
   transition: width 400ms var(--soft);
 }
-#loading-copy { margin: 0; font-size: 14px; color: #8c6a3c; min-height: 20px; }
-.loading-footnote { margin-top: 6px; font-size: 12px; letter-spacing: 0.08em; color: #a58d66; }
+#loading-copy { margin: 0; font-size: 14px; color: #5c4324; min-height: 20px; }
+.loading-footnote { margin-top: 6px; font-size: 12px; letter-spacing: 0.08em; color: #5c4324; }
 #btn-open { animation: hud-pop 700ms var(--spring) both, open-nudge 2.4s ease-in-out 1.2s infinite; }
 @keyframes open-nudge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
 
@@ -683,6 +691,7 @@ img { display: block; }
   box-shadow: 0 0 0 2px #fff9ec, 0 2px 4px #05081a66;
   pointer-events: none;
 }
+.account-button .icon { filter: drop-shadow(0 0 1px #2a1608) drop-shadow(0 1px 2px rgba(42, 22, 8, 0.55)) contrast(1.12); }
 .account-button.has-avatar .icon { display: none; }
 /* the Pro pin: a member's badge hung on the corner button and on the parent row of the profiles folio */
 .pro-pin {
@@ -731,9 +740,9 @@ img { display: block; }
 .profile-avatar img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: 50% 18%; display: block; }
 .profile-info { min-width: 0; display: grid; gap: 3px; }
 .profile-info b { font-family: "Baloo 2", var(--ui-font); font-size: 22px; font-weight: 800; color: #3d2a17; line-height: 1.1; }
-.profile-info small { color: #8c6a3c; font-size: 13px; }
+.profile-info small { color: #5c4324; font-size: 13px; }
 .profile-info .board-bar { margin: 3px 0 2px; }
-.profile-stats { display: flex; flex-wrap: wrap; gap: 3px 14px; font-size: 13px; color: #6b5740; }
+.profile-stats { display: flex; flex-wrap: wrap; gap: 3px 14px; font-size: 13px; color: #4e3c28; }
 .profile-stats span { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
 .profile-stats .icon { width: 15px; height: 15px; }
 .profile-stats .chip-star { font-style: normal; color: #c9963a; font-size: 15px; }
@@ -792,7 +801,7 @@ dialog.folio-dialog[open] { display: block; }
 .folio-dialog .panel-actions .pill-button.tall { width: min(100%, 420px); min-height: 68px; font-size: 20px; gap: 12px; }
 .folio-dialog .google-g { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 1px #d4b982, 0 2px 4px #05081a22; }
 .folio-dialog .google-g svg { width: 22px; height: 22px; }
-.folio-dialog .account-divider { text-align: center; font-size: 12px; letter-spacing: 0.1em; color: #8c6a3c; margin: 12px 0 4px; }
+.folio-dialog .account-divider { text-align: center; font-size: 12px; letter-spacing: 0.1em; color: #5c4324; margin: 12px 0 4px; }
 .folio-dialog .account-text-button { background: none; border: 0; color: #8d4f1f; text-decoration: underline; font: inherit; font-size: 14px; cursor: pointer; padding: 6px 0; justify-self: center; }
 .folio-dialog .status-line a { color: #8d4f1f; }
 .folio-benefits { list-style: none; padding: 0; margin: 4px 0 0; }
@@ -806,7 +815,7 @@ dialog.folio-dialog[open] { display: block; }
 .folio-benefits .row-icon { width: 46px; height: 46px; display: grid; place-items: center; background: url("/sc/public/ui/tile.26d4a3e3569a5f83.webp") center / 100% 100% no-repeat; }
 .folio-benefits .row-icon .icon { width: 24px; height: 24px; }
 .folio-benefits b { display: block; font-weight: 600; font-size: 16px; color: #3d2a17; }
-.folio-benefits small { display: block; font-size: 12px; color: #8c6a3c; margin-top: 2px; }
+.folio-benefits small { display: block; font-size: 12px; color: #5c4324; margin-top: 2px; }
 @media (max-width: 640px) {
   .folio-dialog .folio-head { flex-direction: column; text-align: center; }
   /* a phone: less paper margin so the wooden buttons keep their shape (the pill ends are fixed slices,
@@ -963,7 +972,8 @@ dialog.pricing-dialog.panel-shell { width: min(900px, 96vw); overflow: auto; pad
   padding: 1cqw 3cqw;
   font-size: 6cqw;
   letter-spacing: 0;
-  color: var(--ink);
+  font-weight: 700;
+  color: var(--ink-strong);
   border: 0;
   border-image: url("/sc/public/ui/pill.f374995659899b10.webp") 112 fill / 33px / 0 stretch;
   border-radius: 999px;
@@ -1109,6 +1119,7 @@ dialog.pricing-dialog.panel-shell { width: min(900px, 96vw); overflow: auto; pad
   overflow: auto;
   padding: 34px 46px 30px;
   color: var(--ink);
+  -webkit-font-smoothing: auto;
   background: url("/sc/public/textures/paper.7b1612c72db0354d.webp") center / cover, var(--paper);
   border-radius: 8px;
   box-shadow: 0 0 0 1px #d4b982, inset 0 0 0 6px #fff9ec, inset 0 0 0 7px #d4b98266, 0 0 0 8px var(--navy), 0 30px 80px #05081acc;
@@ -1139,9 +1150,9 @@ dialog.pricing-dialog.panel-shell { width: min(900px, 96vw); overflow: auto; pad
   animation: hud-pop 700ms var(--spring) both;
 }
 .folio-head .portrait img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: 50% 18%; }
-.folio-head .portrait .icon { width: 52px; height: 52px; margin: auto; }
+.folio-head .portrait .icon { width: 52px; height: 52px; margin: auto; filter: drop-shadow(0 0 0.8px #2a1608) drop-shadow(0 1px 2px rgba(42, 22, 8, 0.45)); }
 .panel-shell h2 { margin: 2px 0 4px; font-family: "Baloo 2", var(--ui-font); font-size: 36px; font-weight: 800; color: #3d2a17; line-height: 1; }
-.panel-shell .panel-description { margin: 0; color: #6b5740; font-size: 14px; line-height: 1.5; }
+.panel-shell .panel-description { margin: 0; color: #4e3c28; font-size: 14px; line-height: 1.5; }
 .folio-rule { display: flex; align-items: center; gap: 10px; margin: 18px 0 8px; }
 .folio-rule::before, .folio-rule::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, #c9a45f, transparent); }
 .folio-rule .icon { width: 16px; height: 16px; opacity: 0.8; }
@@ -1172,9 +1183,9 @@ dialog.pricing-dialog.panel-shell { width: min(900px, 96vw); overflow: auto; pad
   place-items: center;
   background: url("/sc/public/ui/tile.26d4a3e3569a5f83.webp") center / 100% 100% no-repeat;
 }
-.settings-row .row-icon .icon { width: 24px; height: 24px; }
+.settings-row .row-icon .icon { width: 24px; height: 24px; filter: drop-shadow(0 0 0.6px #2a1608) drop-shadow(0 1px 1px rgba(42, 22, 8, 0.4)); }
 .settings-row label { font-weight: 600; font-size: 16px; color: #3d2a17; }
-.settings-row small { display: block; font-weight: 400; font-size: 12px; color: #8c6a3c; margin-top: 2px; }
+.settings-row small { display: block; font-weight: 400; font-size: 12px; color: #5c4324; margin-top: 2px; }
 .row-control { display: flex; justify-content: flex-end; }
 .settings-row select, .settings-row input[type="range"] { accent-color: var(--coral); }
 .settings-row select {
@@ -1196,10 +1207,10 @@ dialog.pricing-dialog.panel-shell { width: min(900px, 96vw); overflow: auto; pad
   height: 34px;
   border: 0;
   border-radius: 17px;
-  background: #cdb88e;
+  background: #b89a68;
   position: relative;
   transition: background 250ms;
-  box-shadow: inset 0 2px 4px #5a3d1a33;
+  box-shadow: inset 0 2px 4px #5a3d1a55;
   padding: 0;
 }
 .switch i {
@@ -1214,7 +1225,7 @@ dialog.pricing-dialog.panel-shell { width: min(900px, 96vw); overflow: auto; pad
 .switch[aria-checked="true"] { background: var(--coral); }
 .switch[aria-checked="true"] i { transform: translateX(30px); }
 .panel-actions { display: flex; justify-content: center; gap: 12px; margin-top: 22px; }
-.status-line { font-size: 12px; color: #8c6a3c; margin-top: 14px; text-align: center; line-height: 1.5; }
+.status-line { font-size: 12px; color: #5c4324; margin-top: 14px; text-align: center; line-height: 1.5; }
 
 #toast {
   position: absolute;
@@ -1336,17 +1347,18 @@ dialog.pricing-dialog.panel-shell { width: min(900px, 96vw); overflow: auto; pad
   flex: none;
   font: 800 34px/1 "Baloo 2", var(--ui-font); cursor: pointer; width: 52px; height: 52px; border: 0; border-radius: 50%;
   display: grid; place-items: center; padding: 0 0 6px;   /* the chevron glyph hangs low in its em box: lift it to the centre */
-  color: #3a2410; background: radial-gradient(circle at 35% 30%, #ffe8b8, #e9b56b 70%, #c98a44);
-  box-shadow: 0 0 0 3px var(--navy), 0 8px 18px #05081a99, inset 0 -3px 0 #a86a2c;
-  transition: transform 220ms var(--spring), opacity 200ms;
+  color: #2a1608; background: radial-gradient(circle at 35% 30%, #fff6d8, #f0c56a 62%, #c07a2e);
+  text-shadow: 0 1px 0 #fff6d8;
+  box-shadow: 0 0 0 3px var(--navy), 0 8px 18px #05081a99, inset 0 -3px 0 #8a5418;
+  transition: transform 220ms var(--spring), opacity 200ms, filter 200ms;
 }
 .shelf-nav:hover { transform: scale(1.08); }
 .shelf-nav:active { transform: scale(0.96); }
-.shelf-nav:disabled { opacity: 0.35; cursor: default; transform: none; }
+.shelf-nav:disabled { opacity: 0.72; filter: grayscale(0.1); cursor: default; transform: none; }
 .shelf-row.single .shelf-nav { display: none; }
 .shelf-dots { display: flex; gap: 8px; }
-.shelf-dots i { width: 9px; height: 9px; border-radius: 50%; background: #ffffff66; box-shadow: 0 0 0 2px #05081a66; }
-.shelf-dots i.on { background: #ffd97a; }
+.shelf-dots i { width: 9px; height: 9px; border-radius: 50%; background: #fff6d8cc; box-shadow: 0 0 0 2px #05081a99; }
+.shelf-dots i.on { background: #ffd97a; box-shadow: 0 0 0 2px #05081a99, 0 0 8px #ffd97a99; }
 .shelf-book {
   font: inherit; text-align: left; cursor: pointer; min-width: 180px;
   padding: 10px 16px 9px; border: 0; border-radius: 14px; color: var(--ink);
@@ -1387,13 +1399,13 @@ dialog.pricing-dialog.panel-shell { width: min(900px, 96vw); overflow: auto; pad
 .quiz-marks { margin-top: 6px; gap: 4px; }
 .quiz-marks i { width: 16px; height: 16px; font-size: 11px; }
 .shelf-meta { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-.shelf-meta small { display: block; font-size: 12px; color: #7a6a4a; white-space: nowrap; }
+.shelf-meta small { display: block; font-size: 12px; color: #5c4324; white-space: nowrap; }
 .shelf-pins { display: flex; gap: 3px; }
 .shelf-pins img { width: 20px; height: 20px; object-fit: contain; }
 .shelf-pins img.missing { filter: brightness(0) opacity(0.22); }
 .shelf-book:hover, .shelf-book.hover { transform: translateY(-4px) scale(1.03); box-shadow: 0 0 0 1px #ffd97a, 0 0 0 4px var(--navy), 0 16px 30px #05081aaa; }
 .shelf-book.soon { opacity: 0.8; }
-.shelf-book.soon small { color: #a08a5a; }
+.shelf-book.soon small { color: #6b4e28; }
 @media (max-width: 720px) {
   /* the cards stack under the title (nothing clips their shadows); the round arrows keep their shape beside them */
   .shelf-strip { bottom: 12px; gap: 6px; }
@@ -1422,7 +1434,7 @@ dialog.pricing-dialog.panel-shell { width: min(900px, 96vw); overflow: auto; pad
 .quiz-card { position: relative; width: min(720px, 92vw); padding: 22px 34px 26px; border-radius: 22px; text-align: center; color: var(--ink);
   background: url("/sc/public/textures/paper.7b1612c72db0354d.webp") center / cover, var(--paper); box-shadow: 0 0 0 1px #d4b982, 0 0 0 5px var(--navy), 0 24px 50px #05081aaa; }
 .quiz-card.arriving { animation: hud-pop 600ms var(--spring) both; }
-.quiz-eyebrow { display: block; font: 700 12px/1 var(--ui-font); letter-spacing: 0.14em; text-transform: uppercase; color: #a08a5a; margin-bottom: 8px; }
+.quiz-eyebrow { display: block; font: 700 12px/1 var(--ui-font); letter-spacing: 0.14em; text-transform: uppercase; color: #6b4e28; margin-bottom: 8px; }
 .quiz-question { margin: 0; font: 800 clamp(24px, 3.6vw, 36px)/1.15 "Baloo 2", var(--ui-font); }
 .quiz-options { display: flex; gap: 22px; justify-content: center; flex-wrap: wrap; }
 .quiz-option { --i: 0; font: inherit; cursor: pointer; border: 0; padding: 12px 12px 10px; border-radius: 22px; width: clamp(150px, 22vw, 230px); color: var(--ink);
@@ -1512,7 +1524,7 @@ dialog.pricing-dialog.panel-shell { width: min(900px, 96vw); overflow: auto; pad
 .souvenir-chip .chip-pins b { color: #fff; }
 .souvenir-chip .chip-check { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; background: linear-gradient(135deg, #9be29a, #3fa860); color: #fff; font-style: normal; font-size: 12px; font-weight: 800; box-shadow: inset 0 0 0 2px #dbf5d6, 0 2px 4px #00000066; }
 .souvenir-chip .chip-quiz b { color: #fff; }
-.souvenir-chip small { font-size: 12px; opacity: 0.75; margin-left: -4px; }
+.souvenir-chip small { font-size: 12px; opacity: 0.92; margin-left: -4px; color: #fff3d6; }
 .pin-flight { position: fixed; left: 0; top: 0; width: 96px; height: auto; pointer-events: none; z-index: 40; filter: drop-shadow(0 8px 12px #00000066); }
 /* a star or a check on its way to the counter (the same arc as a pin) */
 .glyph-flight { width: auto; font-style: normal; font-weight: 800; line-height: 1; font-family: "Baloo 2", var(--ui-font); }
@@ -1610,7 +1622,7 @@ body.quiz-open .souvenir-chip { z-index: 31; }
 .page-words .word.foreign ruby { ruby-position: over; ruby-align: center; }
 .page-words .word.foreign rt {
   font: 500 0.42em/1 "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Noto Sans SC", "PingFang SC", "Yu Gothic", system-ui, sans-serif;
-  color: #a5642f;
+  color: #7a3f16;
   letter-spacing: 0.02em;
   padding-bottom: 2px;
 }
@@ -1646,18 +1658,18 @@ body.quiz-open .souvenir-chip { z-index: 31; }
 .vocab-text { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
 .vocab-script { font: 800 clamp(40px, 6vw, 64px)/1.1 "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Noto Sans SC", "PingFang SC", "Baloo 2", var(--ui-font); color: #8d3a12; }
 .vocab-script:lang(fr) { font-family: "Baloo 2", var(--ui-font); }
-.vocab-roman { font: 600 24px/1.2 var(--ui-font); color: #a5642f; font-style: italic; }
+.vocab-roman { font: 600 24px/1.2 var(--ui-font); color: #7a3f16; font-style: italic; }
 .vocab-meaning { font: 700 26px/1.2 "Baloo 2", var(--ui-font); color: #3d2a17; }
 .vocab-meaning::before { content: "= "; color: #c9a45f; }
-.vocab-note { font-size: 13px; color: #7a6a52; }
-.vocab-lang { margin-top: 6px; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #a5642f; }
+.vocab-note { font-size: 13px; color: #5c4a36; }
+.vocab-lang { margin-top: 6px; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #7a3f16; }
 @media (max-width: 720px) { .vocab-card { flex-direction: column; text-align: center; padding: 20px; } .vocab-text { align-items: center; } .vocab-card img { width: 120px; height: 120px; } }
 
 .phrase-pill .icon-abc { width: 20px; height: 20px; }
 .phrase-count { margin: 6px 0 0; font: 600 13px/1 var(--ui-font); color: #8d4f1f; }
 .phrase-count b { font-size: 16px; }
 .phrase-page { margin-top: 14px; }
-.phrase-page span { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #a5642f; padding: 3px 8px; border-radius: 999px; background: #efe0c2; }
+.phrase-page span { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #7a3f16; padding: 3px 8px; border-radius: 999px; background: #efe0c2; }
 .phrase-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 8px; margin-bottom: 6px; }
 .phrase-row { position: relative; display: grid; grid-template-columns: 56px 1fr 32px; align-items: center; gap: 12px; padding: 8px 10px; border: 0; border-radius: 14px; text-align: left; color: var(--ink); background: #fff9ec99; box-shadow: inset 0 0 0 1px #d4b98266; cursor: pointer; transition: transform 250ms var(--spring), background 200ms; }
 .phrase-row:hover { background: #fff3d6; transform: translateY(-2px); }
@@ -1668,9 +1680,9 @@ body.quiz-open .souvenir-chip { z-index: 31; }
 .phrase-text { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
 .phrase-text b { font: 700 20px/1.2 "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Noto Sans SC", "PingFang SC", "Baloo 2", var(--ui-font); color: #8d3a12; }
 .phrase-text b:lang(fr) { font-family: "Baloo 2", var(--ui-font); }
-.phrase-text i { font: 500 13px/1.2 var(--ui-font); color: #a5642f; }
+.phrase-text i { font: 500 13px/1.2 var(--ui-font); color: #7a3f16; }
 .phrase-text span { font: 600 14px/1.2 var(--ui-font); color: #3d2a17; }
-.phrase-text small { font-size: 11px; color: #7a6a52; }
+.phrase-text small { font-size: 11px; color: #5c4a36; }
 .phrase-play { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: #1b2450; box-shadow: 0 0 0 2px #e6bd6688; }
 .phrase-play .icon { width: 16px; height: 16px; }
 .phrase-stamp { position: absolute; right: 8px; top: 6px; width: 22px; height: 22px; display: grid; place-items: center; border-radius: 50%; background: #e2493d; color: #fff; font: 800 13px/1 var(--ui-font); transform: rotate(-12deg) scale(0); transition: transform 350ms var(--spring); }
@@ -1699,9 +1711,10 @@ body.quiz-open .souvenir-chip { z-index: 31; }
   background: url("/sc/public/textures/paper.7b1612c72db0354d.webp") center / cover, var(--paper);
   box-shadow: 0 0 0 1px #d4b982, inset 0 0 0 4px #fff9ec, 0 14px 30px #05081a80;
   z-index: 9;
+  -webkit-font-smoothing: auto;
 }
 .language-menu.arriving { animation: hud-pop 400ms var(--spring) both; }
-.language-menu button { display: flex; align-items: center; gap: 12px; min-width: 170px; padding: 8px 14px 8px 10px; border: 0; border-radius: 10px; background: transparent; color: #3d2a17; font: 600 15px/1 var(--ui-font); text-align: left; cursor: pointer; transition: background 150ms, transform 200ms var(--spring); }
+.language-menu button { display: flex; align-items: center; gap: 12px; min-width: 170px; padding: 8px 14px 8px 10px; border: 0; border-radius: 10px; background: transparent; color: #2a1608; font: 700 15px/1 var(--ui-font); text-align: left; cursor: pointer; transition: background 150ms, transform 200ms var(--spring); }
 .language-menu button img.flag { display: block; width: 36px; height: 24px; flex: none; filter: drop-shadow(0 1px 0 rgba(61, 42, 23, 0.25)); }
 .language-menu button:hover { background: #fff3d6; transform: translateX(2px); }
 .language-menu button[aria-pressed="true"] { background: #ffd97a; }
