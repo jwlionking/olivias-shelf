@@ -4,14 +4,17 @@ import { assetUrl } from "./assets.js";
    spoken, and plays it back with word callbacks.
 
    Providers, in the order tried by "auto":
-     openai  — POST /api/tts on the local server (server.py proxies the OpenAI speech API and
-               whisper word timestamps). Expressive, any text, needs an API key on the server.
-     bundled — books/<id>/voice/page-N.mp3 generated ahead of time. Word timings come from a
-               syllable-weighted energy alignment done in the browser (or timings.json if present).
+     bundled — books/<id>/voice/page-N.mp3 pre-rendered with Grok Carina.
+     grok    — POST /api/tts (xAI Carina). Used live for missing/new pages.
      browser — the Web Speech API. Word boundaries come from its `boundary` events. */
 
 const STOP_PUNCT = /[.!?]["”']?$/;
 const PHRASE_PUNCT = /[,.!?;:]["”']?$/;
+const MARKUP = /\{([^}:]+)(?::[^}]+)?\}/g;
+const LEGACY_VOICE = {
+  fable: "carina", nova: "carina", onyx: "carina", coral: "carina",
+  shimmer: "carina", alloy: "carina", echo: "carina", sage: "luna", willow: "carina",
+};
 
 export function cleanWord(word) {
   return String(word).normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9']/g, "");
@@ -195,7 +198,7 @@ export class Narrator {
     this.settings = settings;
     this.onStatus = onStatus || (() => {});
     this.cache = new Map();
-    this.server = { checked: false, openai: false, voices: [] };
+    this.server = { checked: false, grok: false, openai: false, voices: [] };
     this.current = null; // { page, source, startedAt, offset, timings, buffer, duration, provider, utterance }
     this.gain = context.createGain();
     this.gain.gain.value = 1;
@@ -205,20 +208,36 @@ export class Narrator {
     this.paused = false;
   }
 
+  grokVoice() {
+    const raw = this.settings.grokVoice || this.settings.openaiVoice || this.story?.narrator?.grok?.voice || "carina";
+    return LEGACY_VOICE[raw] || raw || "carina";
+  }
+
   async checkServer() {
     if (this.server.checked) return this.server;
     this.server.checked = true;
-    this.server.openai = false;
-    this.server.voices = [];
+    try {
+      const res = await fetch("/api/tts");
+      if (res.ok) {
+        const data = await res.json();
+        this.server.grok = !!(data.grok ?? data.openai);
+        this.server.openai = this.server.grok;
+        this.server.voices = (data.voices || []).map((v) => v.id || v).filter(Boolean);
+      }
+    } catch {
+      this.server.grok = false;
+      this.server.openai = false;
+      this.server.voices = [];
+    }
     return this.server;
   }
 
   provider() {
     const pref = this.settings.voice || "auto";
-    if (pref === "openai") return this.server.openai ? "openai" : "bundled";
+    if (pref === "openai" || pref === "grok") return this.server.grok ? "grok" : "bundled";
     if (pref === "bundled") return "bundled";
     if (pref === "browser") return "browser";
-    return this.server.openai ? "openai" : "bundled";
+    return "auto";
   }
 
   /** Swap to another book: drop every prepared page of the old one. */
@@ -231,9 +250,9 @@ export class Narrator {
 
   pageText(pageIndex) {
     const pages = this.story.pages;
-    if (pageIndex < pages.length) return pages[pageIndex].text.replace(/\{([^}:]+)(?::[^}]+)?\}/g, "$1");
+    if (pageIndex < pages.length) return pages[pageIndex].text.replace(MARKUP, "$1");
     const end = this.story.end;
-    return `${end.heading}. ${end.text} ${end.prompt}`;
+    return `${end.heading}. ${end.text} ${end.prompt}`.replace(MARKUP, "$1");
   }
 
   /** The words of the reading card, in its index space (the spoken end page also says the
@@ -241,47 +260,56 @@ export class Narrator {
   words(pageIndex) {
     const pages = this.story.pages;
     const text = pageIndex < pages.length ? pages[pageIndex].text : `${this.story.end.text} ${this.story.end.prompt}`;
-    return text.replace(/\{([^}:]+)(?::[^}]+)?\}/g, "$1").split(/\s+/).filter(Boolean);
+    return text.replace(MARKUP, "$1").split(/\s+/).filter(Boolean);
   }
 
   /** Resolve audio + timings for a page with the active provider (falls back down the chain). */
   async prepare(pageIndex) {
     await this.checkServer();
     const provider = this.provider();
-    const key = `${provider}:${pageIndex}:${this.settings.openaiVoice || ""}`;
+    const key = `${provider}:${pageIndex}:${this.grokVoice()}`;
     if (this.cache.has(key)) return this.cache.get(key);
     const words = this.words(pageIndex);
     const task = (async () => {
-      if (provider === "openai") {
+      const bundled = async () => this.prepareBundled(pageIndex, words);
+      const grok = async () => this.prepareGrok(pageIndex, words);
+      const browser = () => ({ provider: "browser", buffer: null, timings: null, words, duration: 0 });
+      if (provider === "grok") {
         try {
-          return await this.prepareOpenAI(pageIndex, words);
+          return await grok();
         } catch (error) {
-          console.warn("OpenAI narration failed, using bundled voice", error);
+          console.warn("Grok narration failed, using bundled voice", error);
           this.onStatus(t("openaiUnavailable"));
         }
+        try { return await bundled(); } catch (error) {
+          console.warn("Bundled narration missing, using the browser voice", error);
+        }
+        return browser();
       }
       if (provider !== "browser") {
         try {
-          return await this.prepareBundled(pageIndex, words);
+          return await bundled();
         } catch (error) {
-          console.warn("Bundled narration missing, using the browser voice", error);
+          console.warn("Bundled narration missing", error);
+        }
+        if (this.server.grok && provider === "auto") {
+          try { return await grok(); } catch (error) {
+            console.warn("Grok narration failed, using the browser voice", error);
+          }
         }
       }
-      return { provider: "browser", buffer: null, timings: null, words, duration: 0 };
+      return browser();
     })();
     this.cache.set(key, task);
     return task;
   }
 
-  async prepareOpenAI(pageIndex, words) {
-    const n = this.story.narrator?.openai || {};
+  async prepareGrok(pageIndex, words) {
+    const n = this.story.narrator?.grok || this.story.narrator?.openai || {};
     const body = {
       text: this.pageText(pageIndex),
-      voice: this.settings.openaiVoice || n.voice || "fable",
-      instructions: n.instructions,
-      speed: n.speed || 0.92,
-      model: n.model || "gpt-4o-mini-tts",
-      align: true,
+      voice: this.grokVoice() || n.voice || "carina",
+      language: n.language || this.settings.language || this.story.lang || "en",
     };
     const res = await fetch("/api/tts", {
       method: "POST",
@@ -290,12 +318,17 @@ export class Narrator {
     });
     if (!res.ok) throw new Error(`tts ${res.status}`);
     const data = await res.json();
+    if (!data.audio) throw new Error("tts missing audio");
     const bytes = Uint8Array.from(atob(data.audio), (c) => c.charCodeAt(0));
     const buffer = await this.ctx.decodeAudioData(bytes.buffer);
     const timings = data.words && data.words.length >= words.length * 0.5
       ? alignByTranscript(data.words, words, buffer.duration)
       : alignByEnergy(buffer, words);
-    return { provider: "openai", buffer, timings, words, duration: buffer.duration };
+    return { provider: "grok", buffer, timings, words, duration: buffer.duration };
+  }
+
+  async prepareOpenAI(pageIndex, words) {
+    return this.prepareGrok(pageIndex, words);
   }
 
   async prepareBundled(pageIndex, words) {
@@ -533,25 +566,31 @@ export class Narrator {
     this.speakText(word);
   }
 
-  /** Say a short line (a toy's name, a book's title) in the storyteller's voice: the OpenAI voice
-      through the server when it has a key (one call per line, cached here and on disk), the
-      browser's own voice otherwise. */
+  /** Say a short line (a toy's name, a book's title) in the storyteller's voice: Grok Carina
+      through the server when it has a key (one call per line, cached here), the browser's own
+      voice otherwise. */
   async say(text, { instructions = "Say this warmly and clearly, like a storyteller introducing a friend to a child. Just the words, no extras.", clip = null } = {}) {
     text = String(text || "").trim();
     if (!text) return;
     // a clip made ahead of time (tools/voice_lines.py) plays first; a missing one costs one 404
     if (clip && await this.playClip(clip)) return;
     await this.checkServer().catch(() => null);
-    if (this.server.openai) {
-      const voice = this.settings.openaiVoice || this.story?.narrator?.openai?.voice || "fable";
+    if (this.server.grok) {
+      const voice = this.grokVoice();
       const key = `say:${voice}:${text}`;
       try {
         let task = this.cache.get(key);
         if (!task) {
           task = (async () => {
-            const res = await fetch("/api/tts", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ text, voice, instructions, speed: 0.95, model: "gpt-4o-mini-tts", align: false }) });
+            const res = await fetch("/api/tts", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ text, voice, language: this.settings.language || "en" }),
+            });
             if (!res.ok) throw new Error(`tts ${res.status}`);
-            return await this.ctx.decodeAudioData(await res.arrayBuffer());
+            const data = await res.json();
+            const bytes = Uint8Array.from(atob(data.audio), (c) => c.charCodeAt(0));
+            return await this.ctx.decodeAudioData(bytes.buffer);
           })();
           this.cache.set(key, task);
         }

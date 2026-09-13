@@ -11,7 +11,7 @@
   "colors": {"cloth": "#1c4a5a", "endpaper": {"base": "#1c2836", "ink": "#f0c978", "pattern": "stars"}},
   "hero": {"name": "Olivia", "felt": "otto"},
   "magic": {"launch": "The little rocket pushed the air, and the air pushed back.", "drop": "Everything falls. That pull has a name: gravity."},
-  "narrator": {"openai": {"model": "gpt-4o-mini-tts", "voice": "onyx", "speed": 0.94, "instructions": "Warm, clear storyteller reading a science picture book to a child. Curious, never lecturing. Pause at full stops."}},
+  "narrator": {"grok": {"voice": "carina","language": "en","instructions": "Warm, clear storyteller reading a science picture book to a child. Curious, never lecturing. Pause at full stops."},"openai": {"model": "grok-tts","voice": "carina","speed": 0.94,"instructions": "Warm, clear storyteller reading a science picture book to a child. Curious, never lecturing. Pause at full stops."},"bundled": {"folder": "voice","format": "mp3","timings": true}},
   "pages": [
     {"id": "shop", "scene": "workshop", "heading": "Sink and float", "text": "{Olivia} dropped a {pebble}. It sank. She dropped a wooden {boat}. It floated on the {workshop} tray.", "hint": "Tap Olivia.", "words": ["Olivia", "pebble", "boat", "workshop"]},
     {"id": "hug", "scene": "workshop", "heading": "An upward hug", "text": "\"Water pushes {up} on everything in it,\" said {Elon:elon/teach}. \"That upward hug is called {buoyancy}.\"", "hint": "Tap Elon.", "words": ["up", "Elon", "buoyancy"]},

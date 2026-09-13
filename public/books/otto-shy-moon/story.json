@@ -37,9 +37,14 @@
     "sleep": "Goodnight, Otto. Goodnight, Moon."
   },
   "narrator": {
+    "grok": {
+      "voice": "carina",
+      "language": "en",
+      "instructions": "You are a warm, gentle storyteller reading a picture book to a young child at bedtime. Read slowly and clearly, with soft wonder. Pause briefly at full stops. Give the moon a soft, shy, kind voice; give the owl a wise, hooting voice; give the cat a lazy purr; give Otto a small, curious, brave voice. Never rush. Leave a little silence after the last word."
+    },
     "openai": {
-      "model": "gpt-4o-mini-tts",
-      "voice": "fable",
+      "model": "grok-tts",
+      "voice": "carina",
       "speed": 0.92,
       "instructions": "You are a warm, gentle storyteller reading a picture book to a young child at bedtime. Read slowly and clearly, with soft wonder. Pause briefly at full stops. Give the moon a soft, shy, kind voice; give the owl a wise, hooting voice; give the cat a lazy purr; give Otto a small, curious, brave voice. Never rush. Leave a little silence after the last word."
     },
@@ -216,7 +221,7 @@
     "text": "You {read} the whole {story}. {Otto} is {asleep:otto/sleep}, and the {moon} is not {shy:moon/smile} any more.",
     "prompt": "What would you do if the moon went missing?"
   },
-  "credits": "Story, 3D scenes and code made for Storylight. Title lettering, controls, icons, cover art and pop-up backdrop generated with GPT Image 2 through Higgsfield; narration voice through Higgsfield text-to-speech, with optional live narration through the OpenAI speech API.",
+  "credits": "Story, 3D scenes and code made for Storylight. Title lettering, controls, icons, cover art and pop-up backdrop generated with GPT Image 2 through Higgsfield; narration voice through Higgsfield text-to-speech, with optional live narration through Grok Carina.",
   "audio": {
     "music": "audio/music.m4a",
     "ambience": "audio/ambience.mp3",

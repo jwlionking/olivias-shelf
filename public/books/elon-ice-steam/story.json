@@ -11,7 +11,7 @@
   "colors": {"cloth": "#2a4a6a", "endpaper": {"base": "#1c2836", "ink": "#f0c978", "pattern": "stars"}},
   "hero": {"name": "Olivia", "felt": "otto"},
   "magic": {"launch": "The little rocket pushed the air, and the air pushed back.", "drop": "Everything falls. That pull has a name: gravity."},
-  "narrator": {"openai": {"model": "gpt-4o-mini-tts", "voice": "onyx", "speed": 0.94, "instructions": "Warm, clear storyteller reading a science picture book to a child. Curious, never lecturing. Pause at full stops."}},
+  "narrator": {"grok": {"voice": "carina","language": "en","instructions": "Warm, clear storyteller reading a science picture book to a child. Curious, never lecturing. Pause at full stops."},"openai": {"model": "grok-tts","voice": "carina","speed": 0.94,"instructions": "Warm, clear storyteller reading a science picture book to a child. Curious, never lecturing. Pause at full stops."},"bundled": {"folder": "voice","format": "mp3","timings": true}},
   "pages": [
     {"id": "shop", "scene": "workshop", "heading": "Water standing still", "text": "{Olivia} held an {ice} cube on the {workshop} bench. Hard. Cold. \"That is water standing still,\" said {Elon:elon/look}.", "hint": "Tap Olivia. Tap Elon.", "words": ["Olivia", "ice", "workshop", "Elon"]},
     {"id": "melt", "scene": "apple-fall", "heading": "A sliding face", "text": "The cube became a {puddle} in her palm. \"Same water, now sliding,\" said {Elon:elon/teach}. \"{Heat} made it change face.\"", "hint": "Tap the apple. Tap Elon.", "words": ["puddle", "Elon", "Heat"]},

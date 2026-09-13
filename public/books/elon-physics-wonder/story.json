@@ -18,11 +18,21 @@
     "drop": "Everything falls. That pull has a name: gravity."
   },
   "narrator": {
+    "grok": {
+      "voice": "carina",
+      "language": "en",
+      "instructions": "Warm, clear storyteller reading a science picture book to a child. Curious, never lecturing. Pause at full stops."
+    },
     "openai": {
-      "model": "gpt-4o-mini-tts",
-      "voice": "onyx",
+      "model": "grok-tts",
+      "voice": "carina",
       "speed": 0.94,
       "instructions": "Warm, clear storyteller reading a science picture book to a child. Curious, never lecturing. Pause at full stops."
+    },
+    "bundled": {
+      "folder": "voice",
+      "format": "mp3",
+      "timings": true
     }
   },
   "pages": [

@@ -18,11 +18,21 @@
     "home": "One rock. One candy. Two sisters on the couch."
   },
   "narrator": {
+    "grok": {
+      "voice": "carina",
+      "language": "en",
+      "instructions": "Warm gentle storyteller reading a family picture book about two real dogs. Soft, clear, never rushed. Zero is calm. Belle is bouncy. Give them kind voices without barking words."
+    },
     "openai": {
-      "model": "gpt-4o-mini-tts",
-      "voice": "nova",
+      "model": "grok-tts",
+      "voice": "carina",
       "speed": 0.92,
       "instructions": "Warm gentle storyteller reading a family picture book about two real dogs. Soft, clear, never rushed. Zero is calm. Belle is bouncy. Give them kind voices without barking words."
+    },
+    "bundled": {
+      "folder": "voice",
+      "format": "mp3",
+      "timings": true
     }
   },
   "pages": [

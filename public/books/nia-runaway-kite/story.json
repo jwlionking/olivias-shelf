@@ -38,9 +38,14 @@
     "sleep": "Goodnight, Nia. Goodnight, kites."
   },
   "narrator": {
+    "grok": {
+      "voice": "carina",
+      "language": "en",
+      "instructions": "You are a warm, gentle storyteller reading a picture book to a young child. Read slowly and clearly, with bright, breezy wonder. Pause briefly at full stops. Give the wind a soft whooshing voice, the ducks a cheerful quack, the sheep a woolly bleat, the crow a raspy caw, the cloud a sleepy sniffly voice, and Nia a small, brave, giggly voice. Never rush. Leave a little silence after the last word."
+    },
     "openai": {
-      "model": "gpt-4o-mini-tts",
-      "voice": "fable",
+      "model": "grok-tts",
+      "voice": "carina",
       "speed": 0.92,
       "instructions": "You are a warm, gentle storyteller reading a picture book to a young child. Read slowly and clearly, with bright, breezy wonder. Pause briefly at full stops. Give the wind a soft whooshing voice, the ducks a cheerful quack, the sheep a woolly bleat, the crow a raspy caw, the cloud a sleepy sniffly voice, and Nia a small, brave, giggly voice. Never rush. Leave a little silence after the last word."
     },
@@ -214,7 +219,7 @@
     "text": "You {read} the whole {story}. {Nia} is {home:nia/home}, and {two:kite2/hang} {kites:kite/hang} are safe on the {wall:wall/glow}.",
     "prompt": "Would you let your kite fly free?"
   },
-  "credits": "Story, 3D scenes and code made for Storylight. Title lettering, cover art, pop-up backdrops and cut-outs generated with GPT Image 2 through Higgsfield; Nia modelled and rigged through Higgsfield (Meshy); narration voice through Higgsfield text-to-speech, with optional live narration through the OpenAI speech API.",
+  "credits": "Story, 3D scenes and code made for Storylight. Title lettering, cover art, pop-up backdrops and cut-outs generated with GPT Image 2 through Higgsfield; Nia modelled and rigged through Higgsfield (Meshy); narration voice through Higgsfield text-to-speech, with optional live narration through Grok Carina.",
   "audio": {
     "music": "audio/music.m4a",
     "ambience": "audio/ambience.mp3",

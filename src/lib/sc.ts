@@ -73,8 +73,7 @@ export function heroModelUrl(id: string, file: string) {
 }
 
 export function voiceUrl(id: string, page: number) {
-  const found = map[`books/${id}/voice/page-${page + 1}.mp3`];
-  return found ? cdn(found) : found;
+  return cdn(`/books/${id}/voice/page-${page + 1}.mp3`);
 }
 
 export function wordCardUrl(id: string, word: string) {

@@ -11,7 +11,7 @@
   "colors": {"cloth": "#7a3a1c", "endpaper": {"base": "#1c2836", "ink": "#f0c978", "pattern": "stars"}},
   "hero": {"name": "Olivia", "felt": "otto"},
   "magic": {"launch": "The little rocket pushed the air, and the air pushed back.", "drop": "Everything falls. That pull has a name: gravity."},
-  "narrator": {"openai": {"model": "gpt-4o-mini-tts", "voice": "onyx", "speed": 0.94, "instructions": "Warm, clear storyteller reading a science picture book to a child. Curious, never lecturing. Pause at full stops."}},
+  "narrator": {"grok": {"voice": "carina","language": "en","instructions": "Warm, clear storyteller reading a science picture book to a child. Curious, never lecturing. Pause at full stops."},"openai": {"model": "grok-tts","voice": "carina","speed": 0.94,"instructions": "Warm, clear storyteller reading a science picture book to a child. Curious, never lecturing. Pause at full stops."},"bundled": {"folder": "voice","format": "mp3","timings": true}},
   "pages": [
     {"id": "shop", "scene": "workshop", "heading": "A quiet fire", "text": "{Olivia} held a sun-warm {stone} on the {workshop} bench. \"{Elon:elon/look},\" she said. \"It feels like a quiet fire.\"", "hint": "Tap Olivia. Tap Elon.", "words": ["Olivia", "stone", "workshop", "Elon"]},
     {"id": "dance", "scene": "apple-fall", "heading": "Tiny bits dancing", "text": "\"{Heat} is tiny bits {dancing},\" said {Elon:elon/teach}. \"A faster dance feels warmer. A slower dance feels cooler.\"", "hint": "Tap Elon. Tap the apple.", "words": ["Heat", "dancing", "Elon"]},

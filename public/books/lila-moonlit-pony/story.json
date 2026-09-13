@@ -30,11 +30,21 @@
     "sleep": "Goodnight, Lila. Goodnight, pony."
   },
   "narrator": {
+    "grok": {
+      "voice": "carina",
+      "language": "en",
+      "instructions": "You are a warm, gentle storyteller reading a picture book to a seven-year-old girl at bedtime. Read slowly and clearly, with soft wonder. Pause briefly at full stops. Give Lila a small, kind, brave voice; give the pony a soft breathy hush; give the moon a sleepy, smiling voice. Never rush. Leave a little silence after the last word."
+    },
     "openai": {
-      "model": "gpt-4o-mini-tts",
-      "voice": "nova",
+      "model": "grok-tts",
+      "voice": "carina",
       "speed": 0.92,
       "instructions": "You are a warm, gentle storyteller reading a picture book to a seven-year-old girl at bedtime. Read slowly and clearly, with soft wonder. Pause briefly at full stops. Give Lila a small, kind, brave voice; give the pony a soft breathy hush; give the moon a sleepy, smiling voice. Never rush. Leave a little silence after the last word."
+    },
+    "bundled": {
+      "folder": "voice",
+      "format": "mp3",
+      "timings": true
     }
   },
   "pages": [

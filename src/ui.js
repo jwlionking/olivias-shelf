@@ -21,7 +21,8 @@ const $ = (id) => document.getElementById(id);
 
 export const DEFAULT_SETTINGS = {
   voice: "auto",
-  openaiVoice: "fable",
+  grokVoice: "carina",
+  openaiVoice: "carina",
   browserVoice: "",
   music: 0.6,
   sfx: 0.8,
@@ -31,6 +32,20 @@ export const DEFAULT_SETTINGS = {
   muted: false,
   language: "en",
 };
+
+const LEGACY_GROK_VOICE = {
+  fable: "carina", nova: "carina", onyx: "carina", coral: "carina",
+  shimmer: "carina", alloy: "carina", echo: "carina", sage: "luna", willow: "carina",
+};
+
+export const GROK_VOICE_OPTIONS = [
+  { id: "carina", name: "Carina" },
+  { id: "luna", name: "Luna" },
+  { id: "eve", name: "Eve" },
+  { id: "ara", name: "Ara" },
+  { id: "iris", name: "Iris" },
+  { id: "celeste", name: "Celeste" },
+];
 
 /** The languages a book can be read in (books/<id>/lang/<code>.json + lang/<code>/voice). */
 export const LANGUAGES = [
@@ -44,7 +59,13 @@ export const LANGUAGES = [
 export function loadSettings() {
   try {
     const raw = localStorage.getItem("storylight-settings");
-    return { ...DEFAULT_SETTINGS, ...(raw ? JSON.parse(raw) : {}) };
+    const s = { ...DEFAULT_SETTINGS, ...(raw ? JSON.parse(raw) : {}) };
+    if (s.voice === "openai") s.voice = "grok";
+    const mapped = LEGACY_GROK_VOICE[s.grokVoice] || LEGACY_GROK_VOICE[s.openaiVoice];
+    if (mapped) s.grokVoice = mapped;
+    s.grokVoice = s.grokVoice || s.openaiVoice || "carina";
+    s.openaiVoice = s.grokVoice;
+    return s;
   } catch (error) {
     return { ...DEFAULT_SETTINGS };
   }
@@ -632,8 +653,14 @@ export class UI {
 
   /* ---------- settings folio ---------- */
 
-  openSettings({ openai, browserVoices, openaiVoices }) {
+  openSettings({ grok, openai, browserVoices, grokVoices, openaiVoices }) {
     const s = this.settings;
+    const live = !!(grok ?? openai);
+    const voices = (grokVoices || openaiVoices || []).length
+      ? (grokVoices || openaiVoices).map((v) => (typeof v === "string" ? { id: v, name: v } : v))
+      : GROK_VOICE_OPTIONS;
+    const currentVoice = s.voice === "openai" ? "grok" : s.voice;
+    const currentGrok = s.grokVoice || s.openaiVoice || "carina";
     const panel = this.el.panel;
     const option = (value, label, current) => `<option value="${value}" ${value === current ? "selected" : ""}>${label}</option>`;
     const row = (icon, title, sub, control) => `
@@ -660,16 +687,16 @@ export class UI {
           <select id="set-language">
             ${LANGUAGES.map((l) => option(l.code, `${l.native} · ${l.name}`, s.language || "en")).join("")}
           </select>`)}
-        ${row("listen", t("narrator"), openai ? t("openaiConnected") : t("openaiMissing"), `
+        ${row("listen", t("narrator"), live ? t("openaiConnected") : t("openaiMissing"), `
           <select id="set-voice">
-            ${option("auto", t("automatic"), s.voice)}
-            ${option("openai", t("openaiLive"), s.voice)}
-            ${option("bundled", t("bundledNarrator"), s.voice)}
-            ${option("browser", t("browserVoice"), s.voice)}
+            ${option("auto", t("automatic"), currentVoice)}
+            ${option("grok", t("openaiLive"), currentVoice)}
+            ${option("bundled", t("bundledNarrator"), currentVoice)}
+            ${option("browser", t("browserVoice"), currentVoice)}
           </select>`)}
-        ${row("moon", t("openaiVoice"), "gpt-4o-mini-tts", `
-          <select id="set-openai-voice" ${openai ? "" : "disabled"}>
-            ${(openaiVoices.length ? openaiVoices : ["fable", "coral", "sage", "nova", "shimmer"]).map((v) => option(v, v, s.openaiVoice)).join("")}
+        ${row("moon", t("openaiVoice"), "Grok · Carina", `
+          <select id="set-grok-voice" ${live ? "" : "disabled"}>
+            ${voices.map((v) => option(v.id, v.name || v.id, currentGrok)).join("")}
           </select>`)}
         ${row("hand", t("browserVoiceShort"), "", `
           <select id="set-browser-voice">
@@ -699,7 +726,11 @@ export class UI {
     const change = (key, value) => { this.settings[key] = value; saveSettings(this.settings); this.onAction("setting", { key, value }); };
     panel.querySelector("#set-voice").addEventListener("change", (e) => change("voice", e.target.value));
     panel.querySelector("#set-language").addEventListener("change", (e) => { change("language", e.target.value); this.markLanguage(); });
-    panel.querySelector("#set-openai-voice").addEventListener("change", (e) => change("openaiVoice", e.target.value));
+    const grokSelect = panel.querySelector("#set-grok-voice");
+    if (grokSelect) grokSelect.addEventListener("change", (e) => {
+      change("grokVoice", e.target.value);
+      change("openaiVoice", e.target.value);
+    });
     panel.querySelector("#set-browser-voice").addEventListener("change", (e) => change("browserVoice", e.target.value));
     panel.querySelector("#set-music").addEventListener("input", (e) => change("music", parseFloat(e.target.value)));
     panel.querySelector("#set-sfx").addEventListener("input", (e) => change("sfx", parseFloat(e.target.value)));

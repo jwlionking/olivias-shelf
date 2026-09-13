@@ -41,6 +41,9 @@ export function assetUrl(url) {
   const path = stripOrigin(url);
   if (path.startsWith("/sc/")) return cdn(path);
   const key = catalogKey(path);
+  if (/^books\/[^/]+\/voice\/page-\d+\.(mp3|ogg|wav)$/i.test(key)) {
+    return cdn(`/${key}`);
+  }
   if (MAP[key]) return cdn(MAP[key]);
   if (key === "books/index.json") return cdn("/books/index.json");
   if (key === "public/models/toys/manifest.json") return cdn("/models/toys/manifest.json");

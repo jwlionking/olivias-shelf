@@ -38,9 +38,14 @@
     "sleep": "Goodnight, Fin. Goodnight, glowing sea."
   },
   "narrator": {
+    "grok": {
+      "voice": "carina",
+      "language": "en",
+      "instructions": "You are a warm, gentle storyteller reading a picture book to a young child at bedtime. Read slowly and clearly, with hushed underwater wonder. Pause briefly at full stops. Give the crab a quick clicky voice, the octopus a playful whisper, the whale a very low slow rumble, the lantern fish a small silvery voice, and Fin a soft, brave, curious voice. Never rush. Leave a little silence after the last word."
+    },
     "openai": {
-      "model": "gpt-4o-mini-tts",
-      "voice": "fable",
+      "model": "grok-tts",
+      "voice": "carina",
       "speed": 0.9,
       "instructions": "You are a warm, gentle storyteller reading a picture book to a young child at bedtime. Read slowly and clearly, with hushed underwater wonder. Pause briefly at full stops. Give the crab a quick clicky voice, the octopus a playful whisper, the whale a very low slow rumble, the lantern fish a small silvery voice, and Fin a soft, brave, curious voice. Never rush. Leave a little silence after the last word."
     },
@@ -206,7 +211,7 @@
     "text": "You {read} the whole {story}. {Fin} is {asleep:fin/sleep}, and the {reef:reef/glow} is {bright:reef/glow} with {laughing:fish/glow}.",
     "prompt": "What makes you laugh?"
   },
-  "credits": "Story, 3D scenes and code made for Storylight. Title lettering, cover art, pop-up backdrops and cut-outs generated with GPT Image 2 through Higgsfield; Fin modelled and rigged through Higgsfield (Meshy); narration voice through Higgsfield text-to-speech, with optional live narration through the OpenAI speech API.",
+  "credits": "Story, 3D scenes and code made for Storylight. Title lettering, cover art, pop-up backdrops and cut-outs generated with GPT Image 2 through Higgsfield; Fin modelled and rigged through Higgsfield (Meshy); narration voice through Higgsfield text-to-speech, with optional live narration through Grok Carina.",
   "audio": {
     "music": "audio/music.m4a",
     "ambience": "audio/ambience.mp3",

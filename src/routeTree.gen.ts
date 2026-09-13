@@ -14,6 +14,7 @@ import { Route as AccountRouteImport } from './routes/account'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as TermsRouteImport } from './routes/terms'
+import { Route as ApiTtsRouteImport } from './routes/api/tts'
 import { Route as QuizSlugRouteImport } from './routes/quiz/$slug'
 import { Route as ReadSlugRouteImport } from './routes/read/$slug'
 import { Route as StoriesIndexRouteImport } from './routes/stories/index'
@@ -44,6 +45,11 @@ const TermsRoute = TermsRouteImport.update({
   path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiTtsRoute = ApiTtsRouteImport.update({
+  id: '/api/tts',
+  path: '/api/tts',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const QuizSlugRoute = QuizSlugRouteImport.update({
   id: '/quiz/$slug',
   path: '/quiz/$slug',
@@ -71,6 +77,7 @@ export interface FileRoutesByFullPath {
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
+  '/api/tts': typeof ApiTtsRoute
   '/quiz/$slug': typeof QuizSlugRoute
   '/read/$slug': typeof ReadSlugRoute
   '/stories/$slug': typeof StoriesSlugRoute
@@ -82,6 +89,7 @@ export interface FileRoutesByTo {
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
+  '/api/tts': typeof ApiTtsRoute
   '/quiz/$slug': typeof QuizSlugRoute
   '/read/$slug': typeof ReadSlugRoute
   '/stories/$slug': typeof StoriesSlugRoute
@@ -94,6 +102,7 @@ export interface FileRoutesById {
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
+  '/api/tts': typeof ApiTtsRoute
   '/quiz/$slug': typeof QuizSlugRoute
   '/read/$slug': typeof ReadSlugRoute
   '/stories/$slug': typeof StoriesSlugRoute
@@ -107,6 +116,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/privacy'
     | '/terms'
+    | '/api/tts'
     | '/quiz/$slug'
     | '/read/$slug'
     | '/stories/$slug'
@@ -118,6 +128,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/privacy'
     | '/terms'
+    | '/api/tts'
     | '/quiz/$slug'
     | '/read/$slug'
     | '/stories/$slug'
@@ -129,6 +140,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/privacy'
     | '/terms'
+    | '/api/tts'
     | '/quiz/$slug'
     | '/read/$slug'
     | '/stories/$slug'
@@ -141,6 +153,7 @@ export interface RootRouteChildren {
   PricingRoute: typeof PricingRoute
   PrivacyRoute: typeof PrivacyRoute
   TermsRoute: typeof TermsRoute
+  ApiTtsRoute: typeof ApiTtsRoute
   QuizSlugRoute: typeof QuizSlugRoute
   ReadSlugRoute: typeof ReadSlugRoute
   StoriesSlugRoute: typeof StoriesSlugRoute
@@ -184,6 +197,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/tts': {
+      id: '/api/tts'
+      path: '/api/tts'
+      fullPath: '/api/tts'
+      preLoaderRoute: typeof ApiTtsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/quiz/$slug': {
       id: '/quiz/$slug'
       path: '/quiz/$slug'
@@ -221,6 +241,7 @@ const rootRouteChildren: RootRouteChildren = {
   PricingRoute: PricingRoute,
   PrivacyRoute: PrivacyRoute,
   TermsRoute: TermsRoute,
+  ApiTtsRoute: ApiTtsRoute,
   QuizSlugRoute: QuizSlugRoute,
   ReadSlugRoute: ReadSlugRoute,
   StoriesSlugRoute: StoriesSlugRoute,

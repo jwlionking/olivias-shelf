@@ -1889,7 +1889,7 @@ async function applySetting(key, value) {
   if (key === "music") sound.setMusicVolume(value);
   if (key === "sfx") sound.setSfxVolume(value);
   if (key === "textSize") reading.setTextSize(value);
-  if (key === "voice" || key === "openaiVoice") { narrator.cache.clear(); if (state.page >= 0) narrator.prepare(state.page).catch(() => {}); }
+  if (key === "voice" || key === "openaiVoice" || key === "grokVoice") { narrator.cache.clear(); if (state.page >= 0) narrator.prepare(state.page).catch(() => {}); }
   if (key === "reducedMotion" && sparks) sparks.clear();
 }
 
@@ -2073,7 +2073,7 @@ async function onAction(name, payload) {
     case "settings":
       sound.click();
       if (state.reading === "playing") { narrator.pause(); setReadingState("paused"); }
-      ui.openSettings({ openai: narrator.server.openai, browserVoices: ("speechSynthesis" in window ? speechSynthesis.getVoices() : []).filter((v) => v.lang && v.lang.startsWith("en")), openaiVoices: narrator.server.voices });
+      ui.openSettings({ grok: narrator.server.grok, openai: narrator.server.grok, browserVoices: ("speechSynthesis" in window ? speechSynthesis.getVoices() : []).filter((v) => v.lang && v.lang.startsWith("en")), grokVoices: narrator.server.voices, openaiVoices: narrator.server.voices });
       break;
     case "settings-closed": break;
     case "account":

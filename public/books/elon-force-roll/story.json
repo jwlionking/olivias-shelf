@@ -11,7 +11,7 @@
   "colors": {"cloth": "#4a2a1a", "endpaper": {"base": "#1c2836", "ink": "#f0c978", "pattern": "stars"}},
   "hero": {"name": "Olivia", "felt": "otto"},
   "magic": {"launch": "The little rocket pushed the air, and the air pushed back.", "drop": "Everything falls. That pull has a name: gravity."},
-  "narrator": {"openai": {"model": "gpt-4o-mini-tts", "voice": "onyx", "speed": 0.94, "instructions": "Warm, clear storyteller reading a science picture book to a child. Curious, never lecturing. Pause at full stops."}},
+  "narrator": {"grok": {"voice": "carina","language": "en","instructions": "Warm, clear storyteller reading a science picture book to a child. Curious, never lecturing. Pause at full stops."},"openai": {"model": "grok-tts","voice": "carina","speed": 0.94,"instructions": "Warm, clear storyteller reading a science picture book to a child. Curious, never lecturing. Pause at full stops."},"bundled": {"folder": "voice","format": "mp3","timings": true}},
   "pages": [
     {"id": "shop", "scene": "workshop", "heading": "It wanted to keep going", "text": "{Olivia} pushed a little {cart} across the {workshop} floor. It rolled. Then it wanted to keep rolling.", "hint": "Tap Olivia.", "words": ["Olivia", "cart", "workshop"]},
     {"id": "force", "scene": "rocket-push", "heading": "A push or a pull", "text": "\"A {force} is a push or a {pull},\" said {Elon:elon/teach}. \"No force, and a still cart stays still.\"", "hint": "Tap the rocket. Tap Elon.", "words": ["force", "pull", "Elon"]},

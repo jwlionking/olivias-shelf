@@ -11,7 +11,7 @@
   "colors": {"cloth": "#3a5a7a", "endpaper": {"base": "#1c2836", "ink": "#f0c978", "pattern": "stars"}},
   "hero": {"name": "Olivia", "felt": "otto"},
   "magic": {"launch": "The little rocket pushed the air, and the air pushed back.", "drop": "Everything falls. That pull has a name: gravity."},
-  "narrator": {"openai": {"model": "gpt-4o-mini-tts", "voice": "onyx", "speed": 0.94, "instructions": "Warm, clear storyteller reading a science picture book to a child. Curious, never lecturing. Pause at full stops."}},
+  "narrator": {"grok": {"voice": "carina","language": "en","instructions": "Warm, clear storyteller reading a science picture book to a child. Curious, never lecturing. Pause at full stops."},"openai": {"model": "grok-tts","voice": "carina","speed": 0.94,"instructions": "Warm, clear storyteller reading a science picture book to a child. Curious, never lecturing. Pause at full stops."},"bundled": {"folder": "voice","format": "mp3","timings": true}},
   "pages": [
     {"id": "shop", "scene": "workshop", "heading": "Something pushed", "text": "{Olivia} waved a paper {fan}. A scrap of paper jumped. \"{Elon:elon/look},\" she said. \"Something invisible pushed it.\"", "hint": "Tap Olivia. Tap Elon.", "words": ["Olivia", "fan", "Elon"]},
     {"id": "ocean", "scene": "workshop", "heading": "A sea of air", "text": "\"{Air} is real. It has weight,\" said {Elon:elon/teach}. \"We live at the bottom of an invisible {ocean}.\"", "hint": "Tap Elon.", "words": ["Air", "Elon", "ocean"]},
