@@ -30,7 +30,12 @@ export const FREE_BOOK_IDS = [
 function elonArt(id: string, file: string) {
   const own = `books/${id}/${file}`;
   if (map[own]) return map[own];
-  if (id.startsWith("elon-") && id !== "elon-physics-wonder") {
+  // Character stands stay shared with Physics of Wonder. Everything else is per-book.
+  if (
+    id.startsWith("elon-") &&
+    id !== "elon-physics-wonder" &&
+    /art\/(olivia-stand|elon-stand|pip-stand)\./.test(file)
+  ) {
     return map[`books/elon-physics-wonder/${file}`] || `/books/elon-physics-wonder/${file}`;
   }
   return `/books/${id}/${file}`;
@@ -57,10 +62,9 @@ export function logoUrl(id: string) {
 }
 
 export function wallUrl(id: string) {
-  if (id.startsWith("elon-") && id !== "elon-physics-wonder") {
-    return cdn(map[`public/textures/walls/elon-physics-wonder.jpg`] || `/textures/walls/elon-physics-wonder.jpg`);
-  }
-  return cdn(map[`public/textures/walls/${id}.jpg`] || `/textures/walls/${id}.jpg`);
+  const mapped = map[`public/textures/walls/${id}.jpg`];
+  if (mapped) return cdn(mapped);
+  return cdn(`/textures/walls/${id}.jpg`);
 }
 
 export function heroModelUrl(id: string, file: string) {

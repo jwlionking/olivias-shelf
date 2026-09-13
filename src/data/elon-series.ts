@@ -5,7 +5,7 @@ import { L, page } from "./l";
 export const elonSeriesBooks: Book[] = [
   {
     slug: "elon-heat-jiggle",
-    cover: "/covers/elon.jpg",
+    cover: "/books/elon-heat-jiggle/art/cover-shelf.webp",
     free: true,
     scene: "workshop",
     title: L(
@@ -50,7 +50,7 @@ export const elonSeriesBooks: Book[] = [
   },
   {
     slug: "elon-force-roll",
-    cover: "/covers/elon.jpg",
+    cover: "/books/elon-force-roll/art/cover-shelf.webp",
     free: true,
     scene: "workshop",
     title: L(
@@ -95,7 +95,7 @@ export const elonSeriesBooks: Book[] = [
   },
   {
     slug: "elon-float-boat",
-    cover: "/covers/elon.jpg",
+    cover: "/books/elon-float-boat/art/cover-shelf.webp",
     free: true,
     scene: "workshop",
     title: L(
@@ -140,7 +140,7 @@ export const elonSeriesBooks: Book[] = [
   },
   {
     slug: "elon-air-hug",
-    cover: "/covers/elon.jpg",
+    cover: "/books/elon-air-hug/art/cover-shelf.webp",
     free: true,
     scene: "workshop",
     title: L(
@@ -185,7 +185,7 @@ export const elonSeriesBooks: Book[] = [
   },
   {
     slug: "elon-ice-steam",
-    cover: "/covers/elon.jpg",
+    cover: "/books/elon-ice-steam/art/cover-shelf.webp",
     free: true,
     scene: "workshop",
     title: L(
@@ -230,7 +230,7 @@ export const elonSeriesBooks: Book[] = [
   },
   {
     slug: "elon-friction-grip",
-    cover: "/covers/elon.jpg",
+    cover: "/books/elon-friction-grip/art/cover-shelf.webp",
     free: true,
     scene: "workshop",
     title: L(
@@ -275,7 +275,7 @@ export const elonSeriesBooks: Book[] = [
   },
   {
     slug: "elon-lever-lift",
-    cover: "/covers/elon.jpg",
+    cover: "/books/elon-lever-lift/art/cover-shelf.webp",
     free: true,
     scene: "workshop",
     title: L(
@@ -320,7 +320,7 @@ export const elonSeriesBooks: Book[] = [
   },
   {
     slug: "elon-energy-spring",
-    cover: "/covers/elon.jpg",
+    cover: "/books/elon-energy-spring/art/cover-shelf.webp",
     free: true,
     scene: "workshop",
     title: L(
@@ -365,7 +365,7 @@ export const elonSeriesBooks: Book[] = [
   },
   {
     slug: "elon-balance-tip",
-    cover: "/covers/elon.jpg",
+    cover: "/books/elon-balance-tip/art/cover-shelf.webp",
     free: true,
     scene: "workshop",
     title: L(
@@ -410,7 +410,7 @@ export const elonSeriesBooks: Book[] = [
   },
   {
     slug: "elon-sky-blue",
-    cover: "/covers/elon.jpg",
+    cover: "/books/elon-sky-blue/art/cover-shelf.webp",
     free: true,
     scene: "workshop",
     title: L(

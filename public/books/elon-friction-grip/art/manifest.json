@@ -1,15 +1,45 @@
 {
   "cards": [
-    {"id": "cover", "file": "cover.jpg", "width": 1200, "height": 1600, "cutout": false, "copy": "Binding the cover\u2026"},
-    {"id": "olivia-stand", "file": "olivia-stand.webp", "cutout": true, "copy": "Waking Olivia\u2026", "width": 543, "height": 1600},
-    {"id": "elon-stand", "file": "elon-stand.webp", "width": 718, "height": 1600, "cutout": true, "copy": "Waking Elon\u2026"},
-    {"id": "rocket", "file": "rocket.webp", "width": 614, "height": 986, "cutout": true, "copy": "Waking rocket\u2026"},
-    {"id": "apple", "file": "apple.webp", "width": 805, "height": 832, "cutout": true, "copy": "Waking apple\u2026"},
-    {"id": "magnet", "file": "magnet.webp", "width": 727, "height": 811, "cutout": true, "copy": "Waking magnet\u2026"},
-    {"id": "workshop", "file": "workshop.jpg", "width": 1600, "height": 1200, "cutout": false, "copy": "Painting workshop\u2026"},
-    {"id": "orchard", "file": "orchard.jpg", "width": 1600, "height": 1200, "cutout": false, "copy": "Painting orchard\u2026"},
-    {"id": "launch", "file": "launch.jpg", "width": 1600, "height": 900, "cutout": false, "copy": "Painting launch\u2026"},
-    {"id": "stars", "file": "stars.jpg", "width": 1408, "height": 1408, "cutout": false, "copy": "Painting stars\u2026"}
+    {
+      "id": "cover",
+      "file": "cover.jpg",
+      "width": 1200,
+      "height": 1800,
+      "cutout": false,
+      "copy": "Binding the cover\u2026"
+    },
+    {
+      "id": "olivia-stand",
+      "file": "olivia-stand.webp",
+      "width": 543,
+      "height": 1600,
+      "cutout": true,
+      "copy": "Waking Olivia\u2026"
+    },
+    {
+      "id": "elon-stand",
+      "file": "elon-stand.webp",
+      "width": 718,
+      "height": 1600,
+      "cutout": true,
+      "copy": "Waking Elon\u2026"
+    },
+    {
+      "id": "workshop",
+      "file": "workshop.jpg",
+      "width": 1600,
+      "height": 1067,
+      "cutout": false,
+      "copy": "Painting the workshop\u2026"
+    },
+    {
+      "id": "mat",
+      "file": "mat.webp",
+      "width": 900,
+      "height": 900,
+      "cutout": true,
+      "copy": "Waking the sticky mat\u2026"
+    }
   ],
-  "provenance": "Series paintings shared with Elon and the Physics of Wonder. Painted for Olivia's Shelf."
+  "provenance": "Subject paintings for elon-friction-grip. Character stands shared with Elon and the Physics of Wonder. A quiet grab on the floor."
 }

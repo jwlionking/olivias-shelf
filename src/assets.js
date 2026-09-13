@@ -48,12 +48,9 @@ export function assetUrl(url) {
   if (/^books\/[^/]+\/(story\.json|art\/manifest\.json|words\/manifest\.json)$/.test(key)) {
     return cdn(`/${key}`);
   }
-  // Later Elon & Olivia physics books share the first book's paintings.
-  if (/^books\/elon-(?!physics-wonder)[^/]+\/art\//.test(key) && /\.(png|jpe?g|webp|gif)$/i.test(key)) {
+  // Later Elon & Olivia physics books share only the painted character stands.
+  if (/^books\/elon-(?!physics-wonder)[^/]+\/art\/(olivia-stand|elon-stand|pip-stand)\./.test(key)) {
     return cdn("/" + shareElonArt(key));
-  }
-  if (/^public\/textures\/walls\/elon-(?!physics-wonder)/.test(key)) {
-    return cdn("/textures/walls/elon-physics-wonder.jpg");
   }
   // Original books host unhashed paintings under /books and /textures.
   if (/^books\/[^/]+\/art\//.test(key) && /\.(png|jpe?g|webp|gif)$/i.test(key)) {
