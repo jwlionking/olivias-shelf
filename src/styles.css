@@ -104,3 +104,9 @@ body.sc-live:has(#sc-root:not([hidden])) .sc-boot {
   from { transform: rotateX(70deg) translateY(18px); opacity: 0; }
   to { transform: rotateX(0deg) translateY(0); opacity: 1; }
 }
+
+/* 3D books are the picker. Keep shelf arrows and dots; hide the paper cards. */
+#shelf-strip .shelf-heading,
+#shelf-strip .shelf-books {
+  display: none !important;
+}
