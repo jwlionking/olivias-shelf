@@ -1,0 +1,93 @@
+{
+  "cards": [
+    {
+      "id": "cover",
+      "file": "cover.jpg",
+      "width": 1200,
+      "height": 1800,
+      "cutout": false,
+      "copy": "Painting cover…"
+    },
+    {
+      "id": "olivia-stand",
+      "file": "olivia-stand.webp",
+      "width": 529,
+      "height": 1081,
+      "cutout": true,
+      "copy": "Waking olivia stand…"
+    },
+    {
+      "id": "zero",
+      "file": "zero.webp",
+      "width": 641,
+      "height": 920,
+      "cutout": true,
+      "copy": "Waking zero…"
+    },
+    {
+      "id": "belle",
+      "file": "belle.webp",
+      "width": 631,
+      "height": 1057,
+      "cutout": true,
+      "copy": "Waking belle…"
+    },
+    {
+      "id": "book",
+      "file": "book.webp",
+      "width": 884,
+      "height": 667,
+      "cutout": true,
+      "copy": "Waking book…"
+    },
+    {
+      "id": "quill",
+      "file": "quill.webp",
+      "width": 464,
+      "height": 623,
+      "cutout": true,
+      "copy": "Waking quill…"
+    },
+    {
+      "id": "clock",
+      "file": "clock.webp",
+      "width": 627,
+      "height": 626,
+      "cutout": true,
+      "copy": "Waking clock…"
+    },
+    {
+      "id": "house-night",
+      "file": "house-night.jpg",
+      "width": 1600,
+      "height": 1067,
+      "cutout": false,
+      "copy": "Painting house night…"
+    },
+    {
+      "id": "attic-library",
+      "file": "attic-library.jpg",
+      "width": 1600,
+      "height": 1067,
+      "cutout": false,
+      "copy": "Painting attic library…"
+    },
+    {
+      "id": "attic-glow",
+      "file": "attic-glow.jpg",
+      "width": 1600,
+      "height": 1067,
+      "cutout": false,
+      "copy": "Painting attic glow…"
+    },
+    {
+      "id": "attic-dawn",
+      "file": "attic-dawn.jpg",
+      "width": 1600,
+      "height": 1067,
+      "cutout": false,
+      "copy": "Painting attic dawn…"
+    }
+  ],
+  "provenance": "Grok Imagine gouache paintings from the Olivia home-book art (Olivia, Zero, Belle, Home)."
+}

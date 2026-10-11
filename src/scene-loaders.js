@@ -25,6 +25,7 @@ const loaders = {
   "olivia-yard-romp": () => import("./books/olivia-yard-romp/scenes.js"),
   "olivia-porch-light": () => import("./books/olivia-porch-light/scenes.js"),
   "zero-belle-candy": () => import("./books/zero-belle-candy/scenes.js"),
+  "olivia-midnight-library": () => import("./books/olivia-midnight-library/scenes.js"),
   "olivia-garden-beds": () => import("./books/olivia-garden-beds/scenes.js"),
   "olivia-quiet-sun": () => import("./books/olivia-quiet-sun/scenes.js"),
   "olivia-house-hill": () => import("./books/olivia-house-hill/scenes.js"),

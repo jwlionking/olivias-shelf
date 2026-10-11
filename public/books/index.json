@@ -751,6 +751,52 @@
       "access": "free"
     },
     {
+      "id": "olivia-midnight-library",
+      "title": "Olivia and the Midnight Library on the Hill",
+      "subtitle": "The truest story is the strongest.",
+      "blurb": "For one hour after midnight, the attic becomes a library of stories about Olivia's own life. One unfinished book begs for a thrilling, false ending. Olivia has to choose the true one.",
+      "cover": "art/cover.jpg",
+      "spine": "#3a2a50",
+      "pages": 7,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "moon",
+          "name": "Thirteenth-hour moon pin"
+        },
+        {
+          "id": "star",
+          "name": "Candle star pin"
+        },
+        {
+          "id": "book",
+          "name": "Unfinished book pin"
+        },
+        {
+          "id": "quill",
+          "name": "True quill pin"
+        },
+        {
+          "id": "zero",
+          "name": "Door guard Zero pin"
+        }
+      ],
+      "quizCount": 4,
+      "titles": {
+        "fr": "Olivia and the Midnight Library on the Hill",
+        "es": "Olivia and the Midnight Library on the Hill",
+        "ja": "Olivia and the Midnight Library on the Hill",
+        "zh": "Olivia and the Midnight Library on the Hill"
+      },
+      "blurbs": {
+        "fr": "For one hour after midnight, the attic becomes a library of stories about Olivia's own life. One unfinished book begs for a thrilling, false ending. Olivia has to choose the true one.",
+        "es": "For one hour after midnight, the attic becomes a library of stories about Olivia's own life. One unfinished book begs for a thrilling, false ending. Olivia has to choose the true one.",
+        "ja": "For one hour after midnight, the attic becomes a library of stories about Olivia's own life. One unfinished book begs for a thrilling, false ending. Olivia has to choose the true one.",
+        "zh": "For one hour after midnight, the attic becomes a library of stories about Olivia's own life. One unfinished book begs for a thrilling, false ending. Olivia has to choose the true one."
+      },
+      "access": "free"
+    },
+    {
       "id": "otto-shy-moon",
       "title": "Otto and the Shy Moon",
       "subtitle": "A bedtime pop-up story",

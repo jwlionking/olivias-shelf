@@ -201,4 +201,28 @@ export const oliviaHomeBooks: Book[] = [
     ],
     quiz: [q("Why did the foil wrappers lead into the woods?", "Theo left them as a signal", "It was a trap", "The wind blew them")],
   },
+  {
+    slug: "olivia-midnight-library",
+    cover: "/books/olivia-midnight-library/art/cover-shelf.webp",
+    free: true,
+    scene: "farm",
+    title: L("Olivia and the Midnight Library on the Hill", "Olivia and the Midnight Library on the Hill", "Olivia and the Midnight Library on the Hill", "Olivia and the Midnight Library on the Hill", "Olivia and the Midnight Library on the Hill"),
+    blurb: L(
+      "For one hour after midnight, the attic becomes a library of stories about Olivia's own life. One unfinished book begs for a thrilling, false ending. Olivia has to choose the true one.",
+      "For one hour after midnight, the attic becomes a library of stories about Olivia's own life. One unfinished book begs for a thrilling, false ending. Olivia has to choose the true one.",
+      "For one hour after midnight, the attic becomes a library of stories about Olivia's own life. One unfinished book begs for a thrilling, false ending. Olivia has to choose the true one.",
+      "For one hour after midnight, the attic becomes a library of stories about Olivia's own life. One unfinished book begs for a thrilling, false ending. Olivia has to choose the true one.",
+      "For one hour after midnight, the attic becomes a library of stories about Olivia's own life. One unfinished book begs for a thrilling, false ending. Olivia has to choose the true one.",
+    ),
+    pages: [
+      e("At midnight on Halloween, the white house on the hill made a sound like a held breath let go. The hall clock struck twelve, then, impossibly, a thirteenth time. Above Olivia's ceiling, something rustled like a thousand pages turning at once. Zero lifted her head. Belle was already at the attic stairs."),
+      e("The attic was gone. In its place stood shelves that climbed into shadow, lit by candles that did not drip. Every spine bore a title about the woods, the red clay, the dogs. One read Zero and the Smooth Rock. One read Belle, Unstoppable. Olivia's breath caught. The handwriting on them looked almost like her own."),
+      e("On a reading stand lay one book that was not finished. Its last page stopped mid-sentence: \"The night Olivia lost Belle in the woods, she...\" The ink shimmered, waiting. A silky voice rose from the paper. \"Finish me,\" the book whispered. \"Give me a thrilling ending. A wolf. A storm. A rescue everyone will remember.\""),
+      e("A quill floated into Olivia's hand, warm as a cup of cocoa. She could see the false ending already, cinematic and glorious: Olivia the hero, lightning splitting the oaks, Belle snatched from a wolf's jaws. It would be the most exciting story on every shelf. Belle whined. Zero planted herself across the attic door and would not let anything leave."),
+      e("Olivia remembered the real night. Belle had chased a rabbit, and Olivia had shouted until her voice cracked. There was no wolf. There was only Olivia, frightened and sorry for losing her temper, and Belle, who came back muddy on her own and licked her tears. The truth was smaller. It was also hers. Olivia felt the quill grow heavy, as if it already knew."),
+      e("\"No,\" Olivia said, and her voice did not shake. She wrote the true ending: I was scared, and I yelled, and Belle came home anyway, and we forgave each other. The book sighed, not angry, only quiet, and closed itself like a door that had found its frame. All along the shelves the candles steadied, as if every story in the room could finally rest."),
+      e("When the clock struck one, the library folded itself back into boxes and old blankets. Dawn found Olivia asleep against a trunk, Zero still guarding the door, Belle snoring across her feet. On the floor lay a single page in her handwriting. It was not the most exciting story in the house. It was the truest one, and that made it the strongest."),
+    ],
+    quiz: [q("What did the unfinished book want Olivia to do?", "Write a thrilling ending that wasn't true", "Read it aloud", "Throw it away")],
+  },
 ];

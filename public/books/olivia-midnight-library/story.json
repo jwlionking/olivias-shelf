@@ -1,0 +1,275 @@
+{
+  "author": "Olivia's Shelf",
+  "ageRange": "7 to 10",
+  "readingLevel": "Advanced picture book",
+  "cover": "art/cover.jpg",
+  "scenes": "scenes.js",
+  "hero": {
+    "name": "Olivia",
+    "felt": "otto"
+  },
+  "narrator": {
+    "grok": {
+      "voice": "carina",
+      "language": "en",
+      "instructions": "You are a warm, intelligent storyteller reading a Halloween picture book to a sharp, homeschooled child who loves suspense and big ideas. Read with quiet intensity, never campy. Let the attic feel enchanted and a little dangerous; let the hungry book sound silky and persuasive, never shrieking. Olivia sounds clear, thoughtful and honest; Zero is low and steady; Belle is bright and restless. Pause at full stops. Let the hard choice breathe."
+    },
+    "openai": {
+      "model": "grok-tts",
+      "voice": "carina",
+      "speed": 0.94,
+      "instructions": "You are a warm, intelligent storyteller reading a Halloween picture book to a sharp, homeschooled child who loves suspense and big ideas. Read with quiet intensity, never campy. Let the attic feel enchanted and a little dangerous; let the hungry book sound silky and persuasive, never shrieking. Olivia sounds clear, thoughtful and honest; Zero is low and steady; Belle is bright and restless. Pause at full stops. Let the hard choice breathe."
+    },
+    "bundled": {
+      "folder": "voice",
+      "format": "mp3",
+      "timings": true
+    }
+  },
+  "credits": "Painted with Grok Imagine from the Olivia, Zero, Belle, and home paintings. Narrated by Grok Voice (Carina).",
+  "pins": [
+    {
+      "id": "moon",
+      "name": "Thirteenth-hour moon pin",
+      "page": 0,
+      "at": [
+        0.38,
+        0,
+        -0.2
+      ]
+    },
+    {
+      "id": "star",
+      "name": "Candle star pin",
+      "page": 1,
+      "at": [
+        -0.38,
+        0,
+        -0.18
+      ]
+    },
+    {
+      "id": "book",
+      "name": "Unfinished book pin",
+      "page": 2,
+      "at": [
+        0.4,
+        0,
+        -0.2
+      ]
+    },
+    {
+      "id": "quill",
+      "name": "True quill pin",
+      "page": 5,
+      "at": [
+        -0.4,
+        0,
+        0.18
+      ]
+    },
+    {
+      "id": "zero",
+      "name": "Door guard Zero pin",
+      "page": 6,
+      "at": [
+        0.34,
+        0,
+        -0.22
+      ]
+    }
+  ],
+  "id": "olivia-midnight-library",
+  "title": "Olivia and the Midnight Library on the Hill",
+  "subtitle": "The truest story is the strongest.",
+  "blurb": "For one hour after midnight, the attic becomes a library of stories about Olivia's own life. One unfinished book begs for a thrilling, false ending. Olivia has to choose the true one.",
+  "colors": {
+    "cloth": "#2a2238",
+    "endpaper": {
+      "base": "#16121e",
+      "ink": "#e8c87a",
+      "pattern": "stars"
+    }
+  },
+  "magic": {
+    "hour": "The clock struck twelve, then a thirteenth time.",
+    "temptation": "A thrilling story is not always a true one.",
+    "truth": "The truest story is the strongest."
+  },
+  "pages": [
+    {
+      "id": "midnight",
+      "scene": "house",
+      "heading": "The hour that isn't on clocks",
+      "text": "At midnight on {Halloween}, the white house on the hill made a sound like a held breath let go. The hall {clock:clock/chime} struck twelve, then, impossibly, a thirteenth time. Above {Olivia:olivia/ask}'s ceiling, something rustled like a thousand pages turning at once. {Zero:zero/sniff} lifted her head. {Belle:belle/wag} was already at the attic stairs.",
+      "hint": "Tap the clock. Count the strikes.",
+      "words": [
+        "Halloween",
+        "clock",
+        "Olivia",
+        "Zero",
+        "Belle"
+      ]
+    },
+    {
+      "id": "shelves",
+      "scene": "attic",
+      "heading": "A library for one night",
+      "text": "The attic was gone. In its place stood {shelves:attic/hush} that climbed into shadow, lit by candles that did not drip. Every spine bore a title about the woods, the red clay, the dogs. One read {Zero and the Smooth Rock}. One read {Belle, Unstoppable}. Olivia's breath caught. The handwriting on them looked almost like her own.",
+      "hint": "Tap the shelves. Whose stories are these?",
+      "words": [
+        "shelves",
+        "Zero and the Smooth Rock",
+        "Belle, Unstoppable"
+      ]
+    },
+    {
+      "id": "hungry",
+      "scene": "attic-glow",
+      "heading": "The unfinished book",
+      "text": "On a reading stand lay one {book:book/glow} that was not finished. Its last page stopped mid-sentence: \"The night Olivia lost Belle in the woods, she...\" The ink shimmered, waiting. A silky voice rose from the paper. \"Finish me,\" the book {whispered:book/whisper}. \"Give me a thrilling ending. A wolf. A storm. A rescue everyone will remember.\"",
+      "hint": "Tap the book. Listen to what it wants.",
+      "words": [
+        "book",
+        "whispered"
+      ]
+    },
+    {
+      "id": "tempt",
+      "scene": "attic-glow",
+      "heading": "The thrilling version",
+      "text": "A {quill:quill/write} floated into Olivia's hand, warm as a cup of cocoa. She could see the false ending already, cinematic and glorious: Olivia the hero, lightning splitting the oaks, Belle snatched from a wolf's jaws. It would be the most exciting story on every shelf. {Belle:belle/wreck} whined. {Zero:zero/sit} planted herself across the attic door and would not let anything leave.",
+      "hint": "Tap the quill. Tap Zero at the door.",
+      "words": [
+        "quill",
+        "Belle",
+        "Zero"
+      ]
+    },
+    {
+      "id": "truth",
+      "scene": "attic-glow",
+      "heading": "What really happened",
+      "text": "Olivia remembered the real night. Belle had chased a rabbit, and Olivia had shouted until her voice cracked. There was no wolf. There was only Olivia, frightened and sorry for losing her temper, and Belle, who came back muddy on her own and licked her tears. The truth was smaller. It was also hers. {Olivia:olivia/think} felt the quill grow heavy, as if it already knew.",
+      "hint": "Tap Olivia. Is the true ending smaller, or braver?",
+      "words": [
+        "Olivia"
+      ]
+    },
+    {
+      "id": "choice",
+      "scene": "attic",
+      "heading": "The harder ending",
+      "text": "\"No,\" Olivia said, and her voice did not shake. She wrote the {true:quill/write} ending: I was scared, and I yelled, and Belle came home anyway, and we forgave each other. The {book:book/close} sighed, not angry, only quiet, and closed itself like a door that had found its frame. All along the shelves the {candles:attic/hush} steadied, as if every story in the room could finally rest.",
+      "hint": "Tap the quill. Then tap the book as it closes.",
+      "words": [
+        "true",
+        "book",
+        "candles"
+      ]
+    },
+    {
+      "id": "dawn",
+      "scene": "attic-dawn",
+      "heading": "Morning in the attic",
+      "text": "When the {clock:clock/chime} struck one, the library folded itself back into boxes and old blankets. Dawn found {Olivia:olivia/ask} asleep against a trunk, {Zero:zero/sleep} still guarding the door, {Belle:belle/sleep} snoring across her feet. On the floor lay a single page in her handwriting. It was not the most exciting story in the house. It was the truest one, and that made it the strongest.",
+      "hint": "Tap the clock. Goodnight to the library.",
+      "words": [
+        "clock",
+        "Olivia",
+        "Zero",
+        "Belle"
+      ]
+    }
+  ],
+  "end": {
+    "heading": "The End",
+    "text": "You {read} a Halloween where the bravest thing was telling the truth.",
+    "prompt": "If a magic book offered to make one of your memories more exciting, would you let it? Why or why not?"
+  },
+  "quiz": {
+    "folder": "quiz",
+    "questions": [
+      {
+        "q": "What did the unfinished book want Olivia to do?",
+        "options": [
+          {
+            "word": "false-ending",
+            "label": "Write a thrilling ending that wasn't true"
+          },
+          {
+            "word": "read-aloud",
+            "label": "Read it aloud"
+          },
+          {
+            "word": "burn",
+            "label": "Throw it away"
+          }
+        ],
+        "answer": 0,
+        "right": "Yes. It wanted a wolf and a storm instead of the truth.",
+        "wrong": "The book wanted a thrilling ending that never happened."
+      },
+      {
+        "q": "What really happened the night Belle got lost?",
+        "options": [
+          {
+            "word": "rabbit",
+            "label": "Belle chased a rabbit and came home on her own"
+          },
+          {
+            "word": "wolf",
+            "label": "Olivia saved her from a wolf"
+          },
+          {
+            "word": "storm",
+            "label": "A storm carried her away"
+          }
+        ],
+        "answer": 0,
+        "right": "The real night was smaller, and it was hers.",
+        "wrong": "Belle chased a rabbit and came back muddy on her own."
+      },
+      {
+        "q": "Why was Olivia's ending the harder one?",
+        "options": [
+          {
+            "word": "honest",
+            "label": "She had to admit she was scared and yelled"
+          },
+          {
+            "word": "long",
+            "label": "It was much longer"
+          },
+          {
+            "word": "spelling",
+            "label": "It had hard spelling words"
+          }
+        ],
+        "answer": 0,
+        "right": "Telling the truth about yourself takes courage.",
+        "wrong": "She had to admit she was scared and lost her temper."
+      },
+      {
+        "q": "What did Zero do in the library?",
+        "options": [
+          {
+            "word": "guard",
+            "label": "She guarded the attic door"
+          },
+          {
+            "word": "read",
+            "label": "She read a book"
+          },
+          {
+            "word": "chase",
+            "label": "She chased the candles"
+          }
+        ],
+        "answer": 0,
+        "right": "Steady Zero kept watch the whole night.",
+        "wrong": "Zero guarded the door so nothing could leave."
+      }
+    ]
+  }
+}
