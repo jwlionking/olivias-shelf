@@ -1,0 +1,272 @@
+{
+  "author": "Olivia's Shelf",
+  "ageRange": "7 to 10",
+  "readingLevel": "Advanced picture book",
+  "cover": "art/cover.jpg",
+  "scenes": "scenes.js",
+  "hero": {
+    "name": "Olivia",
+    "felt": "otto"
+  },
+  "narrator": {
+    "grok": {
+      "voice": "carina",
+      "language": "en",
+      "instructions": "You are a warm, intelligent storyteller reading a Halloween picture book to a sharp, homeschooled child who feels things deeply. Read with quiet intensity and tenderness, never campy. Let the costume's tug feel uncanny and a little unsettling, then let it become understandable and sad and sweet. Olivia sounds clear, thoughtful and kind; Zero is low and steady; Belle is bright and restless. Pause at full stops. Let the last pages be gentle."
+    },
+    "openai": {
+      "model": "grok-tts",
+      "voice": "carina",
+      "speed": 0.94,
+      "instructions": "You are a warm, intelligent storyteller reading a Halloween picture book to a sharp, homeschooled child who feels things deeply. Read with quiet intensity and tenderness, never campy. Let the costume's tug feel uncanny and a little unsettling, then let it become understandable and sad and sweet. Olivia sounds clear, thoughtful and kind; Zero is low and steady; Belle is bright and restless. Pause at full stops. Let the last pages be gentle."
+    },
+    "bundled": {
+      "folder": "voice",
+      "format": "mp3",
+      "timings": true
+    }
+  },
+  "credits": "Painted with Grok Imagine from the Olivia, Zero, Belle, and home paintings. Narrated by Grok Voice (Carina).",
+  "pins": [
+    {
+      "id": "costume",
+      "name": "Copper fox pin",
+      "page": 0,
+      "at": [
+        0.38,
+        0,
+        -0.2
+      ]
+    },
+    {
+      "id": "moon",
+      "name": "Halloween moon pin",
+      "page": 1,
+      "at": [
+        -0.38,
+        0,
+        -0.18
+      ]
+    },
+    {
+      "id": "spool",
+      "name": "Spool of thread pin",
+      "page": 3,
+      "at": [
+        0.4,
+        0,
+        -0.2
+      ]
+    },
+    {
+      "id": "star",
+      "name": "Someone-for-a-night star pin",
+      "page": 5,
+      "at": [
+        -0.4,
+        0,
+        0.18
+      ]
+    },
+    {
+      "id": "zero",
+      "name": "Patient Zero pin",
+      "page": 6,
+      "at": [
+        0.34,
+        0,
+        -0.22
+      ]
+    }
+  ],
+  "id": "olivia-costume-memory",
+  "title": "Olivia and the Costume That Remembered Someone Else",
+  "subtitle": "Everyone deserves one night of being someone.",
+  "blurb": "Olivia's handmade fox costume fits perfectly, until she feels a second heartbeat inside it. The costume tugs her toward an old shop at the edge of town, where something has waited fifty years to go trick-or-treating.",
+  "colors": {
+    "cloth": "#5a2e1a",
+    "endpaper": {
+      "base": "#24140c",
+      "ink": "#e8a060",
+      "pattern": "stars"
+    }
+  },
+  "magic": {
+    "heartbeat": "Under her own heartbeat she felt a second one.",
+    "longing": "This was not a haunting. It was a longing.",
+    "rest": "The second heartbeat beat once, content, and settled into silence."
+  },
+  "pages": [
+    {
+      "id": "fitting",
+      "scene": "bedroom",
+      "heading": "A perfect fit",
+      "text": "The fabric had come from the estate sale of Mrs. Penhallow's costume shop: copper velvet, soft as a held breath. {Olivia:olivia/ask} sewed her fox {costume:costume/swish} for three weeks. On Halloween afternoon she slipped it on, and it fit as if it had been waiting for her. Then, under her own heartbeat, she felt a second one: quieter, older, like someone {remembering:costume/pulse} how it felt to be someone.",
+      "hint": "Tap the costume. Feel the second heartbeat.",
+      "words": [
+        "Olivia",
+        "costume",
+        "remembering"
+      ]
+    },
+    {
+      "id": "tug",
+      "scene": "street",
+      "heading": "The tug",
+      "text": "At dusk the street filled with witches and wizards and one wobbly dinosaur. {Zero:zero/sniff} walked close. {Belle:belle/wag} greeted every pumpkin personally. But at each corner the {costume:costume/tug} leaned, gently and unmistakably, toward the far end of town. {Olivia:olivia/think} planted her feet. \"I am steering,\" she whispered. The velvet went still, like a child caught tiptoeing.",
+      "hint": "Tap the costume. Which way does it pull?",
+      "words": [
+        "Zero",
+        "Belle",
+        "costume",
+        "Olivia"
+      ]
+    },
+    {
+      "id": "decide",
+      "scene": "street",
+      "heading": "Three choices",
+      "text": "Olivia could take the costume off and walk home cold. She could march it back to the shop and leave it on the step. Or she could ask what it wanted. Fear said the first. Fairness said the second. But {curiosity:olivia/think} said the third, and curiosity had never yet steered her wrong. \"Show me,\" she told the velvet. \"But slowly. And the dogs come too.\" {Zero:zero/sit} agreed by not leaving.",
+      "hint": "Tap Olivia. Which choice would you make?",
+      "words": [
+        "curiosity",
+        "Zero"
+      ]
+    },
+    {
+      "id": "workshop",
+      "scene": "workshop",
+      "heading": "The shop at the edge of town",
+      "text": "Penhallow's Costumes stood dark, its window dusty, its sign creaking in the wind. Inside, among bolts of fabric and {spools:spool/spin} of thread, stood a {dress form:mannequin/still}: no face, no arms, just a padded shape on a wooden stand. For fifty years it had worn every costume Mrs. Penhallow sewed, pinned and fitted and admired, and then undressed. It had never once gone out.",
+      "hint": "Tap the dress form. How long has it waited?",
+      "words": [
+        "spools",
+        "dress form"
+      ]
+    },
+    {
+      "id": "memory",
+      "scene": "workshop",
+      "heading": "What it remembered",
+      "text": "The second heartbeat swelled, and Olivia understood without words. The velvet remembered being pinned on that padded shape, and the dress form remembered being, for one fitting, someone. A fox. A queen. An astronaut. Never anyone for long. {Belle:belle/bark} pressed her nose to the glass. {Zero:zero/sleep} lay down by the door, patient as a promise. This was not a haunting, Olivia thought. It was a longing.",
+      "hint": "Tap Zero and Belle. Is this a haunting, or a longing?",
+      "words": [
+        "Belle",
+        "Zero"
+      ]
+    },
+    {
+      "id": "invite",
+      "scene": "street",
+      "heading": "One night of being someone",
+      "text": "\"You can come with me,\" Olivia said softly. \"Tonight only. Then you rest.\" The {costume:costume/pulse} glowed warm against her ribs. All evening she walked a little differently: chin up, proud, as if two people were wearing one fox. At every door she said \"Trick or treat\" twice, once for herself and once, very quietly, for the dress form who had always wanted to say it.",
+      "hint": "Tap the costume. Who is saying trick or treat?",
+      "words": [
+        "costume",
+        "dress form"
+      ]
+    },
+    {
+      "id": "thanks",
+      "scene": "bedroom",
+      "heading": "Hung with thanks",
+      "text": "At midnight Olivia hung the fox costume on her closet door and smoothed every fold. \"Thank you,\" she said. The second heartbeat beat once, content, and settled into silence. In the morning she walked back to Penhallow's and tied a copper {ribbon:spool/spin} on the dress form's stand, a souvenir from its night out. {Belle:belle/wag} wagged. {Zero:zero/sleep} sighed. The window, somehow, looked less dusty.",
+      "hint": "Tap the ribbon. A souvenir for someone who waited.",
+      "words": [
+        "ribbon",
+        "Belle",
+        "Zero"
+      ]
+    }
+  ],
+  "end": {
+    "heading": "The End",
+    "text": "You {read} a Halloween about lending someone a little of your night.",
+    "prompt": "If something that had waited a very long time asked to come along with you, what would you say?"
+  },
+  "quiz": {
+    "folder": "quiz",
+    "questions": [
+      {
+        "q": "What did Olivia feel when she put on the costume?",
+        "options": [
+          {
+            "word": "heartbeat",
+            "label": "A second, quieter heartbeat"
+          },
+          {
+            "word": "itch",
+            "label": "An itchy tag"
+          },
+          {
+            "word": "cold",
+            "label": "An icy chill"
+          }
+        ],
+        "answer": 0,
+        "right": "Yes. The costume was remembering someone.",
+        "wrong": "She felt a second, quieter heartbeat in the velvet."
+      },
+      {
+        "q": "Who did the memory belong to?",
+        "options": [
+          {
+            "word": "dress-form",
+            "label": "The dress form in the old shop"
+          },
+          {
+            "word": "ghost",
+            "label": "A ghost in the attic"
+          },
+          {
+            "word": "belle",
+            "label": "Belle"
+          }
+        ],
+        "answer": 0,
+        "right": "The dress form wore every costume but never went out.",
+        "wrong": "It was the dress form in Mrs. Penhallow's shop."
+      },
+      {
+        "q": "Why was it not really a haunting?",
+        "options": [
+          {
+            "word": "longing",
+            "label": "It was a longing, not a threat"
+          },
+          {
+            "word": "dream",
+            "label": "Olivia was dreaming"
+          },
+          {
+            "word": "trick",
+            "label": "Belle was playing a trick"
+          }
+        ],
+        "answer": 0,
+        "right": "Something that only wants to belong is not a villain.",
+        "wrong": "It was a longing to be someone, not a threat."
+      },
+      {
+        "q": "How did Olivia say goodbye?",
+        "options": [
+          {
+            "word": "thanks",
+            "label": "She hung it with thanks and left a ribbon"
+          },
+          {
+            "word": "threw",
+            "label": "She threw the costume away"
+          },
+          {
+            "word": "locked",
+            "label": "She locked it in a box"
+          }
+        ],
+        "answer": 0,
+        "right": "A kind goodbye let the memory rest.",
+        "wrong": "She hung the costume with thanks and gave the dress form a ribbon."
+      }
+    ]
+  }
+}

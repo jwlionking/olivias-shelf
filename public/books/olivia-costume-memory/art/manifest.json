@@ -1,0 +1,85 @@
+{
+  "cards": [
+    {
+      "id": "cover",
+      "file": "cover.jpg",
+      "width": 1200,
+      "height": 1800,
+      "cutout": false,
+      "copy": "Painting cover…"
+    },
+    {
+      "id": "olivia-stand",
+      "file": "olivia-stand.webp",
+      "width": 529,
+      "height": 1081,
+      "cutout": true,
+      "copy": "Waking olivia stand…"
+    },
+    {
+      "id": "zero",
+      "file": "zero.webp",
+      "width": 641,
+      "height": 920,
+      "cutout": true,
+      "copy": "Waking zero…"
+    },
+    {
+      "id": "belle",
+      "file": "belle.webp",
+      "width": 631,
+      "height": 1057,
+      "cutout": true,
+      "copy": "Waking belle…"
+    },
+    {
+      "id": "costume",
+      "file": "costume.webp",
+      "width": 587,
+      "height": 772,
+      "cutout": true,
+      "copy": "Waking costume…"
+    },
+    {
+      "id": "mannequin",
+      "file": "mannequin.webp",
+      "width": 268,
+      "height": 759,
+      "cutout": true,
+      "copy": "Waking mannequin…"
+    },
+    {
+      "id": "spool",
+      "file": "spool.webp",
+      "width": 561,
+      "height": 461,
+      "cutout": true,
+      "copy": "Waking spool…"
+    },
+    {
+      "id": "bedroom",
+      "file": "bedroom.jpg",
+      "width": 1600,
+      "height": 1067,
+      "cutout": false,
+      "copy": "Painting bedroom…"
+    },
+    {
+      "id": "street-dusk",
+      "file": "street-dusk.jpg",
+      "width": 1600,
+      "height": 1067,
+      "cutout": false,
+      "copy": "Painting street dusk…"
+    },
+    {
+      "id": "workshop",
+      "file": "workshop.jpg",
+      "width": 1600,
+      "height": 1067,
+      "cutout": false,
+      "copy": "Painting workshop…"
+    }
+  ],
+  "provenance": "Grok Imagine gouache paintings from the Olivia home-book art (Olivia, Zero, Belle, Home)."
+}

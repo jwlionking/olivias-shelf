@@ -27,6 +27,7 @@ const loaders = {
   "zero-belle-candy": () => import("./books/zero-belle-candy/scenes.js"),
   "olivia-midnight-library": () => import("./books/olivia-midnight-library/scenes.js"),
   "olivia-chalk-map": () => import("./books/olivia-chalk-map/scenes.js"),
+  "olivia-costume-memory": () => import("./books/olivia-costume-memory/scenes.js"),
   "olivia-garden-beds": () => import("./books/olivia-garden-beds/scenes.js"),
   "olivia-quiet-sun": () => import("./books/olivia-quiet-sun/scenes.js"),
   "olivia-house-hill": () => import("./books/olivia-house-hill/scenes.js"),

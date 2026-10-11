@@ -843,6 +843,52 @@
       "access": "free"
     },
     {
+      "id": "olivia-costume-memory",
+      "title": "Olivia and the Costume That Remembered Someone Else",
+      "subtitle": "Everyone deserves one night of being someone.",
+      "blurb": "Olivia's handmade fox costume fits perfectly, until she feels a second heartbeat inside it. The costume tugs her toward an old shop at the edge of town, where something has waited fifty years to go trick-or-treating.",
+      "cover": "art/cover.jpg",
+      "spine": "#6a3a20",
+      "pages": 7,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "costume",
+          "name": "Copper fox pin"
+        },
+        {
+          "id": "moon",
+          "name": "Halloween moon pin"
+        },
+        {
+          "id": "spool",
+          "name": "Spool of thread pin"
+        },
+        {
+          "id": "star",
+          "name": "Someone-for-a-night star pin"
+        },
+        {
+          "id": "zero",
+          "name": "Patient Zero pin"
+        }
+      ],
+      "quizCount": 4,
+      "titles": {
+        "fr": "Olivia and the Costume That Remembered Someone Else",
+        "es": "Olivia and the Costume That Remembered Someone Else",
+        "ja": "Olivia and the Costume That Remembered Someone Else",
+        "zh": "Olivia and the Costume That Remembered Someone Else"
+      },
+      "blurbs": {
+        "fr": "Olivia's handmade fox costume fits perfectly, until she feels a second heartbeat inside it. The costume tugs her toward an old shop at the edge of town, where something has waited fifty years to go trick-or-treating.",
+        "es": "Olivia's handmade fox costume fits perfectly, until she feels a second heartbeat inside it. The costume tugs her toward an old shop at the edge of town, where something has waited fifty years to go trick-or-treating.",
+        "ja": "Olivia's handmade fox costume fits perfectly, until she feels a second heartbeat inside it. The costume tugs her toward an old shop at the edge of town, where something has waited fifty years to go trick-or-treating.",
+        "zh": "Olivia's handmade fox costume fits perfectly, until she feels a second heartbeat inside it. The costume tugs her toward an old shop at the edge of town, where something has waited fifty years to go trick-or-treating."
+      },
+      "access": "free"
+    },
+    {
       "id": "otto-shy-moon",
       "title": "Otto and the Shy Moon",
       "subtitle": "A bedtime pop-up story",

@@ -249,4 +249,28 @@ export const oliviaHomeBooks: Book[] = [
     ],
     quiz: [q("What was strange about the chalk arrows?", "They rearranged themselves", "They glowed green", "They sang a song")],
   },
+  {
+    slug: "olivia-costume-memory",
+    cover: "/books/olivia-costume-memory/art/cover-shelf.webp",
+    free: true,
+    scene: "farm",
+    title: L("Olivia and the Costume That Remembered Someone Else", "Olivia and the Costume That Remembered Someone Else", "Olivia and the Costume That Remembered Someone Else", "Olivia and the Costume That Remembered Someone Else", "Olivia and the Costume That Remembered Someone Else"),
+    blurb: L(
+      "Olivia's handmade fox costume fits perfectly, until she feels a second heartbeat inside it. The costume tugs her toward an old shop at the edge of town, where something has waited fifty years to go trick-or-treating.",
+      "Olivia's handmade fox costume fits perfectly, until she feels a second heartbeat inside it. The costume tugs her toward an old shop at the edge of town, where something has waited fifty years to go trick-or-treating.",
+      "Olivia's handmade fox costume fits perfectly, until she feels a second heartbeat inside it. The costume tugs her toward an old shop at the edge of town, where something has waited fifty years to go trick-or-treating.",
+      "Olivia's handmade fox costume fits perfectly, until she feels a second heartbeat inside it. The costume tugs her toward an old shop at the edge of town, where something has waited fifty years to go trick-or-treating.",
+      "Olivia's handmade fox costume fits perfectly, until she feels a second heartbeat inside it. The costume tugs her toward an old shop at the edge of town, where something has waited fifty years to go trick-or-treating.",
+    ),
+    pages: [
+      e("The fabric had come from the estate sale of Mrs. Penhallow's costume shop: copper velvet, soft as a held breath. Olivia sewed her fox costume for three weeks. On Halloween afternoon she slipped it on, and it fit as if it had been waiting for her. Then, under her own heartbeat, she felt a second one: quieter, older, like someone remembering how it felt to be someone."),
+      e("At dusk the street filled with witches and wizards and one wobbly dinosaur. Zero walked close. Belle greeted every pumpkin personally. But at each corner the costume leaned, gently and unmistakably, toward the far end of town. Olivia planted her feet. \"I am steering,\" she whispered. The velvet went still, like a child caught tiptoeing."),
+      e("Olivia could take the costume off and walk home cold. She could march it back to the shop and leave it on the step. Or she could ask what it wanted. Fear said the first. Fairness said the second. But curiosity said the third, and curiosity had never yet steered her wrong. \"Show me,\" she told the velvet. \"But slowly. And the dogs come too.\" Zero agreed by not leaving."),
+      e("Penhallow's Costumes stood dark, its window dusty, its sign creaking in the wind. Inside, among bolts of fabric and spools of thread, stood a dress form: no face, no arms, just a padded shape on a wooden stand. For fifty years it had worn every costume Mrs. Penhallow sewed, pinned and fitted and admired, and then undressed. It had never once gone out."),
+      e("The second heartbeat swelled, and Olivia understood without words. The velvet remembered being pinned on that padded shape, and the dress form remembered being, for one fitting, someone. A fox. A queen. An astronaut. Never anyone for long. Belle pressed her nose to the glass. Zero lay down by the door, patient as a promise. This was not a haunting, Olivia thought. It was a longing."),
+      e("\"You can come with me,\" Olivia said softly. \"Tonight only. Then you rest.\" The costume glowed warm against her ribs. All evening she walked a little differently: chin up, proud, as if two people were wearing one fox. At every door she said \"Trick or treat\" twice, once for herself and once, very quietly, for the dress form who had always wanted to say it."),
+      e("At midnight Olivia hung the fox costume on her closet door and smoothed every fold. \"Thank you,\" she said. The second heartbeat beat once, content, and settled into silence. In the morning she walked back to Penhallow's and tied a copper ribbon on the dress form's stand, a souvenir from its night out. Belle wagged. Zero sighed. The window, somehow, looked less dusty."),
+    ],
+    quiz: [q("What did Olivia feel when she put on the costume?", "A second, quieter heartbeat", "An itchy tag", "An icy chill")],
+  },
 ];
