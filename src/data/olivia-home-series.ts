@@ -177,4 +177,28 @@ export const oliviaHomeBooks: Book[] = [
     ],
     quiz: [q("Why did the wind drink the candle light?", "It was afraid of the dark", "It wanted candy", "It was angry")],
   },
+  {
+    slug: "zero-belle-candy",
+    cover: "/books/zero-belle-candy/art/cover-shelf.webp",
+    free: true,
+    scene: "farm",
+    title: L("Zero, Belle, and the Candy That Walked Away", "Zero, Belle, and the Candy That Walked Away", "Zero, Belle, and the Candy That Walked Away", "Zero, Belle, and the Candy That Walked Away", "Zero, Belle, and the Candy That Walked Away"),
+    blurb: L(
+      "On Halloween dusk Olivia's candy vanishes, and a trail of foil leads into the woods. Belle wants the chase, Zero wants proof, and Olivia learns the trail was never a trap.",
+      "On Halloween dusk Olivia's candy vanishes, and a trail of foil leads into the woods. Belle wants the chase, Zero wants proof, and Olivia learns the trail was never a trap.",
+      "On Halloween dusk Olivia's candy vanishes, and a trail of foil leads into the woods. Belle wants the chase, Zero wants proof, and Olivia learns the trail was never a trap.",
+      "On Halloween dusk Olivia's candy vanishes, and a trail of foil leads into the woods. Belle wants the chase, Zero wants proof, and Olivia learns the trail was never a trap.",
+      "On Halloween dusk Olivia's candy vanishes, and a trail of foil leads into the woods. Belle wants the chase, Zero wants proof, and Olivia learns the trail was never a trap.",
+    ),
+    pages: [
+      e("Halloween dusk turned the red clay the color of rust. Olivia set her candy bag on the patio bench beside Belle's favorite toy, a rainbow chew shaped like a candy corn. Zero lay with her chin on a smooth rock, supervising. Olivia turned to fix her costume. When she turned back, the bench was empty."),
+      e("There was no thief in sight. Only a wrapper, silver and deliberate, lying on the clay. Then another, three steps farther. Then a third, at the edge of the woods. Belle quivered like a plucked string. Zero did not move at all. Olivia understood both of them perfectly. One wanted the chase; the other wanted proof."),
+      e("At the treeline the sisters argued without a single bark. Belle spun in tight, impatient circles: now, now, now. Zero planted herself on the path home, solid as a closed gate. Olivia weighed them both. \"Belle is right that something is waiting,\" she said slowly. \"Zero is right that we should know what.\" She clicked on her flashlight."),
+      e("Inside the trees the dusk went thick and blue. Every wrapper waited exactly three steps beyond the last, as if someone were measuring courage in careful portions. A branch cracked. Belle froze mid-bounce. Even the wind seemed to hold its breath. Olivia felt fear tighten, then sharpen into attention. A trail this tidy, she thought, is not a trap. It is a message."),
+      e("Behind a fallen oak sat Theo, the six-year-old from down the road, in a cardboard astronaut helmet with one antenna bent. Her candy bag was in his lap, untouched. \"I wasn't stealing,\" he said fiercely, chin wobbling. \"I got turned around. I didn't want to yell. Yelling means you're lost.\" The foil had been his only way to ask without asking."),
+      e("Olivia did not laugh, and she did not lecture. She sat on the cold log beside him. \"That was clever,\" she said, and meant it. \"You made a trail so someone could find you without you having to say it.\" Zero leaned her warm side against his knees. Belle solemnly returned the rainbow candy toy to him, a peace offering. Theo's shoulders came down from his ears."),
+      e("They walked out together, Zero in front because she knew the way, Belle behind because she refused to miss anything. Theo held the flashlight like a captain. At his porch, his mother hugged him so hard his helmet tipped. Later, on her own patio, Olivia split the candy three ways: one share for her, one for two very good dogs, and a handful saved for a brave astronaut tomorrow."),
+    ],
+    quiz: [q("Why did the foil wrappers lead into the woods?", "Theo left them as a signal", "It was a trap", "The wind blew them")],
+  },
 ];

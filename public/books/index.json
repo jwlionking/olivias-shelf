@@ -705,6 +705,52 @@
       "access": "free"
     },
     {
+      "id": "zero-belle-candy",
+      "title": "Zero, Belle, and the Candy That Walked Away",
+      "subtitle": "Some trails are a way of asking.",
+      "blurb": "On Halloween dusk Olivia's candy vanishes, and a trail of foil leads into the woods. Belle wants the chase, Zero wants proof, and Olivia learns the trail was never a trap.",
+      "cover": "art/cover.jpg",
+      "spine": "#5a3a1a",
+      "pages": 7,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "candy",
+          "name": "Rainbow candy pin"
+        },
+        {
+          "id": "foil",
+          "name": "Foil trail pin"
+        },
+        {
+          "id": "moon",
+          "name": "Treeline moon pin"
+        },
+        {
+          "id": "star",
+          "name": "Astronaut star pin"
+        },
+        {
+          "id": "zero",
+          "name": "Steady Zero pin"
+        }
+      ],
+      "quizCount": 4,
+      "titles": {
+        "fr": "Zero, Belle, and the Candy That Walked Away",
+        "es": "Zero, Belle, and the Candy That Walked Away",
+        "ja": "Zero, Belle, and the Candy That Walked Away",
+        "zh": "Zero, Belle, and the Candy That Walked Away"
+      },
+      "blurbs": {
+        "fr": "On Halloween dusk Olivia's candy vanishes, and a trail of foil leads into the woods. Belle wants the chase, Zero wants proof, and Olivia learns the trail was never a trap.",
+        "es": "On Halloween dusk Olivia's candy vanishes, and a trail of foil leads into the woods. Belle wants the chase, Zero wants proof, and Olivia learns the trail was never a trap.",
+        "ja": "On Halloween dusk Olivia's candy vanishes, and a trail of foil leads into the woods. Belle wants the chase, Zero wants proof, and Olivia learns the trail was never a trap.",
+        "zh": "On Halloween dusk Olivia's candy vanishes, and a trail of foil leads into the woods. Belle wants the chase, Zero wants proof, and Olivia learns the trail was never a trap."
+      },
+      "access": "free"
+    },
+    {
       "id": "otto-shy-moon",
       "title": "Otto and the Shy Moon",
       "subtitle": "A bedtime pop-up story",

@@ -1,0 +1,93 @@
+{
+  "cards": [
+    {
+      "id": "cover",
+      "file": "cover.jpg",
+      "width": 1200,
+      "height": 1800,
+      "cutout": false,
+      "copy": "Painting cover…"
+    },
+    {
+      "id": "olivia-stand",
+      "file": "olivia-stand.webp",
+      "width": 529,
+      "height": 1081,
+      "cutout": true,
+      "copy": "Waking olivia stand…"
+    },
+    {
+      "id": "zero",
+      "file": "zero.webp",
+      "width": 641,
+      "height": 920,
+      "cutout": true,
+      "copy": "Waking zero…"
+    },
+    {
+      "id": "belle",
+      "file": "belle.webp",
+      "width": 631,
+      "height": 1057,
+      "cutout": true,
+      "copy": "Waking belle…"
+    },
+    {
+      "id": "candy",
+      "file": "candy.webp",
+      "width": 746,
+      "height": 518,
+      "cutout": true,
+      "copy": "Waking candy…"
+    },
+    {
+      "id": "foil",
+      "file": "foil.webp",
+      "width": 673,
+      "height": 348,
+      "cutout": true,
+      "copy": "Waking foil…"
+    },
+    {
+      "id": "boy",
+      "file": "boy.webp",
+      "width": 653,
+      "height": 1125,
+      "cutout": true,
+      "copy": "Waking boy…"
+    },
+    {
+      "id": "yard-dusk",
+      "file": "yard-dusk.jpg",
+      "width": 1600,
+      "height": 1067,
+      "cutout": false,
+      "copy": "Painting yard dusk…"
+    },
+    {
+      "id": "treeline",
+      "file": "treeline.jpg",
+      "width": 1600,
+      "height": 1067,
+      "cutout": false,
+      "copy": "Painting treeline…"
+    },
+    {
+      "id": "woods-dark",
+      "file": "woods-dark.jpg",
+      "width": 1600,
+      "height": 1067,
+      "cutout": false,
+      "copy": "Painting woods dark…"
+    },
+    {
+      "id": "yard-night",
+      "file": "yard-night.jpg",
+      "width": 1600,
+      "height": 1067,
+      "cutout": false,
+      "copy": "Painting yard night…"
+    }
+  ],
+  "provenance": "Grok Imagine gouache paintings from the Olivia home-book art (Olivia, Zero, Belle, Home)."
+}

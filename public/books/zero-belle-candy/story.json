@@ -1,0 +1,281 @@
+{
+  "author": "Olivia's Shelf",
+  "ageRange": "7 to 10",
+  "readingLevel": "Advanced picture book",
+  "cover": "art/cover.jpg",
+  "scenes": "scenes.js",
+  "hero": {
+    "name": "Olivia",
+    "felt": "otto"
+  },
+  "narrator": {
+    "grok": {
+      "voice": "carina",
+      "language": "en",
+      "instructions": "You are a warm, intelligent storyteller reading a Halloween picture book to a sharp, homeschooled child who loves suspense. Read with quiet intensity, never campy, never cruel. Let the woods feel genuinely uncertain, then let kindness feel earned. Olivia sounds clear and thoughtful; Zero is low and steady; Belle is bright and impatient; the boy, Theo, is small, stubborn, and trying hard not to cry. Pause at full stops. Do not rush the dark."
+    },
+    "openai": {
+      "model": "grok-tts",
+      "voice": "carina",
+      "speed": 0.94,
+      "instructions": "You are a warm, intelligent storyteller reading a Halloween picture book to a sharp, homeschooled child who loves suspense. Read with quiet intensity, never campy, never cruel. Let the woods feel genuinely uncertain, then let kindness feel earned. Olivia sounds clear and thoughtful; Zero is low and steady; Belle is bright and impatient; the boy, Theo, is small, stubborn, and trying hard not to cry. Pause at full stops. Do not rush the dark."
+    },
+    "bundled": {
+      "folder": "voice",
+      "format": "mp3",
+      "timings": true
+    }
+  },
+  "credits": "Painted with Grok Imagine from the Olivia, Zero, Belle, and home paintings. Narrated by Grok Voice (Carina).",
+  "pins": [
+    {
+      "id": "candy",
+      "name": "Rainbow candy pin",
+      "page": 0,
+      "at": [
+        0.38,
+        0,
+        -0.2
+      ]
+    },
+    {
+      "id": "foil",
+      "name": "Foil trail pin",
+      "page": 1,
+      "at": [
+        -0.38,
+        0,
+        -0.18
+      ]
+    },
+    {
+      "id": "moon",
+      "name": "Treeline moon pin",
+      "page": 3,
+      "at": [
+        0.4,
+        0,
+        -0.2
+      ]
+    },
+    {
+      "id": "star",
+      "name": "Astronaut star pin",
+      "page": 4,
+      "at": [
+        -0.4,
+        0,
+        0.18
+      ]
+    },
+    {
+      "id": "zero",
+      "name": "Steady Zero pin",
+      "page": 6,
+      "at": [
+        0.34,
+        0,
+        -0.22
+      ]
+    }
+  ],
+  "id": "zero-belle-candy",
+  "title": "Zero, Belle, and the Candy That Walked Away",
+  "subtitle": "Some trails are a way of asking.",
+  "blurb": "On Halloween dusk Olivia's candy vanishes, and a trail of foil leads into the woods. Belle wants the chase, Zero wants proof, and Olivia learns the trail was never a trap.",
+  "colors": {
+    "cloth": "#3a2a1a",
+    "endpaper": {
+      "base": "#1e1610",
+      "ink": "#f2a64a",
+      "pattern": "stars"
+    }
+  },
+  "magic": {
+    "trail": "A trail this tidy is not a trap. It is a message.",
+    "brave": "There is a brave that runs and a brave that waits.",
+    "ask": "Some people cannot say help, so they leave a trail."
+  },
+  "pages": [
+    {
+      "id": "costume",
+      "scene": "yard",
+      "heading": "The bag on the bench",
+      "text": "{Halloween} dusk turned the red clay the color of rust. {Olivia:olivia/ask} set her candy bag on the patio bench beside {Belle:belle/wag}'s favorite toy, a rainbow chew shaped like a {candy:candy/rattle} corn. {Zero:zero/sniff} lay with her chin on a smooth rock, supervising. Olivia turned to fix her costume. When she turned back, the {bench:candy/gone} was empty.",
+      "hint": "Tap the bench. Something is missing.",
+      "words": [
+        "Halloween",
+        "Olivia",
+        "Belle",
+        "candy",
+        "Zero",
+        "bench"
+      ]
+    },
+    {
+      "id": "trail",
+      "scene": "yard",
+      "heading": "Foil like breadcrumbs",
+      "text": "There was no thief in sight. Only a {wrapper:foil/glint}, silver and deliberate, lying on the clay. Then another, three steps farther. Then a third, at the edge of the {woods:yard/hush}. {Belle:belle/run} quivered like a plucked string. {Zero:zero/sit} did not move at all. Olivia understood both of them perfectly. One wanted the chase; the other wanted proof.",
+      "hint": "Tap the foil. Count the steps between them.",
+      "words": [
+        "wrapper",
+        "woods",
+        "Belle",
+        "Zero"
+      ]
+    },
+    {
+      "id": "argument",
+      "scene": "treeline",
+      "heading": "Two kinds of brave",
+      "text": "At the treeline the sisters argued without a single bark. {Belle:belle/wreck} spun in tight, impatient circles: now, now, now. {Zero:zero/wag} planted herself on the path home, solid as a closed gate. {Olivia:olivia/think} weighed them both. \"Belle is right that something is waiting,\" she said slowly. \"Zero is right that we should know what.\" She clicked on her {flashlight:foil/glint}.",
+      "hint": "Tap Belle, then Zero. Which kind of brave is right?",
+      "words": [
+        "Belle",
+        "Zero",
+        "Olivia",
+        "flashlight"
+      ]
+    },
+    {
+      "id": "woods",
+      "scene": "woods",
+      "heading": "Three steps farther",
+      "text": "Inside the trees the dusk went thick and blue. Every {wrapper:foil/glint} waited exactly three steps beyond the last, as if someone were measuring courage in careful portions. A branch cracked. {Belle:belle/bark} froze mid-bounce. Even the {wind:woods/hush} seemed to hold its breath. {Olivia:olivia/watch} felt fear tighten, then sharpen into attention. A trail this tidy, she thought, is not a trap. It is a message.",
+      "hint": "Tap the woods. Listen for what is not an animal.",
+      "words": [
+        "wrapper",
+        "Belle",
+        "wind",
+        "Olivia"
+      ]
+    },
+    {
+      "id": "found",
+      "scene": "woods-find",
+      "heading": "The boy on the stump",
+      "text": "Behind a fallen oak sat {Theo:boy/shy}, the six-year-old from down the road, in a cardboard astronaut helmet with one antenna bent. Her candy bag was in his lap, untouched. \"I wasn't stealing,\" he said fiercely, chin wobbling. \"I got turned around. I didn't want to yell. Yelling means you're lost.\" The {foil:foil/glint} had been his only way to ask without asking.",
+      "hint": "Tap Theo. Is he a thief, or a signal?",
+      "words": [
+        "Theo",
+        "foil"
+      ]
+    },
+    {
+      "id": "dignity",
+      "scene": "woods-find",
+      "heading": "A way to ask",
+      "text": "{Olivia:olivia/ask} did not laugh, and she did not lecture. She sat on the cold log beside him. \"That was clever,\" she said, and meant it. \"You made a trail so someone could find you without you having to say it.\" {Zero:zero/sleep} leaned her warm side against his knees. {Belle:belle/wag} solemnly returned the rainbow {candy:candy/rattle} toy to him, a peace offering. Theo's shoulders came down from his ears.",
+      "hint": "Tap Zero. Tap Belle. Watch the boy's shoulders.",
+      "words": [
+        "Olivia",
+        "Zero",
+        "Belle",
+        "candy"
+      ]
+    },
+    {
+      "id": "home",
+      "scene": "yard-home",
+      "heading": "The long way home",
+      "text": "They walked out together, Zero in front because she knew the way, Belle behind because she refused to miss anything. Theo held the {flashlight:foil/glint} like a captain. At his porch, his mother hugged him so hard his helmet tipped. Later, on her own patio, {Olivia:olivia/ask} split the {candy:candy/rattle} three ways: one share for her, one for two very good dogs, and a handful saved for a brave astronaut tomorrow.",
+      "hint": "Tap the candy. Who gets a share?",
+      "words": [
+        "flashlight",
+        "Olivia",
+        "candy"
+      ]
+    }
+  ],
+  "end": {
+    "heading": "The End",
+    "text": "You {read} a Halloween where the scariest thing in the woods was someone who needed finding.",
+    "prompt": "If you were lost and too proud to shout, what trail would you leave?"
+  },
+  "quiz": {
+    "folder": "quiz",
+    "questions": [
+      {
+        "q": "Why did the foil wrappers lead into the woods?",
+        "options": [
+          {
+            "word": "signal",
+            "label": "Theo left them as a signal"
+          },
+          {
+            "word": "trap",
+            "label": "It was a trap"
+          },
+          {
+            "word": "wind",
+            "label": "The wind blew them"
+          }
+        ],
+        "answer": 0,
+        "right": "Yes. The trail was his way of asking for help.",
+        "wrong": "Theo left the foil so someone could find him."
+      },
+      {
+        "q": "How were Zero and Belle brave in different ways?",
+        "options": [
+          {
+            "word": "wait-chase",
+            "label": "Zero waited, Belle wanted to chase"
+          },
+          {
+            "word": "both-ran",
+            "label": "They both ran away"
+          },
+          {
+            "word": "both-slept",
+            "label": "They both fell asleep"
+          }
+        ],
+        "answer": 0,
+        "right": "There is a brave that runs and a brave that waits.",
+        "wrong": "Belle wanted the chase. Zero wanted proof first."
+      },
+      {
+        "q": "Why didn't Theo yell for help?",
+        "options": [
+          {
+            "word": "proud",
+            "label": "He felt yelling meant admitting he was lost"
+          },
+          {
+            "word": "asleep",
+            "label": "He was asleep"
+          },
+          {
+            "word": "candy",
+            "label": "He was busy eating candy"
+          }
+        ],
+        "answer": 0,
+        "right": "He was too proud to call out, so he left a trail.",
+        "wrong": "Theo thought yelling meant admitting he was lost."
+      },
+      {
+        "q": "How did Olivia share the candy at the end?",
+        "options": [
+          {
+            "word": "three-ways",
+            "label": "Three ways, with some saved for Theo"
+          },
+          {
+            "word": "kept-all",
+            "label": "She kept it all"
+          },
+          {
+            "word": "threw-away",
+            "label": "She threw it away"
+          }
+        ],
+        "answer": 0,
+        "right": "One for her, one for the dogs, and some for a brave astronaut.",
+        "wrong": "She split it three ways and saved some for Theo."
+      }
+    ]
+  }
+}
