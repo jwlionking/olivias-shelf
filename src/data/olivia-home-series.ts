@@ -153,4 +153,28 @@ export const oliviaHomeBooks: Book[] = [
     ],
     quiz: [q("What color is the house?", "white", "purple", "gold")],
   },
+  {
+    slug: "olivia-porch-light",
+    cover: "/books/olivia-porch-light/art/cover-shelf.webp",
+    free: true,
+    scene: "farm",
+    title: L("Olivia and the Porch That Wouldn't Stay Lit", "Olivia and the Porch That Wouldn't Stay Lit", "Olivia and the Porch That Wouldn't Stay Lit", "Olivia and the Porch That Wouldn't Stay Lit", "Olivia and the Porch That Wouldn't Stay Lit"),
+    blurb: L(
+      "On Halloween night the porch jack-o'-lanterns dim one by one. Olivia, Zero, and Belle keep watch and meet a shy wind that drinks flame because it is afraid of the dark.",
+      "On Halloween night the porch jack-o'-lanterns dim one by one. Olivia, Zero, and Belle keep watch and meet a shy wind that drinks flame because it is afraid of the dark.",
+      "On Halloween night the porch jack-o'-lanterns dim one by one. Olivia, Zero, and Belle keep watch and meet a shy wind that drinks flame because it is afraid of the dark.",
+      "On Halloween night the porch jack-o'-lanterns dim one by one. Olivia, Zero, and Belle keep watch and meet a shy wind that drinks flame because it is afraid of the dark.",
+      "On Halloween night the porch jack-o'-lanterns dim one by one. Olivia, Zero, and Belle keep watch and meet a shy wind that drinks flame because it is afraid of the dark.",
+    ),
+    pages: [
+      e("Halloween smelled like leaf-smoke and cold sugar. Olivia set three jack-o'-lanterns on the porch rail, grins carved careful, candles upright as promises. Zero sat like a sentry. Belle paced, already inventing trouble. Then the middle flame thinned, not with a puff of wind, but as if something thirsty had leaned close."),
+      e("One by one the grins went polite and dim. Not out. Worse. Hollowed. Olivia whispered, \"That is not weather.\" Zero tasted the air and did not like the answer. Belle bounced anyway, because courage sometimes looks like refusing to sit still."),
+      e("They kept watch behind the porch post. The yard held its breath, red clay dull as old copper, woods a charcoal scribble. When the last candle shivered, Olivia felt the kind of fear that makes you more precise, not smaller. \"Stay with me,\" she told the dogs, and meant herself too."),
+      e("It arrived like a draft with manners, cool fingers, no footprints. A thin shape hunched over the candle and drank the brightness down to a bead. Belle barked once, bright as a thrown coin. The shape flinched. \"Please,\" it whispered, ashamed. \"The dark is louder when I am alone in it.\""),
+      e("Olivia did not raise a broom or a threat. She raised a question. \"If you empty our light, we all sit in the loud dark. What if you sat with it instead?\" Zero edged closer, calm as a closed gate. Belle offered a ridiculous toy like a treaty. The wind trembled: wanting, fearing, choosing."),
+      e("They relit the jack-o'-lanterns. The wind sat on the top step and practiced stillness. The flames leaned toward it, not stolen but shared, and the dark around the porch grew honest instead of hungry. Far off, a neighbor's laugh skipped like a stone. Halloween went on, braver."),
+      e("Later, Olivia left one small lantern on the rail \"for company.\" Zero claimed the doormat. Belle finally collapsed mid-bounce. The wind, lighter now, slipped into the woods without taking anything with it. On the porch, the grins kept their promises until morning."),
+    ],
+    quiz: [q("Why did the wind drink the candle light?", "It was afraid of the dark", "It wanted candy", "It was angry")],
+  },
 ];

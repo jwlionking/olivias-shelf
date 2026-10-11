@@ -1,0 +1,285 @@
+{
+  "author": "Olivia's Shelf",
+  "ageRange": "7 to 10",
+  "readingLevel": "Advanced picture book",
+  "cover": "art/cover.jpg",
+  "scenes": "scenes.js",
+  "hero": {
+    "name": "Olivia",
+    "felt": "otto"
+  },
+  "narrator": {
+    "grok": {
+      "voice": "carina",
+      "language": "en",
+      "instructions": "You are a warm, intelligent storyteller reading a Halloween picture book to a sharp, homeschooled child who loves suspense. Read with quiet intensity—never campy, never cruel. Let fear feel real, then let courage feel earned. Give Olivia a clear, thoughtful voice; Zero a low, steady calm; Belle a bright impatient energy; the wind-spirit a thin, ashamed whisper that softens when it is offered kindness. Pause at full stops. Do not rush the dark."
+    },
+    "openai": {
+      "model": "grok-tts",
+      "voice": "carina",
+      "speed": 0.94,
+      "instructions": "You are a warm, intelligent storyteller reading a Halloween picture book to a sharp, homeschooled child who loves suspense. Read with quiet intensity—never campy, never cruel. Let fear feel real, then let courage feel earned. Give Olivia a clear, thoughtful voice; Zero a low, steady calm; Belle a bright impatient energy; the wind-spirit a thin, ashamed whisper that softens when it is offered kindness. Pause at full stops. Do not rush the dark."
+    },
+    "bundled": {
+      "folder": "voice",
+      "format": "mp3",
+      "timings": false
+    }
+  },
+  "credits": "Painted with Grok Imagine from the Olivia, Zero, Belle, and home paintings. Narrated by Grok Voice (Carina).",
+  "pins": [
+    {
+      "id": "pumpkin",
+      "name": "Lantern grin pin",
+      "page": 1,
+      "at": [
+        0.38,
+        0,
+        -0.2
+      ]
+    },
+    {
+      "id": "star",
+      "name": "Honest dark pin",
+      "page": 3,
+      "at": [
+        -0.36,
+        0,
+        -0.18
+      ]
+    },
+    {
+      "id": "wind",
+      "name": "Shy wind pin",
+      "page": 4,
+      "at": [
+        0.4,
+        0,
+        0.18
+      ]
+    },
+    {
+      "id": "belle",
+      "name": "Treaty Belle pin",
+      "page": 5,
+      "at": [
+        -0.4,
+        0,
+        0.2
+      ]
+    },
+    {
+      "id": "moon",
+      "name": "Moon pin",
+      "page": 6,
+      "at": [
+        0.32,
+        0,
+        -0.22
+      ]
+    }
+  ],
+  "id": "olivia-porch-light",
+  "title": "Olivia and the Porch That Wouldn't Stay Lit",
+  "subtitle": "Some light is braver when it is shared.",
+  "blurb": "On Halloween night the porch jack-o'-lanterns dim one by one. Olivia, Zero, and Belle keep watch and meet a shy wind that drinks flame because it is afraid of the dark.",
+  "colors": {
+    "cloth": "#2a1830",
+    "endpaper": {
+      "base": "#1a1224",
+      "ink": "#f0c86a",
+      "pattern": "stars"
+    }
+  },
+  "magic": {
+    "dim": "The flame did not blow out. It thinned, like a secret being sipped.",
+    "bargain": "Light is braver when it is shared.",
+    "stay": "The wind sat on the top step and practiced being still."
+  },
+  "pages": [
+    {
+      "id": "porch-dusk",
+      "scene": "dusk",
+      "heading": "The first small theft",
+      "text": "{Halloween} smelled like {leaf-smoke:porch} and cold sugar. {Olivia:olivia/ask} set three {jack-o'-lanterns:pumpkin/glow} on the porch rail, grins carved careful, candles upright as promises. {Zero:zero/sit} sat like a sentry. {Belle:belle/wag} paced, already inventing trouble. Then the middle {flame:pumpkin/dim} thinned, not with a puff of wind, but as if something thirsty had leaned close.",
+      "hint": "Tap the middle pumpkin. Watch the light hesitate.",
+      "words": [
+        "Halloween",
+        "Olivia",
+        "jack-o'-lanterns",
+        "Zero",
+        "Belle",
+        "flame"
+      ]
+    },
+    {
+      "id": "count-the-dark",
+      "scene": "dark",
+      "heading": "Counting the dark",
+      "text": "One by one the {grins:pumpkin/dim} went polite and dim. Not out. {Worse:olivia/think}. Hollowed. {Olivia:olivia/ask} whispered, \"That is not weather.\" {Zero:zero/sniff} tasted the air and did not like the answer. {Belle:belle/wreck} bounced anyway, because courage sometimes looks like refusing to sit still.",
+      "hint": "Tap each pumpkin. Which grin empties first?",
+      "words": [
+        "grins",
+        "Worse",
+        "Olivia",
+        "Zero",
+        "Belle"
+      ]
+    },
+    {
+      "id": "stakeout",
+      "scene": "stakeout",
+      "heading": "The stakeout",
+      "text": "They kept {watch:olivia/watch} behind the porch post. The yard held its breath, {red clay:porch} dull as old copper, woods a charcoal scribble. When the last {candle:pumpkin/glow} shivered, {Olivia} felt the kind of fear that makes you more precise, not smaller. \"Stay with me,\" she told the dogs, and meant herself too.",
+      "hint": "Tap Olivia. Tap Zero. Belle will not stop bouncing, use that.",
+      "words": [
+        "watch",
+        "red clay",
+        "candle",
+        "Olivia"
+      ]
+    },
+    {
+      "id": "the-sip",
+      "scene": "wind",
+      "heading": "The thing that sipped",
+      "text": "It arrived like a {draft:wind/swirl} with manners, cool fingers, no footprints. A thin {shape:wind/shy} hunched over the candle and {drank:wind/sip} the brightness down to a bead. {Belle:belle/bark} barked once, bright as a thrown coin. The shape flinched. \"Please,\" it whispered, ashamed. \"The dark is louder when I am alone in it.\"",
+      "hint": "Tap the wind. It startles, then listens.",
+      "words": [
+        "draft",
+        "shape",
+        "drank",
+        "Belle"
+      ]
+    },
+    {
+      "id": "bargain",
+      "scene": "bargain",
+      "heading": "A bargain on the top step",
+      "text": "{Olivia:olivia/ask} did not raise a broom or a threat. She raised a question. \"If you empty our light, we all sit in the loud dark. What if you {sat:wind/sit} with it instead?\" {Zero:zero/wag} edged closer, calm as a closed gate. {Belle:belle/wag} offered a ridiculous toy like a treaty. The wind trembled: wanting, fearing, choosing.",
+      "hint": "Tap Olivia. Tap the wind. Let Zero hold the line.",
+      "words": [
+        "Olivia",
+        "sat",
+        "Zero",
+        "Belle"
+      ]
+    },
+    {
+      "id": "shared",
+      "scene": "shared",
+      "heading": "Shared light",
+      "text": "They relit the {jack-o'-lanterns:pumpkin/glow}. The wind sat on the top step and practiced {stillness:wind/still}. The flames leaned toward it, not stolen but {shared:pumpkin/share}, and the dark around the porch grew honest instead of hungry. Far off, a neighbor's laugh skipped like a stone. {Halloween} went on, braver.",
+      "hint": "Tap the flames. They lean, they do not flee.",
+      "words": [
+        "jack-o'-lanterns",
+        "stillness",
+        "shared",
+        "Halloween"
+      ]
+    },
+    {
+      "id": "after",
+      "scene": "after",
+      "heading": "After the grins",
+      "text": "Later, {Olivia} left one small {lantern:lantern/glow} on the rail \"for company.\" {Zero:zero/sleep} claimed the doormat. {Belle:belle/sleep} finally collapsed mid-bounce. The wind, lighter now, slipped into the woods without taking anything with it. On the porch, the grins kept their promises until morning.",
+      "hint": "Leave the lantern. Goodnight to dogs and dark alike.",
+      "words": [
+        "Olivia",
+        "lantern",
+        "Zero",
+        "Belle"
+      ]
+    }
+  ],
+  "end": {
+    "heading": "The End",
+    "text": "You {read} a Halloween that stayed kind. Fear can be a thief, or a guest you teach to sit.",
+    "prompt": "If something shy stole your light because it was scared, what bargain would you offer?"
+  },
+  "quiz": {
+    "folder": "quiz",
+    "questions": [
+      {
+        "q": "Why did the wind drink the candle light?",
+        "options": [
+          {
+            "word": "afraid",
+            "label": "It was afraid of the dark"
+          },
+          {
+            "word": "candy",
+            "label": "It wanted candy"
+          },
+          {
+            "word": "angry",
+            "label": "It was angry"
+          }
+        ],
+        "answer": 0,
+        "right": "Yes. The dark felt louder when it was alone.",
+        "wrong": "The wind was afraid of the dark when it was alone."
+      },
+      {
+        "q": "What kept the porch lit in the end?",
+        "options": [
+          {
+            "word": "sharing",
+            "label": "Sharing the light"
+          },
+          {
+            "word": "bigger-candles",
+            "label": "Bigger candles"
+          },
+          {
+            "word": "scaring",
+            "label": "Scaring the wind away"
+          }
+        ],
+        "answer": 0,
+        "right": "Light is braver when it is shared.",
+        "wrong": "They shared the light, and the wind sat with it."
+      },
+      {
+        "q": "How did Zero help?",
+        "options": [
+          {
+            "word": "calm",
+            "label": "She stayed calm, like a closed gate"
+          },
+          {
+            "word": "chase",
+            "label": "She chased the wind"
+          },
+          {
+            "word": "hid",
+            "label": "She hid her rock"
+          }
+        ],
+        "answer": 0,
+        "right": "Zero is the steady one.",
+        "wrong": "Zero stayed calm and held the line."
+      },
+      {
+        "q": "What did Olivia use instead of a broom?",
+        "options": [
+          {
+            "word": "question",
+            "label": "A question"
+          },
+          {
+            "word": "broom",
+            "label": "A louder broom"
+          },
+          {
+            "word": "trap",
+            "label": "A trap"
+          }
+        ],
+        "answer": 0,
+        "right": "A good question can be braver than a threat.",
+        "wrong": "Olivia raised a question, not a broom."
+      }
+    ]
+  }
+}

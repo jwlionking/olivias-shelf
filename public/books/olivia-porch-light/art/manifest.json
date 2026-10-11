@@ -1,0 +1,85 @@
+{
+  "cards": [
+    {
+      "id": "cover",
+      "file": "cover.jpg",
+      "width": 1200,
+      "height": 1800,
+      "cutout": false,
+      "copy": "Painting cover…"
+    },
+    {
+      "id": "olivia-stand",
+      "file": "olivia-stand.webp",
+      "width": 529,
+      "height": 1081,
+      "cutout": true,
+      "copy": "Waking olivia stand…"
+    },
+    {
+      "id": "zero",
+      "file": "zero.webp",
+      "width": 641,
+      "height": 920,
+      "cutout": true,
+      "copy": "Waking zero…"
+    },
+    {
+      "id": "belle",
+      "file": "belle.webp",
+      "width": 631,
+      "height": 1057,
+      "cutout": true,
+      "copy": "Waking belle…"
+    },
+    {
+      "id": "pumpkins",
+      "file": "pumpkins.webp",
+      "width": 756,
+      "height": 299,
+      "cutout": true,
+      "copy": "Waking pumpkins…"
+    },
+    {
+      "id": "wind",
+      "file": "wind.webp",
+      "width": 472,
+      "height": 991,
+      "cutout": true,
+      "copy": "Waking wind…"
+    },
+    {
+      "id": "lantern",
+      "file": "lantern.webp",
+      "width": 388,
+      "height": 717,
+      "cutout": true,
+      "copy": "Waking lantern…"
+    },
+    {
+      "id": "porch-dusk",
+      "file": "porch-dusk.jpg",
+      "width": 1600,
+      "height": 1067,
+      "cutout": false,
+      "copy": "Painting porch dusk…"
+    },
+    {
+      "id": "porch-dark",
+      "file": "porch-dark.jpg",
+      "width": 1600,
+      "height": 1067,
+      "cutout": false,
+      "copy": "Painting porch dark…"
+    },
+    {
+      "id": "porch-lit",
+      "file": "porch-lit.jpg",
+      "width": 1600,
+      "height": 1067,
+      "cutout": false,
+      "copy": "Painting porch lit…"
+    }
+  ],
+  "provenance": "Grok Imagine gouache paintings from the Olivia home-book art (Olivia, Zero, Belle, Home)."
+}

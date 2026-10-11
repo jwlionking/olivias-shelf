@@ -659,6 +659,52 @@
       "access": "free"
     },
     {
+      "id": "olivia-porch-light",
+      "title": "Olivia and the Porch That Wouldn't Stay Lit",
+      "subtitle": "Some light is braver when it is shared.",
+      "blurb": "On Halloween night the porch jack-o'-lanterns dim one by one. Olivia, Zero, and Belle keep watch and meet a shy wind that drinks flame because it is afraid of the dark.",
+      "cover": "art/cover.jpg",
+      "spine": "#3a2440",
+      "pages": 7,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pumpkin",
+          "name": "Lantern grin pin"
+        },
+        {
+          "id": "star",
+          "name": "Honest dark pin"
+        },
+        {
+          "id": "wind",
+          "name": "Shy wind pin"
+        },
+        {
+          "id": "belle",
+          "name": "Treaty Belle pin"
+        },
+        {
+          "id": "moon",
+          "name": "Moon pin"
+        }
+      ],
+      "quizCount": 4,
+      "titles": {
+        "fr": "Olivia and the Porch That Wouldn't Stay Lit",
+        "es": "Olivia and the Porch That Wouldn't Stay Lit",
+        "ja": "Olivia and the Porch That Wouldn't Stay Lit",
+        "zh": "Olivia and the Porch That Wouldn't Stay Lit"
+      },
+      "blurbs": {
+        "fr": "On Halloween night the porch jack-o'-lanterns dim one by one. Olivia, Zero, and Belle keep watch and meet a shy wind that drinks flame because it is afraid of the dark.",
+        "es": "On Halloween night the porch jack-o'-lanterns dim one by one. Olivia, Zero, and Belle keep watch and meet a shy wind that drinks flame because it is afraid of the dark.",
+        "ja": "On Halloween night the porch jack-o'-lanterns dim one by one. Olivia, Zero, and Belle keep watch and meet a shy wind that drinks flame because it is afraid of the dark.",
+        "zh": "On Halloween night the porch jack-o'-lanterns dim one by one. Olivia, Zero, and Belle keep watch and meet a shy wind that drinks flame because it is afraid of the dark."
+      },
+      "access": "free"
+    },
+    {
       "id": "otto-shy-moon",
       "title": "Otto and the Shy Moon",
       "subtitle": "A bedtime pop-up story",
