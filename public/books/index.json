@@ -797,6 +797,52 @@
       "access": "free"
     },
     {
+      "id": "olivia-chalk-map",
+      "title": "Olivia and the Map Drawn in Chalk Dust",
+      "subtitle": "Some stories wait years for an ending.",
+      "blurb": "Chalk arrows appear overnight on the red clay drive, and they rearrange themselves when no one is looking. Olivia follows them to a thin place under the deck, where an old unfinished story is waiting.",
+      "cover": "art/cover.jpg",
+      "spine": "#4a4a56",
+      "pages": 7,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "arrow",
+          "name": "Chalk arrow pin"
+        },
+        {
+          "id": "star",
+          "name": "Puzzle star pin"
+        },
+        {
+          "id": "moon",
+          "name": "Garden moon pin"
+        },
+        {
+          "id": "page",
+          "name": "Unfinished story pin"
+        },
+        {
+          "id": "zero",
+          "name": "Steady Zero pin"
+        }
+      ],
+      "quizCount": 4,
+      "titles": {
+        "fr": "Olivia and the Map Drawn in Chalk Dust",
+        "es": "Olivia and the Map Drawn in Chalk Dust",
+        "ja": "Olivia and the Map Drawn in Chalk Dust",
+        "zh": "Olivia and the Map Drawn in Chalk Dust"
+      },
+      "blurbs": {
+        "fr": "Chalk arrows appear overnight on the red clay drive, and they rearrange themselves when no one is looking. Olivia follows them to a thin place under the deck, where an old unfinished story is waiting.",
+        "es": "Chalk arrows appear overnight on the red clay drive, and they rearrange themselves when no one is looking. Olivia follows them to a thin place under the deck, where an old unfinished story is waiting.",
+        "ja": "Chalk arrows appear overnight on the red clay drive, and they rearrange themselves when no one is looking. Olivia follows them to a thin place under the deck, where an old unfinished story is waiting.",
+        "zh": "Chalk arrows appear overnight on the red clay drive, and they rearrange themselves when no one is looking. Olivia follows them to a thin place under the deck, where an old unfinished story is waiting."
+      },
+      "access": "free"
+    },
+    {
       "id": "otto-shy-moon",
       "title": "Otto and the Shy Moon",
       "subtitle": "A bedtime pop-up story",

@@ -1,0 +1,276 @@
+{
+  "author": "Olivia's Shelf",
+  "ageRange": "7 to 10",
+  "readingLevel": "Advanced picture book",
+  "cover": "art/cover.jpg",
+  "scenes": "scenes.js",
+  "hero": {
+    "name": "Olivia",
+    "felt": "otto"
+  },
+  "narrator": {
+    "grok": {
+      "voice": "carina",
+      "language": "en",
+      "instructions": "You are a warm, intelligent storyteller reading a Halloween picture book to a sharp, homeschooled child who loves mysteries and big ideas. Read with quiet intensity, never campy. Let the moving chalk feel uncanny and the space under the deck feel old and strange, never frightening for its own sake. Olivia sounds clear, curious and careful; Zero is low and steady; Belle is bright and restless. Pause at full stops. Let the ending land softly."
+    },
+    "openai": {
+      "model": "grok-tts",
+      "voice": "carina",
+      "speed": 0.94,
+      "instructions": "You are a warm, intelligent storyteller reading a Halloween picture book to a sharp, homeschooled child who loves mysteries and big ideas. Read with quiet intensity, never campy. Let the moving chalk feel uncanny and the space under the deck feel old and strange, never frightening for its own sake. Olivia sounds clear, curious and careful; Zero is low and steady; Belle is bright and restless. Pause at full stops. Let the ending land softly."
+    },
+    "bundled": {
+      "folder": "voice",
+      "format": "mp3",
+      "timings": true
+    }
+  },
+  "credits": "Painted with Grok Imagine from the Olivia, Zero, Belle, and home paintings. Narrated by Grok Voice (Carina).",
+  "pins": [
+    {
+      "id": "arrow",
+      "name": "Chalk arrow pin",
+      "page": 0,
+      "at": [
+        0.38,
+        0,
+        -0.2
+      ]
+    },
+    {
+      "id": "star",
+      "name": "Puzzle star pin",
+      "page": 1,
+      "at": [
+        -0.38,
+        0,
+        -0.18
+      ]
+    },
+    {
+      "id": "moon",
+      "name": "Garden moon pin",
+      "page": 2,
+      "at": [
+        0.4,
+        0,
+        -0.2
+      ]
+    },
+    {
+      "id": "page",
+      "name": "Unfinished story pin",
+      "page": 4,
+      "at": [
+        -0.4,
+        0,
+        0.18
+      ]
+    },
+    {
+      "id": "zero",
+      "name": "Steady Zero pin",
+      "page": 6,
+      "at": [
+        0.34,
+        0,
+        -0.22
+      ]
+    }
+  ],
+  "id": "olivia-chalk-map",
+  "title": "Olivia and the Map Drawn in Chalk Dust",
+  "subtitle": "Some stories wait years for an ending.",
+  "blurb": "Chalk arrows appear overnight on the red clay drive, and they rearrange themselves when no one is looking. Olivia follows them to a thin place under the deck, where an old unfinished story is waiting.",
+  "colors": {
+    "cloth": "#3a3a42",
+    "endpaper": {
+      "base": "#1c1c22",
+      "ink": "#f0ece0",
+      "pattern": "stars"
+    }
+  },
+  "magic": {
+    "map": "A map that changes is a map that wants to be followed.",
+    "thin": "The air felt older than October.",
+    "ending": "Some stories wait years for someone to end them kindly."
+  },
+  "pages": [
+    {
+      "id": "arrows",
+      "scene": "drive",
+      "heading": "Arrows overnight",
+      "text": "On the morning before {Halloween}, the red clay drive had been drawn on. White {arrows:arrow/turn}, chalked in a hand that was not Olivia's, marched across the dust in a neat, impatient line. {Olivia:olivia/ask} had not left her {chalk:chalk/draw} out. Nobody had. {Zero:zero/sniff} examined the first arrow the way she examined strangers. {Belle:belle/wag} tried to eat it.",
+      "hint": "Tap an arrow. Which way does it point?",
+      "words": [
+        "Halloween",
+        "arrows",
+        "Olivia",
+        "chalk",
+        "Zero",
+        "Belle"
+      ]
+    },
+    {
+      "id": "rearranged",
+      "scene": "drive",
+      "heading": "The map that moved",
+      "text": "Olivia sketched the arrows in her notebook, every angle exact. She went inside for breakfast. When she came back, the {arrows:arrow/turn} had rearranged themselves. Same chalk, same hand, new direction. A shiver went up her arms, but so did something brighter: the particular itch of a {puzzle:olivia/think}. \"A map that changes,\" she murmured, \"is a map that wants to be followed.\"",
+      "hint": "Tap Olivia. What kind of map moves on its own?",
+      "words": [
+        "arrows",
+        "puzzle"
+      ]
+    },
+    {
+      "id": "garden",
+      "scene": "garden",
+      "heading": "The garden beds",
+      "text": "The arrows led to the {garden:garden/hush} beds, where the last tomatoes sagged and the soil smelled of rain and endings. Chalk curled around each wooden corner like ivy. {Belle:belle/run} zigzagged between the rows. {Zero:zero/sit} stopped at the far edge and waited, because the next arrow pointed somewhere Olivia did not expect: toward the old {coop:arrow/turn}.",
+      "hint": "Tap the garden. Where does the trail go next?",
+      "words": [
+        "garden",
+        "Belle",
+        "Zero",
+        "coop"
+      ]
+    },
+    {
+      "id": "coop",
+      "scene": "coop",
+      "heading": "The empty coop",
+      "text": "No hens had lived in the coop for years. Its door hung crooked; its perches held only dust and one old feather. On the inside wall someone had chalked a single {arrow:arrow/turn}, pointing down, then sideways, toward the deck. Beneath it, in faded letters: M., age 9. Olivia's heartbeat quickened. Someone had walked this trail long before her, and had never reached the end.",
+      "hint": "Tap the arrow on the wall. Who was M.?",
+      "words": [
+        "arrow"
+      ]
+    },
+    {
+      "id": "thin",
+      "scene": "under-deck",
+      "heading": "The thin place",
+      "text": "That evening Olivia crawled under the deck with a {lantern:lantern/glow}. The air there felt older than October, thin as tissue paper, the way a room feels when someone has just left it. {Zero:zero/sniff} pressed close. {Belle:belle/bark}, for once, was absolutely still. On a loose board, chalked in that same impatient hand, lay a {story:page/read}. It stopped mid-sentence.",
+      "hint": "Tap the story. Read what M. wrote.",
+      "words": [
+        "lantern",
+        "Zero",
+        "Belle",
+        "story"
+      ]
+    },
+    {
+      "id": "unfinished",
+      "scene": "under-deck",
+      "heading": "Mid-sentence",
+      "text": "\"Once there was a girl who was afraid of the dark under the deck,\" the {story:page/read} said, \"so she drew a map to be brave, and one Halloween night she finally crawled under, and there she found...\" Nothing more. Olivia understood. M. had never been brave enough to finish. The thin place was not a doorway. It was a sentence, waiting decades for someone to end it kindly.",
+      "hint": "Tap the story again. What did the girl find?",
+      "words": [
+        "story"
+      ]
+    },
+    {
+      "id": "finish",
+      "scene": "under-deck",
+      "heading": "The ending, out loud",
+      "text": "{Olivia:olivia/ask} took a breath and finished it aloud. \"...and there she found nothing to be afraid of. Only two good dogs, a little dust, and another girl, years later, who was afraid too and came anyway.\" The air thickened back into ordinary night. The {arrows:arrow/turn} on the board softened into plain chalk dust. {Zero:zero/sleep} sighed. {Belle:belle/wag} sneezed. The map was finished, and so was M.'s story.",
+      "hint": "Tap the arrows. Watch them rest.",
+      "words": [
+        "Olivia",
+        "arrows",
+        "Zero",
+        "Belle"
+      ]
+    }
+  ],
+  "end": {
+    "heading": "The End",
+    "text": "You {read} a Halloween mystery whose answer was a kindness.",
+    "prompt": "If you found a story someone never finished, how would you end it?"
+  },
+  "quiz": {
+    "folder": "quiz",
+    "questions": [
+      {
+        "q": "What was strange about the chalk arrows?",
+        "options": [
+          {
+            "word": "moved",
+            "label": "They rearranged themselves"
+          },
+          {
+            "word": "glowed",
+            "label": "They glowed green"
+          },
+          {
+            "word": "sang",
+            "label": "They sang a song"
+          }
+        ],
+        "answer": 0,
+        "right": "Yes. A map that changes wants to be followed.",
+        "wrong": "The arrows rearranged themselves when no one was looking."
+      },
+      {
+        "q": "Who was M.?",
+        "options": [
+          {
+            "word": "girl-before",
+            "label": "A girl who lived there years before"
+          },
+          {
+            "word": "hen",
+            "label": "One of the old hens"
+          },
+          {
+            "word": "belle",
+            "label": "Belle in disguise"
+          }
+        ],
+        "answer": 0,
+        "right": "M. was nine, and drew the map long ago.",
+        "wrong": "M. was a girl who walked the trail years before Olivia."
+      },
+      {
+        "q": "What was the thin place under the deck, really?",
+        "options": [
+          {
+            "word": "sentence",
+            "label": "An unfinished story waiting for an ending"
+          },
+          {
+            "word": "cave",
+            "label": "A monster's cave"
+          },
+          {
+            "word": "tunnel",
+            "label": "A tunnel to the woods"
+          }
+        ],
+        "answer": 0,
+        "right": "It was a sentence, waiting decades to be finished.",
+        "wrong": "It was M.'s unfinished story, waiting for an ending."
+      },
+      {
+        "q": "How did Olivia close the thin place?",
+        "options": [
+          {
+            "word": "finish-aloud",
+            "label": "She finished the story out loud, kindly"
+          },
+          {
+            "word": "erase",
+            "label": "She erased all the chalk"
+          },
+          {
+            "word": "shout",
+            "label": "She shouted at the dark"
+          }
+        ],
+        "answer": 0,
+        "right": "A kind ending let the story rest.",
+        "wrong": "She finished M.'s story aloud with a kind ending."
+      }
+    ]
+  }
+}

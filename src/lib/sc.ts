@@ -31,6 +31,7 @@ export const FREE_BOOK_IDS = [
   "olivia-porch-light",
   "zero-belle-candy",
   "olivia-midnight-library",
+  "olivia-chalk-map",
   "otto-shy-moon",
   "nia-runaway-kite",
   "fin-glowing-sea",

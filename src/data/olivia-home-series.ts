@@ -225,4 +225,28 @@ export const oliviaHomeBooks: Book[] = [
     ],
     quiz: [q("What did the unfinished book want Olivia to do?", "Write a thrilling ending that wasn't true", "Read it aloud", "Throw it away")],
   },
+  {
+    slug: "olivia-chalk-map",
+    cover: "/books/olivia-chalk-map/art/cover-shelf.webp",
+    free: true,
+    scene: "farm",
+    title: L("Olivia and the Map Drawn in Chalk Dust", "Olivia and the Map Drawn in Chalk Dust", "Olivia and the Map Drawn in Chalk Dust", "Olivia and the Map Drawn in Chalk Dust", "Olivia and the Map Drawn in Chalk Dust"),
+    blurb: L(
+      "Chalk arrows appear overnight on the red clay drive, and they rearrange themselves when no one is looking. Olivia follows them to a thin place under the deck, where an old unfinished story is waiting.",
+      "Chalk arrows appear overnight on the red clay drive, and they rearrange themselves when no one is looking. Olivia follows them to a thin place under the deck, where an old unfinished story is waiting.",
+      "Chalk arrows appear overnight on the red clay drive, and they rearrange themselves when no one is looking. Olivia follows them to a thin place under the deck, where an old unfinished story is waiting.",
+      "Chalk arrows appear overnight on the red clay drive, and they rearrange themselves when no one is looking. Olivia follows them to a thin place under the deck, where an old unfinished story is waiting.",
+      "Chalk arrows appear overnight on the red clay drive, and they rearrange themselves when no one is looking. Olivia follows them to a thin place under the deck, where an old unfinished story is waiting.",
+    ),
+    pages: [
+      e("On the morning before Halloween, the red clay drive had been drawn on. White arrows, chalked in a hand that was not Olivia's, marched across the dust in a neat, impatient line. Olivia had not left her chalk out. Nobody had. Zero examined the first arrow the way she examined strangers. Belle tried to eat it."),
+      e("Olivia sketched the arrows in her notebook, every angle exact. She went inside for breakfast. When she came back, the arrows had rearranged themselves. Same chalk, same hand, new direction. A shiver went up her arms, but so did something brighter: the particular itch of a puzzle. \"A map that changes,\" she murmured, \"is a map that wants to be followed.\""),
+      e("The arrows led to the garden beds, where the last tomatoes sagged and the soil smelled of rain and endings. Chalk curled around each wooden corner like ivy. Belle zigzagged between the rows. Zero stopped at the far edge and waited, because the next arrow pointed somewhere Olivia did not expect: toward the old coop."),
+      e("No hens had lived in the coop for years. Its door hung crooked; its perches held only dust and one old feather. On the inside wall someone had chalked a single arrow, pointing down, then sideways, toward the deck. Beneath it, in faded letters: M., age 9. Olivia's heartbeat quickened. Someone had walked this trail long before her, and had never reached the end."),
+      e("That evening Olivia crawled under the deck with a lantern. The air there felt older than October, thin as tissue paper, the way a room feels when someone has just left it. Zero pressed close. Belle, for once, was absolutely still. On a loose board, chalked in that same impatient hand, lay a story. It stopped mid-sentence."),
+      e("\"Once there was a girl who was afraid of the dark under the deck,\" the story said, \"so she drew a map to be brave, and one Halloween night she finally crawled under, and there she found...\" Nothing more. Olivia understood. M. had never been brave enough to finish. The thin place was not a doorway. It was a sentence, waiting decades for someone to end it kindly."),
+      e("Olivia took a breath and finished it aloud. \"...and there she found nothing to be afraid of. Only two good dogs, a little dust, and another girl, years later, who was afraid too and came anyway.\" The air thickened back into ordinary night. The arrows on the board softened into plain chalk dust. Zero sighed. Belle sneezed. The map was finished, and so was M.'s story."),
+    ],
+    quiz: [q("What was strange about the chalk arrows?", "They rearranged themselves", "They glowed green", "They sang a song")],
+  },
 ];

@@ -1,0 +1,101 @@
+{
+  "cards": [
+    {
+      "id": "cover",
+      "file": "cover.jpg",
+      "width": 1200,
+      "height": 1800,
+      "cutout": false,
+      "copy": "Painting cover…"
+    },
+    {
+      "id": "olivia-stand",
+      "file": "olivia-stand.webp",
+      "width": 529,
+      "height": 1081,
+      "cutout": true,
+      "copy": "Waking olivia stand…"
+    },
+    {
+      "id": "zero",
+      "file": "zero.webp",
+      "width": 641,
+      "height": 920,
+      "cutout": true,
+      "copy": "Waking zero…"
+    },
+    {
+      "id": "belle",
+      "file": "belle.webp",
+      "width": 631,
+      "height": 1057,
+      "cutout": true,
+      "copy": "Waking belle…"
+    },
+    {
+      "id": "arrow",
+      "file": "arrow.webp",
+      "width": 716,
+      "height": 496,
+      "cutout": true,
+      "copy": "Waking arrow…"
+    },
+    {
+      "id": "chalk",
+      "file": "chalk.webp",
+      "width": 654,
+      "height": 657,
+      "cutout": true,
+      "copy": "Waking chalk…"
+    },
+    {
+      "id": "page",
+      "file": "page.webp",
+      "width": 895,
+      "height": 567,
+      "cutout": true,
+      "copy": "Waking page…"
+    },
+    {
+      "id": "lantern",
+      "file": "lantern.webp",
+      "width": 376,
+      "height": 735,
+      "cutout": true,
+      "copy": "Waking lantern…"
+    },
+    {
+      "id": "drive-chalk",
+      "file": "drive-chalk.jpg",
+      "width": 1600,
+      "height": 1067,
+      "cutout": false,
+      "copy": "Painting drive chalk…"
+    },
+    {
+      "id": "garden-dusk",
+      "file": "garden-dusk.jpg",
+      "width": 1600,
+      "height": 1067,
+      "cutout": false,
+      "copy": "Painting garden dusk…"
+    },
+    {
+      "id": "coop-dusk",
+      "file": "coop-dusk.jpg",
+      "width": 1600,
+      "height": 1067,
+      "cutout": false,
+      "copy": "Painting coop dusk…"
+    },
+    {
+      "id": "under-deck",
+      "file": "under-deck.jpg",
+      "width": 1600,
+      "height": 1067,
+      "cutout": false,
+      "copy": "Painting under deck…"
+    }
+  ],
+  "provenance": "Grok Imagine gouache paintings from the Olivia home-book art (Olivia, Zero, Belle, Home)."
+}

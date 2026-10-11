@@ -1,5 +1,5 @@
 // @ts-nocheck
-export const FREE_BOOK_IDS=Object.freeze(['lila-moonlit-pony','elon-physics-wonder','elon-heat-jiggle','elon-force-roll','elon-float-boat','elon-air-hug','elon-ice-steam','elon-friction-grip','elon-lever-lift','elon-energy-spring','elon-balance-tip','elon-sky-blue','zero-and-belle','olivia-two-sisters','olivia-lost-rock','olivia-yard-romp','olivia-garden-beds','olivia-quiet-sun','olivia-house-hill','olivia-porch-light','zero-belle-candy','olivia-midnight-library','otto-shy-moon','nia-runaway-kite','fin-glowing-sea']);
+export const FREE_BOOK_IDS=Object.freeze(['lila-moonlit-pony','elon-physics-wonder','elon-heat-jiggle','elon-force-roll','elon-float-boat','elon-air-hug','elon-ice-steam','elon-friction-grip','elon-lever-lift','elon-energy-spring','elon-balance-tip','elon-sky-blue','zero-and-belle','olivia-two-sisters','olivia-lost-rock','olivia-yard-romp','olivia-garden-beds','olivia-quiet-sun','olivia-house-hill','olivia-porch-light','zero-belle-candy','olivia-midnight-library','olivia-chalk-map','otto-shy-moon','nia-runaway-kite','fin-glowing-sea']);
 export const isFreeBook=id=>FREE_BOOK_IDS.includes(id);
 export function isPublicAsset(file) {
   if(file.startsWith('public/'))return true;
