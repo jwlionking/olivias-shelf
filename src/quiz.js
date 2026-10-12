@@ -1,5 +1,5 @@
 // @ts-nocheck
-import {assetUrl} from "./assets.js";
+import {assetUrl, isMapped} from "./assets.js";
 import { t } from "./i18n.js";
 /* The end-of-story quiz: three picture questions ("Who is the main character?") for children
    who cannot read yet. The narrator reads each question aloud, the answers are big picture
@@ -88,6 +88,8 @@ export class Quiz {
   /** Play one voice clip; resolves when it ends (or right away if it cannot play). */
   play(url) {
     this.stopVoice();
+    // a book without its quiz clips stays quiet instead of firing 404s
+    if (!isMapped(url)) return Promise.resolve();
     this.root.classList.add("speaking");
     return new Promise((resolve) => {
       const a = new Audio(assetUrl(url));
