@@ -313,12 +313,9 @@ async function loadBook(id, progress = (p, copy) => ui.setLoading(p, copy)) {
     } catch (error) { textures.wordCards = textures.wordCards || new Set(); }
   })();
   textures.pins = {};
-  void Promise.all((story.pins || []).map(async (pin) => {
-    const key = `${BOOK_BASE}/pins/${pin.id}.png`;
-    if (!isMapped(key)) return;
-    const tex = await optional(key, 2500);
-    if (tex && BOOK_ID === id) { tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 4; textures.pins[pin.id] = tex; }
-  }));
+  textures.pinLoads = {};
+  // pins load after the first spread has its art (they used to race it and lose at 2.5 s)
+  setTimeout(() => { if (BOOK_ID === id) for (const pin of story.pins || []) ensurePinTexture(pin, id); }, 1500);
   // music and ambience load behind the open button so a large m4a cannot pin the cover
   const audio = story.audio || {};
   void (async () => {
@@ -1305,6 +1302,24 @@ function handleTap(hit) {
 
 /* ---------- the souvenir pins ---------- */
 
+/** Load (once) the enamel texture for a pin of the open book; failed loads may be retried. */
+function ensurePinTexture(pin, id = BOOK_ID) {
+  if (BOOK_ID !== id || !textures.pins) return Promise.resolve(null);
+  if (textures.pins[pin.id]) return Promise.resolve(textures.pins[pin.id]);
+  textures.pinLoads = textures.pinLoads || {};
+  if (textures.pinLoads[pin.id]) return textures.pinLoads[pin.id];
+  const key = `${BOOK_BASE}/pins/${pin.id}.png`;
+  if (!isMapped(key)) return Promise.resolve(null);
+  const pins = textures.pins;
+  const job = optional(key, 10000).then((tex) => {
+    if (tex && BOOK_ID === id && textures.pins === pins) { tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 4; pins[pin.id] = tex; return tex; }
+    if (textures.pinLoads && textures.pinLoads[pin.id] === job) delete textures.pinLoads[pin.id];
+    return null;
+  });
+  textures.pinLoads[pin.id] = job;
+  return job;
+}
+
 /** Stand this page's uncollected pins in the scene: thick enamel badges (src/pin.js) that float
     over the page, turn to catch the light, glow, and trail magic dust. */
 function placePins(d, pageIndex) {
@@ -1312,8 +1327,13 @@ function placePins(d, pageIndex) {
   scene.updateMatrixWorld(true);
   for (const pin of story.pins) {
     if (pin.page !== pageIndex || souvenirs.has(BOOK_ID, pin.id)) continue;
+    if (d.objects[`pin:${pin.id}`]) continue;
     const tex = textures.pins && textures.pins[pin.id];
-    if (!tex || !tex.image) continue;
+    if (!tex || !tex.image) {
+      // not here yet: (re)try now and stand it up if the reader is still on this page
+      ensurePinTexture(pin).then((loaded) => { if (loaded && state.diorama === d && state.page === pageIndex) placePins(d, pageIndex); });
+      continue;
+    }
     const badge = makePinBadge(tex, { size: pin.size || 0.13, reducedMotion: settings.reducedMotion, light: state.pinLight });
     const group = new THREE.Group();
     group.add(badge.object);

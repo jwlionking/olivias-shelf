@@ -54,7 +54,15 @@
       "heading": "Hooves in the dark",
       "text": "{Lila} could not {sleep:lila/sleep}. Soft {hooves} whispered in the {meadow:window}. She {looked:lila/look} out of her {window}. The {moon} was round and gold. \"Who is {there:lila/wave}?\" {whispered:lila/whisper} {Lila}.",
       "hint": "Tap Lila. Tap the moon in the window.",
-      "words": ["Lila", "sleep", "hooves", "meadow", "window", "moon", "whispered"]
+      "words": [
+        "Lila",
+        "sleep",
+        "hooves",
+        "meadow",
+        "window",
+        "moon",
+        "whispered"
+      ]
     },
     {
       "id": "meadow",
@@ -62,7 +70,15 @@
       "heading": "The shy pony",
       "text": "{Lila} {ran:lila/run} into the {meadow}. A cream {pony} stood in the {moonlight:moon/glow}, shy as a secret. A silver {bell} hung from her {mane:pony/toss}. \"{Hello:lila/wave},\" said {Lila}. \"I am not afraid.\"",
       "hint": "Tap the pony. She is a little shy.",
-      "words": ["ran", "meadow", "pony", "moonlight", "bell", "mane", "hello"]
+      "words": [
+        "ran",
+        "meadow",
+        "pony",
+        "moonlight",
+        "bell",
+        "mane",
+        "hello"
+      ]
     },
     {
       "id": "lost",
@@ -70,7 +86,14 @@
       "heading": "Tinkle!",
       "text": "The {pony} {tossed:pony/toss} her head. {Tinkle:bell/ring}! The silver {bell} slipped into the tall {grass:grass}. \"Oh {no:lila/oh},\" said {Lila}. \"We will {find:bell/find} it.\"",
       "hint": "Drag the bell. Can you find it in the grass?",
-      "words": ["tossed", "tinkle", "bell", "slipped", "grass", "find"]
+      "words": [
+        "tossed",
+        "tinkle",
+        "bell",
+        "slipped",
+        "grass",
+        "find"
+      ]
     },
     {
       "id": "stream",
@@ -78,7 +101,14 @@
       "heading": "The silver stream",
       "text": "They {followed:lila/run} the {stream}. {Moonlight:moon/glow} made a silver {path:stream} on the {water:stream/splash}. Little {fish:stream/splash} flashed like coins. The {bell} was not there.",
       "hint": "Tap the water. Watch it splash.",
-      "words": ["followed", "stream", "moonlight", "path", "water", "fish"]
+      "words": [
+        "followed",
+        "stream",
+        "moonlight",
+        "path",
+        "water",
+        "fish"
+      ]
     },
     {
       "id": "oak",
@@ -86,7 +116,14 @@
       "heading": "The old oak",
       "text": "An old {oak:oak/rustle} held out its arms. In the {hollow:oak/hollow} at its {roots:oak}, something {shone:bell/glow}. Not the bell. A {ribbon:flowers} of {roses:flowers/bloom}.",
       "hint": "Tap the oak. Look in the hollow.",
-      "words": ["oak", "hollow", "roots", "shone", "ribbon", "roses"]
+      "words": [
+        "oak",
+        "hollow",
+        "roots",
+        "shone",
+        "ribbon",
+        "roses"
+      ]
     },
     {
       "id": "hill",
@@ -94,7 +131,14 @@
       "heading": "A hill of lanterns",
       "text": "{Fireflies:fireflies/glow} rose from the {hill} like tiny {lanterns:fireflies/glow}. They drifted toward a nest of {flowers:flowers/bloom}. There! The silver {bell:bell/ring}, caught in the {blossoms:flowers}.",
       "hint": "Tap the fireflies. Tap the flowers.",
-      "words": ["fireflies", "hill", "lanterns", "flowers", "bell", "blossoms"]
+      "words": [
+        "fireflies",
+        "hill",
+        "lanterns",
+        "flowers",
+        "bell",
+        "blossoms"
+      ]
     },
     {
       "id": "ribbon",
@@ -102,7 +146,14 @@
       "heading": "A rose-pink bow",
       "text": "{Lila} {tied:lila/tie} the {bell} with a rose-pink {ribbon:bell/tie}. \"Now you will not {lose:bell} it,\" she said. The {pony} {nuzzled:pony/nuzzle} her {cheek:lila}.",
       "hint": "Tap Lila and the pony. They are friends now.",
-      "words": ["tied", "bell", "ribbon", "lose", "nuzzled", "cheek"]
+      "words": [
+        "tied",
+        "bell",
+        "ribbon",
+        "lose",
+        "nuzzled",
+        "cheek"
+      ]
     },
     {
       "id": "ride",
@@ -110,7 +161,14 @@
       "heading": "Under the moon",
       "text": "\"{Come:pony/come},\" said the {pony}, without words. {Lila} {climbed:lila/climb} on. They {rode:pony/ride} the {meadow} under the {moon:moon/glow}, and the {bell:bell/ring} sang tinkle, tinkle, tinkle.",
       "hint": "Hold near the moon and watch her glow.",
-      "words": ["come", "climbed", "rode", "meadow", "moon", "bell"]
+      "words": [
+        "come",
+        "climbed",
+        "rode",
+        "meadow",
+        "moon",
+        "bell"
+      ]
     },
     {
       "id": "sill",
@@ -118,7 +176,14 @@
       "heading": "The extra ribbon",
       "text": "{Dawn:window/glow} came pale as milk. {Lila} walked {home:lila}. She set the extra {ribbon:bell} on her {windowsill:window}, so the {pony} would always know the {way:window}.",
       "hint": "Tap the windowsill. The ribbon is waiting.",
-      "words": ["dawn", "home", "ribbon", "windowsill", "pony", "way"]
+      "words": [
+        "dawn",
+        "home",
+        "ribbon",
+        "windowsill",
+        "pony",
+        "way"
+      ]
     },
     {
       "id": "home",
@@ -126,7 +191,14 @@
       "heading": "Goodnight",
       "text": "{Lila} climbed into her warm {bed:lila/sleep}. The {moon:moon/glow} shone in her {window}. In the meadow, the {pony:pony/sleep} slept in the {flowers:flowers}. \"{Goodnight:lila/wave}, pony,\" whispered {Lila}. \"Goodnight, {Lila},\" said the {moon}.",
       "hint": "Tap Lila. Sweet dreams.",
-      "words": ["bed", "moon", "window", "pony", "flowers", "goodnight"]
+      "words": [
+        "bed",
+        "moon",
+        "window",
+        "pony",
+        "flowers",
+        "goodnight"
+      ]
     }
   ],
   "end": {
@@ -141,9 +213,18 @@
       {
         "q": "Who is the girl in the story?",
         "options": [
-          { "word": "Lila", "image": "portrait" },
-          { "word": "pony", "image": "art:pony.webp" },
-          { "word": "moon", "image": "art:moon-face.webp" }
+          {
+            "word": "Lila",
+            "image": "portrait"
+          },
+          {
+            "word": "pony",
+            "image": "art:pony.webp"
+          },
+          {
+            "word": "moon",
+            "image": "art:moon-face.webp"
+          }
         ],
         "answer": 0,
         "right": "Yes! Lila is the girl who could not sleep, and went out to the meadow.",
@@ -152,9 +233,18 @@
       {
         "q": "What did the shy pony lose?",
         "options": [
-          { "word": "bell", "image": "art:bell.webp" },
-          { "word": "flowers", "image": "art:flowers.webp" },
-          { "word": "moon", "image": "art:moon-face.webp" }
+          {
+            "word": "bell",
+            "image": "art:bell.webp"
+          },
+          {
+            "word": "flowers",
+            "image": "art:flowers.webp"
+          },
+          {
+            "word": "moon",
+            "image": "art:moon-face.webp"
+          }
         ],
         "answer": 0,
         "right": "That's right! The silver bell slipped from her mane into the grass.",
@@ -163,9 +253,18 @@
       {
         "q": "Where was the silver bell found?",
         "options": [
-          { "word": "flowers", "image": "art:flowers.webp" },
-          { "word": "window", "image": "art:bedroom-window.jpg" },
-          { "word": "oak", "image": "art:oak-tree.webp" }
+          {
+            "word": "flowers",
+            "image": "art:flowers.webp"
+          },
+          {
+            "word": "window",
+            "image": "art:bedroom-window.jpg"
+          },
+          {
+            "word": "oak",
+            "image": "art:oak-tree.webp"
+          }
         ],
         "answer": 0,
         "right": "Yes! Fireflies led Lila to a nest of flowers, and the bell was caught in the blossoms.",
@@ -174,9 +273,18 @@
       {
         "q": "What did Lila tie the bell with?",
         "options": [
-          { "word": "ribbon", "label": "a rose ribbon" },
-          { "word": "grass", "label": "a blade of grass" },
-          { "word": "string", "label": "a piece of string" }
+          {
+            "word": "ribbon",
+            "label": "a rose ribbon"
+          },
+          {
+            "word": "grass",
+            "label": "a blade of grass"
+          },
+          {
+            "word": "string",
+            "label": "a piece of string"
+          }
         ],
         "answer": 0,
         "right": "Yes! Lila tied the bell with a rose-pink ribbon so it would not slip again.",
@@ -185,9 +293,18 @@
       {
         "q": "Where did Lila put the extra ribbon?",
         "options": [
-          { "word": "windowsill", "label": "on the windowsill" },
-          { "word": "oak", "label": "in the oak hollow" },
-          { "word": "stream", "label": "in the stream" }
+          {
+            "word": "windowsill",
+            "label": "on the windowsill"
+          },
+          {
+            "word": "oak",
+            "label": "in the oak hollow"
+          },
+          {
+            "word": "stream",
+            "label": "in the stream"
+          }
         ],
         "answer": 0,
         "right": "Yes! She set it on her windowsill, so the pony would always know the way.",
@@ -196,10 +313,55 @@
     ]
   },
   "pins": [
-    { "id": "moon", "name": "Moon pin", "page": 1, "at": [0.44, 0, 0.4] },
-    { "id": "pony", "name": "Pony pin", "page": 2, "at": [0.2, 0, 0.42] },
-    { "id": "bell", "name": "Bell pin", "page": 6, "at": [0.16, 0, 0.46] },
-    { "id": "rose", "name": "Rose pin", "page": 7, "at": [0.3, 0, 0.42] },
-    { "id": "star", "name": "Star pin", "page": 8, "at": [0.46, 0, -0.3] }
+    {
+      "id": "moon",
+      "name": "Moon pin",
+      "page": 1,
+      "at": [
+        0.44,
+        0,
+        0.4
+      ]
+    },
+    {
+      "id": "pony",
+      "name": "Pony pin",
+      "page": 2,
+      "at": [
+        0.2,
+        0,
+        0.42
+      ]
+    },
+    {
+      "id": "bell",
+      "name": "Bell pin",
+      "page": 6,
+      "at": [
+        0.16,
+        0,
+        0.46
+      ]
+    },
+    {
+      "id": "rose",
+      "name": "Rose pin",
+      "page": 7,
+      "at": [
+        0.3,
+        0,
+        0.42
+      ]
+    },
+    {
+      "id": "star",
+      "name": "Star pin",
+      "page": 8,
+      "at": [
+        0.46,
+        0,
+        -0.3
+      ]
+    }
   ]
 }

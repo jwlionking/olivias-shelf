@@ -457,8 +457,8 @@
           "name": "Star pin"
         },
         {
-          "id": "rose",
-          "name": "Rose pin"
+          "id": "rock",
+          "name": "Zero's smooth rock pin"
         }
       ],
       "quizCount": 3,
@@ -954,16 +954,8 @@
           "name": "Moon pin"
         },
         {
-          "id": "balloon",
-          "name": "Balloon pin"
-        },
-        {
           "id": "owl",
           "name": "Owl pin"
-        },
-        {
-          "id": "bear",
-          "name": "Otto pin"
         },
         {
           "id": "star",
@@ -999,10 +991,6 @@
         {
           "id": "kite",
           "name": "Kite pin"
-        },
-        {
-          "id": "rabbit",
-          "name": "Nia pin"
         },
         {
           "id": "sheep",
@@ -1044,16 +1032,8 @@
       "status": "ready",
       "pins": [
         {
-          "id": "fish",
-          "name": "Fin pin"
-        },
-        {
-          "id": "jar",
-          "name": "Jar pin"
-        },
-        {
-          "id": "turtle",
-          "name": "Turtle pin"
+          "id": "octopus",
+          "name": "Dancing octopus pin"
         },
         {
           "id": "crab",

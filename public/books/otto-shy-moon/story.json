@@ -339,16 +339,6 @@
       ]
     },
     {
-      "id": "balloon",
-      "name": "Balloon pin",
-      "page": 3,
-      "at": [
-        0.16,
-        0,
-        0.46
-      ]
-    },
-    {
       "id": "owl",
       "name": "Owl pin",
       "page": 5,
@@ -356,16 +346,6 @@
         0.46,
         0,
         -0.12
-      ]
-    },
-    {
-      "id": "bear",
-      "name": "Otto pin",
-      "page": 7,
-      "at": [
-        0.3,
-        0,
-        0.42
       ]
     },
     {

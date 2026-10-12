@@ -314,33 +314,13 @@
   },
   "pins": [
     {
-      "id": "fish",
-      "name": "Fin pin",
+      "id": "octopus",
+      "name": "Dancing octopus pin",
       "page": 1,
       "at": [
         0.44,
         0,
         0.4
-      ]
-    },
-    {
-      "id": "jar",
-      "name": "Jar pin",
-      "page": 3,
-      "at": [
-        0.16,
-        0,
-        0.46
-      ]
-    },
-    {
-      "id": "turtle",
-      "name": "Turtle pin",
-      "page": 5,
-      "at": [
-        0.46,
-        0,
-        -0.12
       ]
     },
     {

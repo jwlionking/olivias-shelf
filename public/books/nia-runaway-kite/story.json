@@ -337,16 +337,6 @@
       ]
     },
     {
-      "id": "rabbit",
-      "name": "Nia pin",
-      "page": 3,
-      "at": [
-        0.16,
-        0,
-        0.46
-      ]
-    },
-    {
       "id": "sheep",
       "name": "Sheep pin",
       "page": 5,
