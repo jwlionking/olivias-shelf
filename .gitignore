@@ -30,3 +30,17 @@ attachments/
 .idea/
 .vscode/
 *.swp
+
+# book-building + QA helpers (kept on the server, not in the app)
+/.*-gen/
+/.*-stage/
+/.*-stage.tgz
+/.*-qa/
+/.*-jobs.json
+/.porch-gen-*.py
+/.site-review/
+/.playwright-mcp/
+scripts/__pycache__/
+scripts/_*-qa.mjs
+scripts/_*-art-check.mjs
+scripts/_*-others.mjs

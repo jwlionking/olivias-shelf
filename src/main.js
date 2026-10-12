@@ -2095,10 +2095,19 @@ readingEvents.addEventListener('feature',event=>{
 
 /* ---------- boot ---------- */
 
+/** Seasonal books come first while their season runs (stable sort keeps the rest in catalog order). */
+function sortSeasonal(lib, now = new Date()) {
+  const m = now.getMonth(), d = now.getDate();
+  const season = m === 9 || (m === 10 && d <= 2) ? "halloween" : null;
+  if (!season || !Array.isArray(lib.books)) return;
+  lib.books.sort((a, b) => (b.season === season) - (a.season === season));
+}
+
 async function boot() {
   wireLocalAccount();
   await Promise.all(['shared','shelf'].map(scope=>loadPublicAssets({scope,language:settings.language||'en'})));
   try { library = await (await fetch(assetUrl("books/index.json"))).json(); } catch (error) { library = { books: [] }; }
+  sortSeasonal(library);
   const ready = library.books.filter((b) => b.status === "ready");
   if (!BOOK_ID) BOOK_ID = ready.length ? ready[0].id : "otto-shy-moon";
   ui = new UI({ story: null, settings, onAction });

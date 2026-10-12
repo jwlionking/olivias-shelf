@@ -274,7 +274,8 @@ export class UI {
       const chain = [stripOf(localLogo || "art/logo.png"), localLogo || "art/logo.png", localLogo ? "art/logo-strip.webp" : null, localLogo ? "art/logo.png" : null].filter(Boolean);
       logo.addEventListener("error", () => { const next = chain[++chain.at]; if (next) logo.src = assetUrl(`books/${meta.id}/${next}`); else logo.parentNode.classList.add("missing"); });
       chain.at = 0;
-      logo.src = assetUrl(`books/${meta.id}/${chain[0]}`);
+      if (meta.logo === false) logo.parentNode.classList.add("missing");
+      else logo.src = assetUrl(`books/${meta.id}/${chain[0]}`);
       b.addEventListener("click", event => { if(event.target.closest(".shelf-bar-row,.shelf-pins")){this.onAction("souvenirs");return;}this.onAction("select", meta.id); });
       b.addEventListener("pointerenter", () => this.onAction("shelf-hover", meta.id));
       b.addEventListener("pointerleave", () => this.onAction("shelf-hover", null));

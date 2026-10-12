@@ -8,7 +8,7 @@
   "blurb": "A bedtime story that reads itself aloud, lights up every word, and pops out of the page when you touch it.",
   "cover": "art/cover.jpg",
   "logo": "art/logo.png",
-  "portrait": "art/otto-reference.jpg",
+  "portrait": "art/otto-stand.webp",
   "scenes": "scenes.js",
   "colors": {
     "cloth": "#1b2450",
@@ -210,7 +210,6 @@
   },
   "credits": "Story, 3D scenes and code made for Storylight. Title lettering, controls, icons, cover art and pop-up backdrop generated with GPT Image 2 through Higgsfield; narration voice through Higgsfield text-to-speech, with optional live narration through the OpenAI speech API.",
   "audio": {
-    "music": "audio/music.m4a",
     "ambience": "audio/ambience.mp3",
     "ambienceVolume": 0.28,
     "provenance": {

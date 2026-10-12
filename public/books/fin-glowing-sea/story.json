@@ -205,7 +205,6 @@
   },
   "credits": "Story, 3D scenes and code made for Storylight. Title lettering, cover art, pop-up backdrops and cut-outs generated with GPT Image 2 through Higgsfield; Fin modelled and rigged through Higgsfield (Meshy); narration voice through Higgsfield text-to-speech, with optional live narration through Grok Carina.",
   "audio": {
-    "music": "audio/music.m4a",
     "ambience": "audio/ambience.mp3",
     "ambienceVolume": 0.32,
     "provenance": {
