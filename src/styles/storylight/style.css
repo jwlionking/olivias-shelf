@@ -1725,3 +1725,13 @@ body.quiz-open .souvenir-chip { z-index: 31; }
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 .shelf-catalog-link{color:var(--cream);font-size:12px;text-underline-offset:3px;padding:10px 2px;white-space:nowrap}
 .shelf-catalog-link:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* Portrait tablets (iPad 1024x1366 etc.): the text card goes under the pop-up, full width, with bigger words */
+@media (min-width: 901px) and (max-width: 1366px) and (orientation: portrait) {
+  .text-panel { left: 4vw; right: 4vw; width: auto; top: auto; bottom: 170px; transform: none; max-height: 38vh; }
+  .text-panel.hud { animation-name: panel-in-mobile; }
+  .text-panel.turning { animation-name: panel-turn-mobile; }
+  .text-panel.arriving { animation-name: panel-arrive-mobile; }
+  .page-words { font-size: clamp(26px, 3.2vw, 36px); line-height: 1.55; }
+  .text-panel.size-large .page-words { font-size: clamp(30px, 3.7vw, 42px); }
+}
