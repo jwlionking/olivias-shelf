@@ -1,0 +1,17 @@
+{
+  "name": "Olivia's Shelf",
+  "short_name": "Olivia's Shelf",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#141a33",
+  "theme_color": "#141a33",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

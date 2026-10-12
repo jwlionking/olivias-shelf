@@ -246,6 +246,7 @@ async function loadBook(id, progress = (p, copy) => ui.setLoading(p, copy)) {
   const scenesPromise = loadScenes(id).catch((error) => { console.warn("scenes", error); return { default: null, builders: null }; });
   await applyLanguage(settings.language || "en", { announce: false });
   document.title = `${story.title} · Olivia's Shelf`;
+  document.getElementById("gl")?.setAttribute("aria-label", `${story.title}, a pop-up book`);
   let artList = [];
   try {
     const manifest = await (await fetch(assetUrl(`${BOOK_BASE}/art/manifest.json`))).json();
@@ -1826,6 +1827,7 @@ function cancelPick() {
   ui.hideBookCard();
   clearBookToys();
   document.title = "Olivia's Shelf";
+  document.getElementById("gl")?.setAttribute("aria-label", "Olivia's Shelf, a pop-up book library");
   sound.whoosh(false);
   if (id) shelf.flyHome(id, 0.9);
   showShelf();

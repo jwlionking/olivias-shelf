@@ -115,7 +115,7 @@
       "scene": "sea-deep",
       "heading": "The jellyfish",
       "text": "{Deep:sea/dark} and {dark:sea/dark}. \"Have you any {light:jar/shine}?\" \"A {little:jellies/glow},\" said the {jellyfish:jellies/glow}, and {glowed:jellies/glow} {pink:jellies/glow}. One {drop:jar/shine} went in the {jar:jar/shine}. And the {jellyfish:jellies/follow} {came:jellies/follow} along.",
-      "hint": "Hover the jellyfish to light them. Tap the jar.",
+      "hint": "Tap the jellyfish to light them. Tap the jar.",
       "words": [
         "dark",
         "little",

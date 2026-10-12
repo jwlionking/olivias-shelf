@@ -35,3 +35,7 @@
   .pricing-brand.storycomet-logo { width: 150px; }
   .loading-brand { width: min(300px, 78vw); }
 }
+
+/* Olivia's Shelf wordmark (text, replaces the old StoryComet image) */
+.storycomet-logo > .logo-text { width: auto; font-family: inherit; font-weight: 800; font-size: clamp(16px, 2.2vw, 26px); color: #f6d58a; letter-spacing: 0.02em; white-space: nowrap; text-shadow: 0 2px 0 rgba(60, 30, 10, 0.55); line-height: 1; align-self: center; }
+.souvenir-chip { min-height: 44px; }
