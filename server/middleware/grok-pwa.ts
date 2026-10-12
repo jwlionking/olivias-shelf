@@ -15,6 +15,7 @@
  *   runtime hook's return value, and `render:html` does not exist in Nitro v3.
  */
 import installPageTemplate from "../../scripts/install-page.html?raw";
+import siteManifest from "../../public/manifest.webmanifest?raw";
 import { grokOgIdentity } from "virtual:grok-og-identity";
 import {
   acceptsHtml,
@@ -70,8 +71,12 @@ export default async function grokPwaMiddleware(
   const path = event.url.pathname;
   const urlWithQuery = path + event.url.search;
 
+  if (path === "/__grok/icon-180.png") {
+    return new Response(null, { status: 302, headers: { location: "/apple-touch-icon.png" } });
+  }
   if (path === "/__grok/manifest.webmanifest" || path === "/__grok/manifest.json") {
-    return new Response(renderWebManifest(requestHost(event)), {
+    // Olivia's Shelf ships its own manifest; the platform URL serves the same one
+    return new Response(siteManifest || renderWebManifest(requestHost(event)), {
       headers: {
         "content-type": "application/manifest+json; charset=utf-8",
         "cache-control": "no-cache",

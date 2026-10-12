@@ -105,7 +105,7 @@ export function wordCardUrl(id: string, word: string) {
 }
 
 export const BRAND = {
-  symbol: sc("public/brand/storycomet-symbol.png"),
+  symbol: sc("public/brand/olivias-shelf-symbol.png"),
   wordmark: sc("public/brand/storycomet-wordmark.png"),
   moon: sc("public/ui/moon.webp"),
   sky: sc("public/ui/sky.jpg"),
