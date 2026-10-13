@@ -718,7 +718,7 @@ function landingPose() {
 function shelfCamera() {
   const vfov = THREE.MathUtils.degToRad(camera.fov);
   const hfov = 2 * Math.atan(Math.tan(vfov / 2) * camera.aspect);
-  const distance = THREE.MathUtils.clamp((1.9 / Math.tan(hfov / 2)) * 1.0, 3.4, 8);
+  const distance = THREE.MathUtils.clamp((1.74 / Math.tan(hfov / 2)) * 1.0, 3.4, 8);
   const target = new THREE.Vector3(0, 0.7, -2.62);
   const dir = new THREE.Vector3(0, 0.42, 1).normalize();
   return { target, pos: target.clone().add(dir.multiplyScalar(distance)) };

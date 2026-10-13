@@ -1735,3 +1735,16 @@ body.quiz-open .souvenir-chip { z-index: 31; }
   .page-words { font-size: clamp(26px, 3.2vw, 36px); line-height: 1.55; }
   .text-panel.size-large .page-words { font-size: clamp(30px, 3.7vw, 42px); }
 }
+
+/* Tablets: big, thumb-sized shelf arrows, tappable page dots and a "Books 4-6 of 27" count */
+.shelf-dots { align-items: center; flex-wrap: wrap; justify-content: center; }
+.shelf-dots i { cursor: pointer; }
+.shelf-count { margin-left: 10px; font: 700 15px/1 "Baloo 2", var(--ui-font); color: #fff3d6; text-shadow: 0 1px 0 #5a3a1a, 0 2px 8px #000a; }
+@media (min-width: 721px) and (max-width: 1400px), (min-width: 721px) and (pointer: coarse) {
+  .shelf-nav { width: 76px; height: 76px; font-size: 50px; }
+  .shelf-row { gap: 28px; }
+  .shelf-dots { gap: 14px; }
+  .shelf-dots i { width: 16px; height: 16px; position: relative; }
+  .shelf-dots i::after { content: ""; position: absolute; inset: -14px -7px; }   /* 44px tap zone */
+  .shelf-count { font-size: 19px; }
+}

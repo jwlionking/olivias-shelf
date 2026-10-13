@@ -283,7 +283,14 @@ export class UI {
     }
     if (this.el.shelfPrev) this.el.shelfPrev.disabled = page <= 0;
     if (this.el.shelfNext) this.el.shelfNext.disabled = page >= pages - 1;
-    if (this.el.shelfDots) this.el.shelfDots.innerHTML = Array.from({ length: pages }, (_, i) => `<i class="${i === page ? "on" : ""}"></i>`).join("");
+    if (this.el.shelfDots) {
+      const total = this.shelfData.library.books.length, first = page * per + 1, last = Math.min(total, first + per - 1);
+      this.el.shelfDots.innerHTML = Array.from({ length: pages }, (_, i) => `<i class="${i === page ? "on" : ""}" data-page="${i}"></i>`).join("") + `<span class="shelf-count">Books ${first}–${last} of ${total}</span>`;
+      if (!this.el.shelfDots.dataset.wired) {
+        this.el.shelfDots.dataset.wired = "1";
+        this.el.shelfDots.addEventListener("click", (event) => { const dot = event.target.closest("i[data-page]"); if (!dot || !this.shelfPaging) return; const d = Number(dot.dataset.page) - this.shelfPaging.page; if (d) this.onAction("shelf-page", d); });
+      }
+    }
     if (this.el.shelfRow) { this.el.shelfRow.classList.toggle("single", pages <= 1); }
   }
 
