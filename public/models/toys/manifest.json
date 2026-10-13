@@ -1,238 +1,372 @@
 {
- "mode": "Painted paper-cut cards. No generated meshes.",
- "heights": {
-  "house": 0.3,
-  "tree": 0.34,
-  "owl": 0.26,
-  "moon": 0.28,
-  "cat": 0.26,
-  "blocks": 0.22,
-  "rocket": 0.34,
-  "elephant": 0.26,
-  "crane": 0.26,
-  "snowglobe": 0.26,
-  "boat": 0.24,
-  "naga": 0.3,
-  "kite": 0.32,
-  "sheep": 0.2,
-  "turtle": 0.14,
-  "jar": 0.24,
-  "rose": 0.3,
-  "matryoshka": 0.3,
-  "lantern": 0.3,
-  "frog": 0.16,
-  "tuktuk": 0.22,
-  "merlion": 0.3,
-  "otter": 0.26,
-  "daruma": 0.26,
-  "fuji": 0.3,
-  "bamboo": 0.34,
-  "eiffel": 0.36,
-  "croissant": 0.16,
-  "pigeon": 0.22,
-  "dragon": 0.28,
-  "redlantern": 0.3,
-  "drum": 0.24,
-  "cablecar": 0.24,
-  "sealion": 0.24,
-  "goldengate": 0.24,
-  "bus": 0.24,
-  "raven": 0.26,
-  "crown": 0.22,
-  "churro": 0.24,
-  "perez": 0.28,
-  "tooth": 0.22
- },
- "books": {
-  "lila-moonlit-pony": [
-   "rose",
-   "moon",
-   "sheep"
-  ],
-  "elon-physics-wonder": [
-   "rocket",
-   "blocks",
-   "moon"
-  ],
-  "zero-and-belle": [
-   "sheep",
-   "house",
-   "rose"
-  ],
-  "otto-shy-moon": [
-   "owl",
-   "moon",
-   "house"
-  ],
-  "nia-runaway-kite": [
-   "kite",
-   "sheep",
-   "tree"
-  ],
-  "fin-glowing-sea": [
-   "turtle",
-   "jar",
-   "boat"
-  ],
-  "pim-big-wish": [
-   "rocket",
-   "rose",
-   "blocks"
-  ],
-  "mila-firebird": [
-   "snowglobe",
-   "matryoshka",
-   "cat"
-  ],
-  "kiko-paper-crane": [
-   "crane",
-   "lantern",
-   "moon"
-  ],
-  "noy-rain-rocket": [
-   "naga",
-   "frog",
-   "rocket"
-  ],
-  "pong-water-festival": [
-   "elephant",
-   "tuktuk",
-   "blocks"
-  ],
-  "nadim-swordfish": [
-   "merlion",
-   "otter",
-   "boat"
-  ],
-  "kaguya-moon-bamboo": [
-   "bamboo",
-   "daruma",
-   "fuji"
-  ],
-  "colette-paris-postcard": [
-   "eiffel",
-   "croissant",
-   "pigeon"
-  ],
-  "mei-year-beast": [
-   "redlantern",
-   "dragon",
-   "drum"
-  ],
-  "ruby-golden-gate": [
-   "cablecar",
-   "sealion",
-   "goldengate"
-  ],
-  "whit-london-bells": [
-   "bus",
-   "raven",
-   "crown"
-  ],
-  "lucia-tooth-mouse": [
-   "churro",
-   "perez",
-   "tooth"
-  ]
- },
- "labels": {
-  "bamboo": "Bamboo",
-  "blocks": "Blocks",
-  "boat": "Sailboat",
-  "cat": "Cat",
-  "crane": "Paper crane",
-  "croissant": "Croissant",
-  "daruma": "Daruma",
-  "dragon": "Dragon",
-  "drum": "Drum",
-  "eiffel": "Eiffel Tower",
-  "elephant": "Elephant",
-  "frog": "Frog",
-  "fuji": "Mount Fuji",
-  "house": "Little house",
-  "jar": "Glowing jar",
-  "kite": "Kite",
-  "lantern": "Lantern",
-  "matryoshka": "Matryoshka",
-  "merlion": "Merlion",
-  "moon": "Sleepy moon",
-  "naga": "Naga",
-  "otter": "Otter",
-  "owl": "Owl",
-  "pigeon": "Pigeon",
-  "redlantern": "Red lantern",
-  "rocket": "Rocket",
-  "rose": "Rose",
-  "sheep": "Sheep",
-  "snowglobe": "Snow globe",
-  "tree": "Tree",
-  "tuktuk": "Tuk-tuk",
-  "turtle": "Turtle",
-  "cablecar": "Cable car",
-  "sealion": "Sea lion",
-  "goldengate": "Golden Gate",
-  "bus": "Red bus",
-  "raven": "Raven",
-  "crown": "Crown",
-  "churro": "Churro",
-  "perez": "Ratoncito Pérez",
-  "tooth": "Little tooth"
- },
- "sounds": {
-  "bamboo": "rustle",
-  "blocks": "thunk",
-  "boat": "splash",
-  "cat": "meow",
-  "crane": "cranecall",
-  "croissant": "crumble",
-  "daruma": "boing",
-  "dragon": "drum",
-  "drum": "drum",
-  "eiffel": "bell",
-  "elephant": "trumpet",
-  "frog": "croak",
-  "fuji": "gust",
-  "house": "thunk",
-  "jar": "fizz",
-  "kite": "gust",
-  "lantern": "shimmer",
-  "matryoshka": "giggle",
-  "merlion": "splash",
-  "moon": "shimmer",
-  "naga": "thunder",
-  "otter": "otter",
-  "owl": "hoot",
-  "pigeon": "flutter",
-  "redlantern": "shimmer",
-  "rocket": "launch",
-  "rose": "shimmer",
-  "sheep": "baa",
-  "snowglobe": "shimmer",
-  "tree": "rustle",
-  "tuktuk": "tuktuk",
-  "turtle": "bubbles",
-  "cablecar": "bell",
-  "sealion": "howl",
-  "goldengate": "shimmer",
-  "bus": "bell",
-  "raven": "caw",
-  "crown": "shimmer",
-  "churro": "fizz",
-  "perez": "giggle",
-  "tooth": "boing"
- },
- "pending": {
-  "note": "Toys stand on the shelf as painted cut-out cards (public/models/toys/cards/<name>.webp). Do not generate .glb meshes for them.",
-  "toys": [
-   "cablecar",
-   "sealion",
-   "goldengate",
-   "bus",
-   "raven",
-   "crown",
-   "churro",
-   "perez",
-   "tooth"
-  ]
- }
+  "mode": "Painted paper-cut cards. No generated meshes.",
+  "heights": {
+    "house": 0.3,
+    "tree": 0.34,
+    "owl": 0.26,
+    "moon": 0.28,
+    "cat": 0.26,
+    "blocks": 0.22,
+    "rocket": 0.34,
+    "elephant": 0.26,
+    "crane": 0.26,
+    "snowglobe": 0.26,
+    "boat": 0.24,
+    "naga": 0.3,
+    "kite": 0.32,
+    "sheep": 0.2,
+    "turtle": 0.14,
+    "jar": 0.24,
+    "rose": 0.3,
+    "matryoshka": 0.3,
+    "lantern": 0.3,
+    "frog": 0.16,
+    "tuktuk": 0.22,
+    "merlion": 0.3,
+    "otter": 0.26,
+    "daruma": 0.26,
+    "fuji": 0.3,
+    "bamboo": 0.34,
+    "eiffel": 0.36,
+    "croissant": 0.16,
+    "pigeon": 0.22,
+    "dragon": 0.28,
+    "redlantern": 0.3,
+    "drum": 0.24,
+    "cablecar": 0.24,
+    "sealion": 0.24,
+    "goldengate": 0.24,
+    "bus": 0.24,
+    "raven": 0.26,
+    "crown": 0.22,
+    "churro": 0.24,
+    "perez": 0.28,
+    "tooth": 0.22,
+    "ball": 0.17,
+    "balloon": 0.34,
+    "belle": 0.24,
+    "candybucket": 0.22,
+    "chalk": 0.14,
+    "duck": 0.17,
+    "flowerpot": 0.22,
+    "foilwrapper": 0.13,
+    "foxmask": 0.24,
+    "jackolantern": 0.2,
+    "kettle": 0.22,
+    "mapscroll": 0.16,
+    "pinwheel": 0.34,
+    "prism": 0.2,
+    "pulley": 0.3,
+    "quill": 0.28,
+    "rock": 0.14,
+    "scale": 0.26,
+    "seesaw": 0.18,
+    "sled": 0.18,
+    "slinky": 0.24,
+    "sneaker": 0.16,
+    "spool": 0.18,
+    "sun": 0.3,
+    "teapot": 0.2,
+    "top": 0.2,
+    "wateringcan": 0.2,
+    "zero": 0.24
+  },
+  "books": {
+    "lila-moonlit-pony": [
+      "rose",
+      "sheep"
+    ],
+    "elon-physics-wonder": [
+      "rocket",
+      "blocks"
+    ],
+    "zero-and-belle": [
+      "zero",
+      "belle"
+    ],
+    "otto-shy-moon": [
+      "owl",
+      "moon"
+    ],
+    "nia-runaway-kite": [
+      "kite",
+      "otter"
+    ],
+    "fin-glowing-sea": [
+      "turtle",
+      "jar"
+    ],
+    "pim-big-wish": [
+      "rocket",
+      "rose",
+      "blocks"
+    ],
+    "mila-firebird": [
+      "snowglobe",
+      "matryoshka",
+      "cat"
+    ],
+    "kiko-paper-crane": [
+      "crane",
+      "lantern",
+      "moon"
+    ],
+    "noy-rain-rocket": [
+      "naga",
+      "frog",
+      "rocket"
+    ],
+    "pong-water-festival": [
+      "elephant",
+      "tuktuk",
+      "blocks"
+    ],
+    "nadim-swordfish": [
+      "merlion",
+      "otter",
+      "boat"
+    ],
+    "kaguya-moon-bamboo": [
+      "bamboo",
+      "daruma",
+      "fuji"
+    ],
+    "colette-paris-postcard": [
+      "eiffel",
+      "croissant",
+      "pigeon"
+    ],
+    "mei-year-beast": [
+      "redlantern",
+      "dragon",
+      "drum"
+    ],
+    "ruby-golden-gate": [
+      "cablecar",
+      "sealion",
+      "goldengate"
+    ],
+    "whit-london-bells": [
+      "bus",
+      "raven",
+      "crown"
+    ],
+    "lucia-tooth-mouse": [
+      "churro",
+      "perez",
+      "tooth"
+    ],
+    "elon-heat-jiggle": [
+      "kettle",
+      "lamp"
+    ],
+    "elon-force-roll": [
+      "ball",
+      "train"
+    ],
+    "elon-float-boat": [
+      "boat",
+      "duck"
+    ],
+    "elon-air-hug": [
+      "pinwheel",
+      "balloon"
+    ],
+    "elon-ice-steam": [
+      "snowglobe",
+      "teapot"
+    ],
+    "elon-friction-grip": [
+      "sneaker",
+      "sled"
+    ],
+    "elon-lever-lift": [
+      "seesaw",
+      "pulley"
+    ],
+    "elon-energy-spring": [
+      "slinky",
+      "drum"
+    ],
+    "elon-balance-tip": [
+      "scale",
+      "top"
+    ],
+    "elon-sky-blue": [
+      "prism",
+      "crane"
+    ],
+    "olivia-two-sisters": [
+      "crayons",
+      "crown"
+    ],
+    "olivia-lost-rock": [
+      "rock",
+      "magnifier"
+    ],
+    "olivia-yard-romp": [
+      "frog",
+      "pigeon"
+    ],
+    "olivia-garden-beds": [
+      "wateringcan",
+      "flowerpot"
+    ],
+    "olivia-quiet-sun": [
+      "sun",
+      "cat"
+    ],
+    "olivia-house-hill": [
+      "house",
+      "tree"
+    ],
+    "olivia-porch-light": [
+      "jackolantern",
+      "lantern"
+    ],
+    "zero-belle-candy": [
+      "foilwrapper",
+      "candybucket"
+    ],
+    "olivia-midnight-library": [
+      "quill",
+      "raven"
+    ],
+    "olivia-chalk-map": [
+      "chalk",
+      "mapscroll"
+    ],
+    "olivia-costume-memory": [
+      "foxmask",
+      "spool"
+    ]
+  },
+  "labels": {
+    "bamboo": "Bamboo",
+    "blocks": "Blocks",
+    "boat": "Sailboat",
+    "cat": "Cat",
+    "crane": "Paper crane",
+    "croissant": "Croissant",
+    "daruma": "Daruma",
+    "dragon": "Dragon",
+    "drum": "Drum",
+    "eiffel": "Eiffel Tower",
+    "elephant": "Elephant",
+    "frog": "Frog",
+    "fuji": "Mount Fuji",
+    "house": "Little house",
+    "jar": "Glowing jar",
+    "kite": "Kite",
+    "lantern": "Lantern",
+    "matryoshka": "Matryoshka",
+    "merlion": "Merlion",
+    "moon": "Sleepy moon",
+    "naga": "Naga",
+    "otter": "Otter",
+    "owl": "Owl",
+    "pigeon": "Pigeon",
+    "redlantern": "Red lantern",
+    "rocket": "Rocket",
+    "rose": "Rose",
+    "sheep": "Sheep",
+    "snowglobe": "Snow globe",
+    "tree": "Tree",
+    "tuktuk": "Tuk-tuk",
+    "turtle": "Turtle",
+    "cablecar": "Cable car",
+    "sealion": "Sea lion",
+    "goldengate": "Golden Gate",
+    "bus": "Red bus",
+    "raven": "Raven",
+    "crown": "Crown",
+    "churro": "Churro",
+    "perez": "Ratoncito Pérez",
+    "tooth": "Little tooth",
+    "ball": "Rolling ball",
+    "balloon": "Sky-blue balloon",
+    "belle": "Belle",
+    "candybucket": "Candy pail",
+    "chalk": "Sidewalk chalk",
+    "duck": "Rubber duck",
+    "flowerpot": "Seedling",
+    "foilwrapper": "Foil wrapper",
+    "foxmask": "Fox costume",
+    "jackolantern": "Jack-o'-lantern",
+    "kettle": "Whistling kettle",
+    "mapscroll": "Chalk map",
+    "pinwheel": "Pinwheel",
+    "prism": "Rainbow prism",
+    "pulley": "Pulley",
+    "quill": "Quill and ink",
+    "rock": "Lucky rock",
+    "scale": "Balance scale",
+    "seesaw": "Seesaw",
+    "sled": "Little sled",
+    "slinky": "Spring toy",
+    "sneaker": "Grippy sneaker",
+    "spool": "Thread spool",
+    "sun": "Quiet sun",
+    "teapot": "Teapot",
+    "top": "Spinning top",
+    "wateringcan": "Watering can",
+    "zero": "Zero"
+  },
+  "sounds": {
+    "bamboo": "rustle",
+    "blocks": "thunk",
+    "boat": "splash",
+    "cat": "meow",
+    "crane": "cranecall",
+    "croissant": "crumble",
+    "daruma": "boing",
+    "dragon": "drum",
+    "drum": "drum",
+    "eiffel": "bell",
+    "elephant": "trumpet",
+    "frog": "croak",
+    "fuji": "gust",
+    "house": "thunk",
+    "jar": "fizz",
+    "kite": "gust",
+    "lantern": "shimmer",
+    "matryoshka": "giggle",
+    "merlion": "splash",
+    "moon": "shimmer",
+    "naga": "thunder",
+    "otter": "otter",
+    "owl": "hoot",
+    "pigeon": "flutter",
+    "redlantern": "shimmer",
+    "rocket": "launch",
+    "rose": "shimmer",
+    "sheep": "baa",
+    "snowglobe": "shimmer",
+    "tree": "rustle",
+    "tuktuk": "tuktuk",
+    "turtle": "bubbles",
+    "cablecar": "bell",
+    "sealion": "howl",
+    "goldengate": "shimmer",
+    "bus": "bell",
+    "raven": "caw",
+    "crown": "shimmer",
+    "churro": "fizz",
+    "perez": "giggle",
+    "tooth": "boing"
+  },
+  "pending": {
+    "note": "Toys stand on the shelf as painted cut-out cards (public/models/toys/cards/<name>.webp). Do not generate .glb meshes for them.",
+    "toys": [
+      "cablecar",
+      "sealion",
+      "goldengate",
+      "bus",
+      "raven",
+      "crown",
+      "churro",
+      "perez",
+      "tooth"
+    ]
+  }
 }

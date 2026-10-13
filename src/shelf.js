@@ -268,8 +268,10 @@ export function makeShelf({ books, textures }) {
     if (spawned.has(meta.id) || !textures.toyFor) return;
     spawned.add(meta.id);
     const names = perBook[meta.id] || [];
-    const spots = [[-0.32, shelfBack + 0.03, 0.35], [0.02, shelfBack - 0.02, -0.15], [0.33, shelfBack + 0.04, -0.4]];
-    names.slice(0, 3).forEach((name, k) => {
+    // two keepsakes per book, a quarter-slot either side of its centre: one every half-slot along the
+    // whole plank, an even rhythm with breathing room (every name is unique across the shelf)
+    const spots = [[-SPACING / 4, shelfBack + 0.02, 0.28], [SPACING / 4, shelfBack + 0.01, -0.28]];
+    names.slice(0, 2).forEach((name, k) => {
       textures.toyFor(name).then((scene) => {
         if (!scene) return;
         const [dx, z, ry] = spots[k];
